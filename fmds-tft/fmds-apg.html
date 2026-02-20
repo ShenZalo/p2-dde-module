@@ -1,0 +1,1664 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FMDS - Basic Genba Management</title>
+    <link rel="icon" href="../img/perodua-favicon.png" sizes="16x16" type="image/png">
+
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Flowbite CSS (for interactive components) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.1/flowbite.min.css" rel="stylesheet" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Font Awesome 6 Free -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chiron+Sung+HK:ital,wght@0,200..900;1,200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/apg.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/shape.css">
+    <link rel="stylesheet" href="../src/output.css">
+    <!-- Loader -->
+    <link rel="stylesheet" href="../css/loader.css">
+    <script src="../js/loader.js" defer></script>
+</head>
+
+<body>
+    <!-- Loader to hide content until fully loaded -->
+    <div class="preloader" id="preloader">
+        <div class="loader">
+            <span class="loader-text">DDE</span>
+        </div>
+    </div>
+    <main>
+        <div class="section-header p-5 gap-3">
+            <img src="img/perodua-logo.png" alt="Perodua Logo" class="lg:w-40 lg:h-32 w-16 h-12">
+            <h1 class="flex items-center text-center">Asas Pengurusan Genba</h1>
+            <img src="img/dde-logo.png" alt="DDE Logo" class="lg:w-40 lg:h-32 w-16 h-12">
+        </div>
+        <section id="page1">
+            <div class="section-container w-full h-auto mt-7 p-3">
+                <div class="content-container">
+                    <h2 class="cust-size-question lg:text-3xl text-sm">Sistem untuk keadaan Sasaran Genba <br>(Toyota
+                        Way)</h2>
+                    <div x-data="fullscreenImage(`img/apg-1.png`)" class="flex justify-center">
+                        <img src="img/apg-1.png" class="w-4/5 h-auto cursor-pointer -mt-5 lg:mt-1 mb-3"
+                            @click="openFullscreen()">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="page2">
+            <div class="section-container w-full h-auto mt-7 p-3">
+                <div class="content-container">
+                    <h2 class="cust-size-question lg:text-3xl text-sm">
+                        Keadaan Sasaran Genba
+                    </h2>
+                    <div x-data="fullscreenImage(`img/apg-2-wbg.png`)" class="flex justify-center">
+                        <img src="img/apg-2.png" class="w-4/5 h-auto cursor-pointer -mt-5 lg:mt-1 mb-3"
+                            @click="openFullscreen()">
+                    </div>
+                    <hr class="my-4 border-t-4 border-white">
+                    <p class="relative border-4 rounded-md border-amber-950 bg-amber-200 inline-block p-2 ml-1 lg:ml-[15%] mt-2
+                        text-[0.5rem] lg:text-2xl"> Langkah-langkah untuk Pengurusan Abnormaliti
+                    </p>
+                    <div x-data="fullscreenImage(`img/apg-3-wbg.png`)" class="flex justify-center">
+                        <img src="img/apg-3.png" class="w-4/5 h-auto cursor-pointer lg:mt-1 mb-3"
+                            @click="openFullscreen()">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="page3">
+            <div class="section-container w-full h-auto mt-7 p-3">
+                <div class="content-container">
+                    <h2 class="cust-size-question lg:text-3xl text-sm">
+                        <span class="number-circle">1</span>Menjamin keadaan untuk pengeluaran
+                    </h2>
+                    <div class="item flex justify-center">
+                        <span class="relative flex size-3 mb-2"> <span
+                                class="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-75"></span>
+                            <span class="relative inline-flex size-3 rounded-full bg-sky-500"></span></span>
+                        <img src="img/apg-4-1.png" class="w-4/5 h-auto cursor-pointer -mt-5 lg:mt-1 mb-3">
+                    </div>
+                    <div class="panel max-h-0 overflow-hidden opacity-0 transition-all duration-300 ease-out">
+                        <div class="flex justify-center">
+                            <img src="img/apg-4-2-1.png" class="w-4/5 h-auto -mt-5 lg:mt-1 mb-3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="page4">
+            <div class="section-container w-full h-auto mt-7 p-3">
+                <div class="content-container">
+                    <h2 class="cust-size-question lg:text-3xl text-sm"> Menjamin keadaan untuk Kerja Standard (Manusia,
+                        Kaedah)
+                    </h2>
+                    <p class="relative border-4 rounded-md border-amber-950 bg-amber-200 inline-block p-2 ml-1 lg:ml-[15%] mt-2
+                        text-[0.5rem] lg:text-2xl">Perkara yang Perlu Direalisasikan
+                    </p>
+                    <div
+                        class="border-4 border-amber-950 bg-blue-100 lg:text-4xl text-[0.7rem] lg:py-10 py-5 px-2 lg:mx-80 mx-4 mt-2 flex justify-center">
+                        Memadankan Orang (kemahiran) dan Proses
+                    </div>
+                    <p class="relative border-4 rounded-md border-amber-950 bg-amber-200 inline-block p-2 ml-1 lg:ml-[15%] mt-4
+                        text-[0.5rem] lg:text-2xl">Perkara yang Perlu Dilakukan
+                    </p>
+                    <div class="grid grid-cols-3 gap-1 mt-2 p-2">
+                        <div
+                            class="border-2 border-amber-950 bg-yellow-200 text-[0.7rem] lg:text-2xl p-1 flex items-center justify-center text-center">
+                            Dijalankan sekurang-kurangnya satu hari lebih awal
+                        </div>
+                        <div
+                            class="border-2 border-amber-950 bg-fuchsia-100 col-span-2 text-[0.7rem] lg:text-2xl p-1 flex items-center justify-center text-center">
+                            Dijalankan pada hari sebelum Pengeluaran Bermula
+                        </div>
+                        <div
+                            class="trigger border-2 rounded-tr-3xl rounded-br-3xl border-amber-950 bg-white text-[0.7rem] lg:text-2xl p-1 cursor-pointer">
+                            <span class="relative flex size-3 mb-2"> <span
+                                    class="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-75"></span>
+                                <span class="relative inline-flex size-3 rounded-full bg-sky-500"></span></span>
+                            (1) Latihan Kemahiran dan
+                            Penilaian Kemahiran
+                        </div>
+
+                        <div class="trigger border-2 rounded-tr-3xl rounded-br-3xl border-amber-950 bg-white
+                            text-[0.7rem] lg:text-2xl p-1 cursor-pointer">
+                            <span class="relative flex size-3 mb-2"> <span
+                                    class="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-75"></span>
+                                <span class="relative inline-flex size-3 rounded-full bg-sky-500"></span></span>
+                            (2) Pemeriksaan Keadaan Kesihatan
+                        </div>
+
+                        <div
+                            class="trigger border-2 rounded-tr-3xl rounded-br-3xl border-amber-950 bg-white text-[0.7rem] lg:text-2xl p-1 cursor-pointer">
+                            <span class="relative flex size-3 mb-2"> <span
+                                    class="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-75"></span>
+                                <span class="relative inline-flex size-3 rounded-full bg-sky-500"></span></span>
+                            (3) Kakitangan Berasaskan tugasan
+                        </div>
+                    </div>
+                    <div class="content hidden opacity-0 translate-y-2 transition-all duration-300 ease-out">
+                        <p class="relative border-4 rounded-md border-amber-950 bg-amber-200 inline-block p-2 ml-1 lg:ml-[10%] mt-2
+                        text-[0.5rem] lg:text-2xl">Latihan Kemahiran dan Penilaian Kemahiran (contoh)
+                        </p>
+                        <div x-data="fullscreenImage(`img/apg-5-1.png`)" class="flex justify-center">
+                            <img src="img/apg-5-1.png" class="w-4/5 h-auto cursor-pointer lg:mt-1 mb-3"
+                                @click="openFullscreen()">
+                        </div>
+                    </div>
+                    <div class="content hidden opacity-0 translate-y-2 transition-all duration-300 ease-out">
+                        <p class="relative border-4 rounded-md border-amber-950 bg-amber-200 inline-block p-2 ml-1 lg:ml-[10%] mt-2
+                        text-[0.5rem] lg:text-2xl">Menjamin Keadaan Kesihatan
+                        </p>
+                        <div class="border-2 border-amber-950 mx-1 p-2 mt-2">
+                            <p class="font-bold text-[0.6rem] lg:text-3xl">Periksa Keadaan Kesihatan sebelum
+                                Production
+                                Bermula
+                            </p>
+                            <ol class="list-decimal list-inside mt-2 space-y-1">
+                                <li class="text-[0.5rem] lg:text-2xl">Periksa ekspresi muka, kulit dan pergerakan TM
+                                    melalui Komunikasi dan Taisou sebelum bekerja
+                                </li>
+                                <li class="text-[0.5rem] lg:text-2xl"> Untuk penyakit ergonomik, maklumkan gejala
+                                    dan
+                                    periksa pergerakan mereka
+                                </li>
+                                <li class="text-[0.5rem] lg:text-2xl"> Check sheet Pengurusan Kesihatan
+                                </li>
+                            </ol>
+                        </div>
+                        <div x-data="fullscreenImage(`img/apg-5-2.png`)" class="flex justify-center">
+                            <img src="img/apg-5-2.png" class="w-4/5 h-auto cursor-pointer mt-1 mb-3"
+                                @click="openFullscreen()">
+                        </div>
+                    </div>
+                    <div class="content hidden opacity-0 translate-y-2 transition-all duration-300 ease-out">
+                        <p class="relative border-4 rounded-md border-amber-950 bg-amber-200 inline-block p-2 ml-1 lg:ml-[10%] mt-2
+                        text-[0.5rem] lg:text-2xl">[Penjelasan] Prosedur Susunan Pekerja
+                        </p>
+                        <div x-data="fullscreenImage(`img/apg-5-3-1.png`)" class="flex justify-center">
+                            <img src="img/apg-5-3-1.png" class="w-4/5 h-auto cursor-pointer mt-1 mb-3"
+                                @click="openFullscreen()">
+                        </div>
+                        <div x-data="fullscreenImage(`img/apg-5-3-2.png`)" class="flex justify-center">
+                            <img src="img/apg-5-3-2.png" class="w-4/5 h-auto cursor-pointer mt-1 mb-3"
+                                @click="openFullscreen()">
+                        </div>
+                    </div>
+                    <hr class="my-4 border-t-4 border-white">
+                    <p class="relative border-4 rounded-md border-amber-950 bg-amber-200 inline-block p-2 ml-1 lg:ml-[10%] mt-2
+                        text-[0.5rem] lg:text-2xl">Ringkasan
+                    </p>
+                    <div class="flex justify-center">
+                        <img src="img/apg-ringkasan-1.png" class="w-4/5 h-auto mt-1 mb-3">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="page5">
+            <div class="section-container w-full h-auto mt-7 p-3">
+                <div class="content-container">
+                    <h2 class="cust-size-question lg:text-3xl text-sm"> Menjamin Keadaan Standard (Bahan)
+                    </h2>
+                    <p class="relative border-4 rounded-md border-amber-950 bg-amber-200 inline-block p-2 ml-1 lg:ml-[10%] mt-2
+                        text-[0.5rem] lg:text-2xl">Perkara yang Perlu Direalisasikan
+                    </p>
+                    <div
+                        class="border-4 border-amber-950 bg-blue-100 lg:text-4xl text-[0.7rem] lg:py-10 py-5 px-2 lg:mx-80 mx-4 mt-2 flex justify-center">
+                        Mendapatkan Kuantiti yang Diperlukan
+                    </div>
+                    <p class="relative border-4 rounded-md border-amber-950 bg-amber-200 inline-block p-2 ml-1 lg:ml-[10%] mt-2
+                        text-[0.5rem] lg:text-2xl">Perkara yang Perlu Dilakukan
+                    </p>
+                    <div
+                        class="border-4 border-amber-950 bg-amber-50 lg:text-4xl text-[0.7rem] lg:py-10 py-5 px-2 lg:mx-80 mx-4 mt-2 flex justify-center">
+                        Menjamin keadaan 5S di dalam Genba
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="page6">
+            <div class="section-container w-full h-auto mt-7 p-3">
+                <div class="content-container">
+                    <h2 class="cust-size-question lg:text-3xl text-sm">Memeriksa keadaan 5S di Genba
+                    </h2>
+                    <p class="relative border-4 rounded-md border-amber-950 bg-amber-200 inline-block p-2 ml-1 lg:ml-[10%] mt-2
+                        text-[0.5rem] lg:text-2xl">5S ialah titik permulaan Pembuatan Produk (Monodzukuri)
+                    </p>
+                    <div class="border-4 border-amber-950
+                    flex items-center justify-center gap-2
+                    mx-auto lg:mx-10 mt-2">
+                        <div class="border-2 border-amber-950 bg-pink-300
+                            flex flex-col items-center justify-center
+                            p-2 m-2 text-center">
+                            <div class="flex gap-3">
+                                <p class="text-[0.5rem] lg:text-2xl">Seiri</p>
+                                <p class="text-[0.5rem] lg:text-2xl">Seiton</p>
+                                <p class="text-[0.5rem] lg:text-2xl">Seiso</p>
+                            </div>
+                            <div class="flex gap-3 mt-1">
+                                <p class="text-[0.4rem] lg:text-xl">(Sisih)</p>
+                                <p class="text-[0.4rem] lg:text-xl">(Susun)</p>
+                                <p class="text-[0.4rem] lg:text-xl">(Suci)</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-center lg:text-6xl text-2xl">
+                            <i class="fa-solid fa-right-long"></i>
+                        </div>
+                        <div class="border-2 border-amber-950 bg-pink-300
+                            flex flex-col items-center
+                            p-2 m-2">
+                            <div class="flex items-center justify-center gap-3">
+                                <p class="text-[0.5rem] lg:text-2xl">3S</p>
+                                <i class="fa-solid fa-arrow-right text-[0.5rem] lg:text-2xl"></i>
+                                <div class="flex flex-col items-center">
+                                    <p class="text-[0.5rem] lg:text-2xl">Seiketsu</p>
+                                    <p class="text-[0.4rem] lg:text-xl">(Seragam)</p>
+                                </div>
+                                <i class="fa-solid fa-arrow-right text-[0.5rem] lg:text-2xl"></i>
+                                <div class="flex flex-col items-center">
+                                    <p class="text-[0.5rem] lg:text-2xl">Shitsuke</p>
+                                    <p class="text-[0.4rem] lg:text-xl">(Mengekalkan)</p>
+                                </div>
+                            </div>
+                            <p class="mt-1 text-[0.45rem] lg:text-xl text-center">
+                                Mewujudkan “5S” di Genba
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex justify-center mt-1 lg:text-6xl text-2xl">
+                        <i class="fa-solid fa-down-long"></i>
+                    </div>
+                    <div
+                        class="border-4 border-amber-950 bg-amber-50 lg:text-4xl text-[0.7rem] lg:py-10 py-5 px-2 lg:mx-80 mx-4 mt-2 flex justify-center text-center">
+                        Prinsip Asas Pengurusan Genba di Daihatsu ialah "Mampu Mengenal Pasti Abnormaliti dan kaizen
+                        Berterusan"
+                    </div>
+                    <div class="flex justify-center mt-1 lg:text-6xl text-2xl">
+                        <i class="fa-solid fa-down-long"></i>
+                    </div>
+                    <div
+                        class="border-4 border-blue-950 bg-blue-200 lg:text-4xl text-[0.7rem] lg:py-10 py-5 px-2 lg:mx-80 mx-4 mt-2 flex justify-center text-center">
+                        Melakukan apa yang diputuskan dengan betul adalah Asas untuk Membangunkan Orang untuk Bekerja di
+                        Daihatsu.
+                    </div>
+                    <hr class="my-4 border-t-4 border-white">
+                    <p class="relative border-4 rounded-md border-amber-950 bg-amber-200 inline-block p-2 ml-1 lg:ml-[10%] mt-2
+                        text-[0.5rem] lg:text-2xl">5S ialah titik permulaan pembuatan di Daihatsu
+                    </p>
+                    <div class="flex flex-col items-center mt-2">
+                        <p class="border-2 rounded-full border-amber-950 bg-yellow-300 px-2 py-1 w-fit">
+                            Level of 5S understanding
+                        </p>
+
+                        <ol
+                            class="list-decimal list-inside border-2 mt-2 border-black bg-blue-50 lg:text-2xl text-sm mx-2">
+                            <li class="border-b-2 border-black py-2 px-4">Pembersihan</li>
+                            <li class="border-b-2 border-black py-2 px-4">
+                                Seiri <span class="lg:text-sm">(Sisih)</span>, Seiton <span class="lg:text-sm">(Tetapkan
+                                    mengikut susunan)</span>,
+                                Seisou <span class="lg:text-sm">(Suci)</span>,
+                                Seiketsu <span class="lg:text-sm">(Standardize)</span>, Shitsuke <span
+                                    class="lg:text-sm">(Mengekalkan)</span>
+                            </li>
+                            <li class="border-b-2 border-black py-2 px-4">
+                                Lima perkataan dan maknanya
+                            </li>
+                            <li class="border-b-2 border-black py-2 px-4">
+                                Abnormaiti bahan kelihatan
+                            </li>
+                            <li class="border-b-2 border-black py-2 px-4">
+                                Hapuskan abnormaliti, teruskan penambahbaikan (alat penambahbaikan)
+                            </li>
+                            <li class="py-2 px-4">
+                                Ikut peraturan dan jadikan budaya(Shitsuke<span class="lg:text-sm">(Kekal)</span>).
+                            </li>
+                        </ol>
+                    </div>
+                    <div
+                        class="grid grid-cols-3 lg:grid-cols-5 justify-items-center mt-4 gap-4 lg:text-xl text-[0.5rem] p-2">
+                        <div
+                            class="border-2 flex flex-col border-black bg-blue-50 lg:w-52 lg:h-auto items-center p-2 text-center">
+                            <p>Seiri <span class="lg:text-sm">(Sisih)</span></p>
+                            <p class="mt-2">Buang barang yang tidak perlu</p>
+                            <img src="img/apg-seiri-1.png" class="w-20 lg:w-64 h-1/2 mt-2">
+                        </div>
+                        <div
+                            class="border-2 flex flex-col border-black bg-blue-50 lg:w-52 lg:h-auto items-center p-2 text-center">
+                            <p>Seiton <span class="lg:text-sm">(Tetapkan mengikut susunan)
+                                </span></p>
+                            <p class="mt-2">Tentukan tempat yang mudah untuk menyimpan barang yang diperlukan
+                            </p>
+                            <img src="img/apg-seiton-1.png" class="w-20 lg:w-64 h-1/2 mt-2">
+                        </div>
+                        <div
+                            class="border-2 flex flex-col border-black bg-blue-50 lg:w-52 lg:h-auto items-center p-2 text-center">
+                            <p>Seisou <span class="lg:text-sm">(Suci)</span></p>
+                            <p class="mt-2">Pastikan kawasan kerja
+                                bebas kotoran dan bersih
+                            </p>
+                            <img src="img/apg-seisou-1.png" class="w-20 lg:w-64 h-1/2 mt-2">
+                        </div>
+                        <div
+                            class="border-2 hidden lg:flex flex-col border-black bg-blue-50 lg:w-52 lg:h-auto items-center p-2 text-center">
+                            <p>Seiketsu <span class="lg:text-sm">(Standard)</span></p>
+                            <p class="mt-2">Keep Seiri<span class="lg:text-sm">(Sorting)</span>,
+                                Seiton<span class="lg:text-sm">(Set in order)</span>
+                                and Seisou<span class="lg:text-sm">(Shine)</span>
+                            </p>
+                            <img src="img/apg-seiketsu-1.png" class="w-20 lg:w-64 h-1/2 mt-2">
+                        </div>
+                        <div
+                            class="border-2 hidden lg:flex flex-col border-black bg-blue-50 lg:w-52 lg:h-auto items-center p-2 text-center">
+                            <p>Shitsuke <span class="lg:text-sm">(Mengekalkan)</span></p>
+                            </span></p>
+                            <p class="mt-2">Patuhi peraturan, Jadikan Budaya
+                            </p>
+                            <img src="img/apg-shitsuke-1.png" class="w-20 lg:w-64 h-1/2 mt-2">
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 justify-items-center
+                        mt-1 gap-4 lg:text-xl text-[0.5rem] p-2 lg:hidden">
+                        <div
+                            class="border-2 flex flex-col border-black bg-blue-50 lg:w-96 items-center p-2 text-center">
+                            <p>Seiketsu <span class="lg:text-sm">(Standard)</span></p>
+                            <p class="mt-2">Keep Seiri<span class="lg:text-sm">(Sorting)</span>,
+                                Seiton<span class="lg:text-sm">(Set in order)</span>
+                                and Seisou<span class="lg:text-sm">(Shine)</span>
+                            </p>
+                            <img src="img/apg-seiketsu-1.png" class="w-20 lg:w-64 h-1/2 mt-2">
+                        </div>
+                        <div
+                            class="border-2 flex flex-col border-black bg-blue-50 lg:w-96 items-center p-2 text-center">
+                            <p>Shitsuke <span class="lg:text-sm">(Mengekalkan)</span></p>
+                            </span></p>
+                            <p class="mt-2">Patuhi peraturan, Jadikan Budaya
+                            </p>
+                            <img src="img/apg-shitsuke-1.png" class="w-20 lg:w-64 h-1/2 mt-2">
+                        </div>
+                    </div>
+                    <div class="border-2 mt-2 text-blue-50 bg-blue-700 p-4 m-4 rounded-md lg:text-2xl text-[0.5rem]">
+                        <b>Peraturan 5S:</b><br>
+                        Apa yang diperlukan diletakkan di tempatnya dengan petunjuk kuantiti maksimum dan minimum, dan
+                        First-In First-Out dilakukan.
+                    </div>
+                    <hr class=" my-4 border-t-4 border-white">
+                    <div x-data="fullscreenImage(`img/apg-6-wbg.png`)" class="flex justify-center">
+                        <img src="img/apg-6.png" class="w-4/5 h-auto cursor-pointer -mt-5 lg:mt-1 mb-3"
+                            @click="openFullscreen()">
+                    </div>
+                </div>
+        </section>
+        <section id="page7">
+            <div class="section-container w-full h-auto mt-7 p-3">
+                <div class="content-container">
+                    <h2 class="cust-size-question lg:text-3xl text-sm"> Menjamin Keadaan Standard (Mesin)
+                    </h2>
+                    <p class="relative border-4 rounded-md border-amber-950 bg-amber-200 inline-block p-2 ml-1 lg:ml-[10%] mt-2
+                        text-[0.5rem] lg:text-2xl">Perkara yang Perlu Direalisasikan
+                    </p>
+                    <div
+                        class="border-4 border-amber-950 bg-blue-100 lg:text-4xl text-[0.7rem] lg:py-10 py-5 px-2 lg:mx-80 mx-4 mt-2 flex justify-center">
+                        Operasi Biasa dan Pencegahan Kegagalan
+                    </div>
+                    <p class="relative border-4 rounded-md border-amber-950 bg-amber-200 inline-block p-2 ml-1 lg:ml-[10%] mt-2
+                        text-[0.5rem] lg:text-2xl">Perkara yang Perlu Dilakukan
+                    </p>
+                    <div
+                        class="border-4 border-amber-950 bg-amber-50 lg:text-4xl text-[0.7rem] lg:py-10 py-5 px-2 lg:mx-80 mx-4 mt-2 flex justify-center">
+                        Memastikan Pelaksanaan Penyelenggaraan Kendiri
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="page8">
+            <div class="section-container w-full h-auto mt-7 p-3">
+                <div class="content-container">
+                    <h2 class="question">
+                        Penyelenggaraan Kendiri
+                    </h2>
+                    <div class="flex text-center justify-center text-[0.5rem] lg:text-2xl">
+                        Cara Berfikir Pengurusan Genba= Penyelenggaraan berdasarkan TPM
+                    </div>
+                    <div x-data="fullscreenImage(`img/apg-7-wbg.png`)" class="flex justify-center">
+                        <img src="img/apg-7.png" class="w-4/5 h-auto cursor-pointer lg:mt-1 mb-3"
+                            @click="openFullscreen()">
+                    </div>
+                    <hr class=" my-4 border-t-4 border-white">
+                    <p class="relative border-4 rounded-md border-amber-950 bg-amber-200 inline-block p-2 ml-1 lg:ml-[10%] mt-2
+                        text-[0.5rem] lg:text-2xl">Penyelenggaraan Diri yang Mampan dan Cekap (kajian kes)
+                    </p>
+                    <div class="border-2 border-amber-950 bg-blue-50 lg:text-2xl text-[0.5rem] p-4 m-4 text-center">
+                        Jelaskan Peralatan/ Periksa Item/ Kaedah/ Standard Penghakiman/ Orangyang bertanggungjawab/
+                        Masa, dsb.<br>
+                        <i class="fa-solid fa-arrow-down"></i><br>Tugaskan kepada Ahli dan memberi arahan untuk
+                        melakukan penyelenggaraan kendiri.
+                    </div>
+                    <div class="flex flex-row justify-center lg:text-2xl text-[0.5rem]">
+                        <div class="flex flex-col text-center items-center">
+                            <p>TPM Activity Board</p>
+                            <div x-data="fullscreenImage(`img/apg-8-1.png`)" class="flex justify-center">
+                                <img src="img/apg-8-1.png" class="w-1/2 h-auto cursor-pointer mt-1 mb-3"
+                                    @click="openFullscreen()">
+                            </div>
+                        </div>
+                        <div class="flex flex-col text-center items-center">
+                            <p>Self Maintenance Standard Sheet</p>
+                            <div x-data="fullscreenImage(`img/apg-8-2.png`)" class="flex justify-center">
+                                <img src="img/apg-8-2.png" class="w-1/2 h-auto cursor-pointer mt-1 mb-3"
+                                    @click="openFullscreen()">
+                            </div>
+                        </div>
+                    </div>
+                    <hr class=" my-4 border-t-4 border-white">
+                    <p class="relative border-4 rounded-md border-amber-950 bg-amber-200 inline-block p-2 ml-1 lg:ml-[10%] mt-2
+                        text-[0.5rem] lg:text-2xl">Pengesanan Awal Abnormaliti
+                    </p>
+                    <div class="grid grid-cols-3 justify-items-center mx-[20%] lg:mx-[10%]">
+                        <div
+                            class="border-2 border-amber-950 bg-blue-300 text-blue-800 w-fit lg:text-2xl text-[0.5rem] p-2 m-2 flex items-center justify-center text-center">
+                            Pengurus~ Ketua Kumpulan
+                        </div>
+                        <div class="col-start-3 justify-self-center">
+                            <div
+                                class="border-2 border-amber-950 bg-pink-300 text-blue-800 w-fit lg:text-2xl text-[0.5rem] p-2 m-2 flex items-center justify-center text-center">
+                                Operator
+                            </div>
+                        </div>
+                        <div
+                            class="border-2 border-amber-950 bg-yellow-200 text-blue-800 w-fit lg:text-2xl text-[0.5rem] p-2 m-2 flex items-center justify-center text-center">
+                            Semasa pemerhatian kawasan
+                        </div>
+                        <div>
+                            <img src="img/three-way-arrow.png " class="lg:w-24 lg:h-24 w-12 h-12">
+                        </div>
+                        <div
+                            class="border-2 border-amber-950 bg-yellow-200 text-blue-800 w-fit lg:text-2xl text-[0.5rem] p-2 m-2 flex items-center justify-center text-center">
+                            Semasa Standard Work
+                        </div>
+                    </div>
+                    <div class="flex justify-center">
+                        <img src="img/apg-9.png" class="w-4/5 h-auto cursor-pointer mb-3">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="page9">
+            <div class="section-container w-full h-auto mt-7 p-3">
+                <div class="content-container">
+                    <h2 class="question"><span class="number-circle">1</span>Penyediaan Pengeluaran yang Selamat</h2>
+                    <div class="item flex justify-center">
+                        <span class="relative flex size-3 mb-2"> <span
+                                class="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-75"></span>
+                            <span class="relative inline-flex size-3 rounded-full bg-sky-500"></span></span>
+                        <img src="img/apg-4-1.png" class="w-4/5 h-auto cursor-pointer -mt-5 lg:mt-1 mb-3">
+                    </div>
+                    <div class="panel max-h-0 overflow-hidden opacity-0 transition-all duration-300 ease-out">
+                        <div class="flex justify-center">
+                            <img src="img/apg-4-2-2.png" class="w-4/5 h-auto -mt-5 lg:mt-1 mb-3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="page10">
+            <div class="section-container w-full h-auto mt-7 p-3">
+                <div class="content-container">
+                    <h2 class="cust-size-question lg:text-3xl text-sm">Ambil Tindakan mengikut peraturan semasa Changing
+                        Point
+                    </h2>
+                    <p class="relative border-4 rounded-md border-amber-950 bg-amber-200 inline-block p-2 ml-1 lg:ml-[10%] mt-2
+                        text-[0.5rem] lg:text-2xl">Menjamin keupayaan proses: Menguruskan Change point
+                    </p>
+                    <div class="mt-2 border-2 flex flex-col items-center border-amber-950 bg-blue-100
+                        lg:text-2xl text-[0.5rem] w-fit mx-auto text-center">
+                        <p class="border-2 border-blue-950 bg-blue-400 p-1 lg:p-4">
+                            Apa itu changing point?
+                        </p>
+                        <p class="p-1 lg:p-4">
+                            Perkara 4M (Man, Machine, Material and Method) Perubahan dalam aktiviti pengeluaran harian
+                        </p>
+                    </div>
+                    <div class="mt-2 border-2 flex flex-col items-center border-amber-950 bg-blue-100
+                        lg:text-2xl text-[0.5rem] w-fit mx-auto text-center">
+                        <p class="border-2 border-blue-950 bg-blue-400 p-1 lg:p-4">
+                            Menguruskan Change point
+                        </p>
+                        <p class="p-1 lg:p-4">
+                            Mengambil tindakan sebelum dan apabila <b class="text-red-600">CHANGING POINT</b>
+                            berlaku
+                            untuk memastikan produk <br> yang
+                            baik boleh dibuat walaupun changing point berlaku.
+                        </p>
+                    </div>
+                    <hr class=" my-4 border-t-4 border-white">
+                    <p class="relative border-4 rounded-md border-amber-950 bg-amber-200 inline-block p-2 ml-1 lg:ml-[10%] mt-2
+                        text-[0.5rem] lg:text-2xl">Steps Pengurusan Change Point ([1] to [3])
+                    </p>
+                    <div x-data="fullscreenImage(`img/apg-10.png`)" class="flex justify-center">
+                        <img src="img/apg-10.png" class="w-4/5 h-auto cursor-pointer mt-1 mb-3"
+                            @click="openFullscreen()">
+                    </div>
+                    <hr class=" my-4 border-t-4 border-white">
+                    <p class="relative border-4 rounded-md border-amber-950 bg-amber-200 inline-block p-2 ml-1 lg:ml-[10%] mt-2
+                        text-[0.5rem] lg:text-2xl">Alat perkongsian maklumat: Process Management Board
+                    </p>
+                    <div x-data="fullscreenImage(`img/apg-11.png`)" class="flex justify-center">
+                        <img src="img/apg-11.png" class="w-4/5 h-auto cursor-pointer mt-1 mb-3"
+                            @click="openFullscreen()">
+                    </div>
+                    <hr class=" my-4 border-t-4 border-white">
+                    <p class="relative border-4 rounded-md border-amber-950 bg-amber-200 inline-block p-2 ml-1 lg:ml-[10%] mt-2
+                        text-[0.5rem] lg:text-2xl">Alat perkongsian maklumat: Contoh Process Management Board
+                    </p>
+                    <div x-data="fullscreenImage(`img/apg-12.png`)" class="flex justify-center">
+                        <img src="img/apg-12.png" class="w-4/5 h-auto cursor-pointer mt-1 mb-3"
+                            @click="openFullscreen()">
+                    </div>
+                    <hr class=" my-4 border-t-4 border-white">
+                    <p class="relative border-4 rounded-md border-amber-950 bg-amber-200 inline-block p-2 ml-1 lg:ml-[10%] mt-2
+                        text-[0.5rem] lg:text-2xl">Ringkasan
+                    </p>
+                    <div class="flex gap-2 lg:gap-7 justify-center mt-2">
+                        <div
+                            class="flex border-2 border-amber-950 rounded-md bg-pink-300 text-center items-center text-[0.5rem] lg:text-2xl p-2">
+                            Berlakunya Titik Perubahan<br>
+                            (Keputusan oleh Pengurusan)
+                        </div>
+                        <div class="flex justiify-center items-center text-[0.7rem] lg:text-3xl">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                        <div
+                            class="flex flex-col border-2 border-amber-950 rounded-md bg-yellow-200 text-center text-[0.5rem] lg:text-2xl p-1 lg:p-2">
+                            Tindakan mengikut peraturan
+                            <div class="flex justify-center gap-1 mt-1">
+                                <div class="border-2 w-4/5 border-blue-600 bg-blue-100 text-blue-800">
+                                    Perkongsian<br>Maklumat
+                                </div>
+                                <div class="border-2 w-4/5 border-blue-600 bg-blue-100 text-blue-800">
+                                    Menjamin<br>Kualiti/Kuantiti
+                                </div>
+                                <div class="border-2 w-4/5 border-blue-600 bg-blue-100 text-blue-800">
+                                    Simpan<br>Rekod
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="p-2 flex w-fit mx-auto border-2 border-amber-950 bg-gray-200 text-blue-600 text-[0.5rem] lg:text-2xl text-center mt-2">
+                        <p>TM/TL mesti segera menghubungi Superior mereka jika keadaan luar biasa(abnormal).
+                            <br><i class="fa-solid fa-arrow-down-long"></i><br> Buat "Genba lebih sensitif terhadap
+                            sebarang
+                            Perubahan”
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="page11">
+            <div class="section-container w-full h-auto mt-7 p-3">
+                <div class="content-container">
+                    <h2 class="cust-size-question lg:text-3xl text-sm"> <span class="number-circle">2</span>Pengurusan
+                        Genba yang Stabil
+                    </h2>
+                    <div class="item flex justify-center">
+                        <span class="relative flex size-3 mb-2"> <span
+                                class="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-75"></span>
+                            <span class="relative inline-flex size-3 rounded-full bg-sky-500"></span></span>
+                        <img src="img/apg-13-1.png" class="w-4/5 h-auto cursor-pointer -mt-5 lg:mt-1 mb-3">
+                    </div>
+                    <<div class="panel max-h-0 overflow-hidden opacity-0 transition-all duration-300 ease-out">
+                        <div class="flex justify-center">
+                            <img src="img/apg-13-2-1.png" class="w-4/5 h-auto -mt-5 lg:mt-1 mb-3">
+                        </div>
+                </div>
+                <p class="relative border-4 rounded-md border-amber-950 bg-amber-200 inline-block p-2 ml-1 lg:ml-[10%] mt-2
+                        text-[0.5rem] lg:text-2xl">Perkara yang Perlu Direalisasikan
+                </p>
+                <div
+                    class="border-4 border-amber-950 bg-blue-100 lg:text-4xl text-[0.7rem] lg:py-10 py-5 px-2 lg:mx-80 mx-4 mt-2 flex justify-center">
+                    　<i class="fa-solid fa-caret-down"></i>Pematuhan kepada Standardized Work
+                </div>
+                <p class="relative border-4 rounded-md border-amber-950 bg-amber-200 inline-block p-2 ml-1 lg:ml-[10%] mt-2
+                        text-[0.5rem] lg:text-2xl">Perkara yang Perlu Dilakukan
+                </p>
+                <div
+                    class="flex flex-col border-4 border-amber-950 bg-amber-50 lg:text-4xl text-[0.7rem] lg:py-10 py-5 px-2 lg:mx-80 mx-4 mt-2 gap-5 justify-center">
+                    <div class="grid grid-cols-5 border-2 border-black border-dashed p-2 rounded-md text-blue-700">
+                        <p class="number-circle">1</p>
+                        <p class="col-span-4">Perhatikan pematuhan Kerja oleh Team Member kepada Standardized
+                            Work.<br>(Periksa Ketepatan Kerja, Masa dan Kebolehkesanan)
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-5">
+                        <p class="number-circle">2</p>
+                        <p class="col-span-4">Pembangunan kemahiran
+                        </p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <section id="page12">
+            <div class="section-container w-full h-auto mt-7 p-3">
+                <div class="content-container">
+                    <h2 class="cust-size-question lg:text-3xl text-sm"><span
+                            class="border-2 border-black px-2 py-1  rounded-md">1</span> Pemerhatian
+                        kerja dan buat mereka patuhi
+                    </h2>
+                    <div x-data="fullscreenImage(`img/apg-14.png`)" class="flex justify-center">
+                        <img src="img/apg-14.png" class="w-4/5 h-auto cursor-pointer mt-1 mb-3"
+                            @click="openFullscreen()">
+                    </div>
+                    <hr class=" my-4 border-t-4 border-white">
+                    <p class="relative border-4 rounded-md border-amber-950 bg-amber-200 inline-block p-2 ml-1 lg:ml-[10%] mt-2
+                        text-[0.5rem] lg:text-2xl">Perkara Ketika Pemerhatian Kerja
+                    </p>
+                    <div class="grid grid-cols-5 gap-4 mx-[10%] text-[0.5rem] lg:text-2xl mt-2">
+                        <div
+                            class="col-span-2 flex justify-center items-center border-2 border-black bg-blue-100 p-2 w-fit rounded-3xl min-w-full">
+                            Ketepatan kerja
+                        </div>
+                        <div class="col-span-3 flex justify-center items-center p-5">
+                            <ul class="list-disc">
+                                <li>Adakah Kemahiran Asas diperolehi?</li>
+                                <li>Adakah peraturan untuk Keselamatan dan Kualiti dipatuhi?</li>
+                                <li>Adakah kerja dilakukan mengikut prosedur yang ditetapkan?</li>
+                                <li>Adakah terdapat sebarang aktiviti rework?</li>
+                                <li>Adakah Operator melihat work point?</li>
+                                <li>Adakah point kritikal diperiksa?</li>
+                            </ul>
+                        </div>
+                        <div
+                            class="col-span-2 flex justify-center items-center border-2 border-black bg-yellow-200 p-2 w-fit rounded-3xl min-w-full">
+                            Ketepatan masa
+                        </div>
+                        <div class="col-span-3 flex justify-center items-center p-5">
+                            <ul class="list-disc">
+                                <li>Adakah kerja dilakukan mengikut tact time?</li>
+                                <li>Adakah terdapat sebarang kerja yang disiapkan awal?</li>
+                            </ul>
+                        </div>
+                        <div
+                            class="col-span-2 flex justify-center items-center border-2 border-black bg-pink-400 p-2 w-fit rounded-3xl min-w-full">
+                            Kemahiran <br>pengesanan
+                        </div>
+                        <div class="col-span-3 flex justify-center items-center p-5">
+                            <ul class="list-disc">
+                                <li>Adakah kerja dilakukan mengikut tact time?</li>
+                                <li>Adakah terdapat sebarang kerja yang disiapkan awal?</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div
+                        class="flex mx-auto w-4/5 border-2 border-black bg-blue-300 text-[0.5rem] lg:text-2xl mt-2 font-bold text-center">
+                        <p>Perhatikan sama ada kerja itu berasaskan
+                            pada WIS<span class="text-[0.3rem] lg:text-sm">(Work Instruction Sheet)</span> dan
+                            SOP<span class="text-[0.3rem] lg:text-sm">(Standard Operation Procedure)</span> atau tidak
+                        </p>
+                    </div>
+                    <hr class=" my-4 border-t-4 border-white">
+                    <p class="relative border-4 rounded-md border-amber-950 bg-amber-200 inline-block p-2 ml-1 lg:ml-[10%] mt-2
+                        text-[0.5rem] lg:text-2xl">Ringkasan
+                    </p>
+                    <div class="flex justify-center items-center text-[0.5rem] lg:text-2xl">
+                        Bagaimana memerhatikan actual operation.
+                    </div>
+                    <table
+                        class="table-auto border-collapse border border-black mt-2 mx-auto text-[0.5rem] lg:text-2xl bg-yellow-50 mb-5 lg:mb-10">
+                        <thead>
+                            <tr>
+                                <th class="border border-black p-2">Kedudukan</th>
+                                <th class="border border-black p-2">LE/TL (Team Leader)</th>
+                                <th class="border border-black p-2 bg-blue-400">GL, AM, Mgr</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border border-black p-2">
+                                    Sudut pandangan
+                                </td>
+                                <td class="border border-black p-2">
+                                    Pematuhan SOP.
+                                </td>
+                                <td class="border border-black p-2">
+                                    <b class="text-blue-700">Memastikan
+                                        Persekitaran Kondusif
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="border border-black p-2">
+                                    Subjek dan Kekerapan
+                                </td>
+                                <td class="border border-black p-2">
+                                    Semua team member
+                                    1 time/shift
+                                </td>
+                                <td class="border border-black p-2">
+                                    <b class="text-blue-700">Proses Lemah
+                                        (Perubahan Pengurusan)
+                                        atau kemahiran)
+                                        <br>GL:1 time/2 hours
+                                        <br>AM, MGR : 2 times/day</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="border border-black p-2">
+                                    Langkah-langkah Khusus
+                                </td>
+                                <td class="border border-black p-2">
+                                    <div class="flex flex-col justify-center text-center items-center">
+                                        <p>Tahap kerja (Kemahiran)
+                                            tidak mencukupi.
+                                        </p>
+                                        <p><i class="fa-solid fa-arrow-down"></i></p>
+                                        <p>Maklum balas kepada subjek
+                                            & Latihan semula
+                                        </p>
+                                    </div>
+                                </td>
+                                <td class="border border-black p-2">
+                                    <div class="flex flex-col justify-center text-center items-center">
+                                        <b class="text-blue-700">
+                                            <p>Ketahui abnormaliti
+                                                Dalam Standard Work
+                                            </p>
+                                        </b>
+                                        <p><i class="fa-solid fa-arrow-down"></i></p>
+                                        <p>Selesaikan Masalah, Termasuk TL
+                                        </p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="flex justify-center items-center text-[0.5rem] lg:text-2xl">
+                        Peranan Kakitangan Pengurusan
+                    </div>
+                    <p class="ml-[10%] lg:text-xl text-[0.4rem]"><i class="fa-solid fa-square"></i>
+                        Meningkatkan Persekitaran
+                        Kerja</p>
+                    <div class="grid grid-cols-3 justify-items-center mx-[20%] lg:mx-[10%]">
+                        <div
+                            class="border-2 border-amber-950 bg-blue-300 w-fit lg:text-2xl text-[0.5rem] p-2 m-2 flex items-center justify-center text-center">
+                            Pengurus~ Ketua Kumpulan
+                        </div>
+                        <div class="col-start-3 justify-self-center">
+                            <div
+                                class="border-2 border-amber-950 bg-yellow-200  w-fit lg:text-2xl text-[0.5rem] p-2 m-2 flex items-center justify-center text-center">
+                                TM
+                            </div>
+                        </div>
+                        <div
+                            class="border-2 border-amber-950 bg-yellow-200 w-fit lg:text-2xl text-[0.5rem] p-2 m-2 flex items-center justify-center text-center font-bold">
+                            Genba yang mudah diuruskan
+                        </div>
+                        <div>
+                            <img src="img/three-way-arrow.png " class="lg:w-24 lg:h-24 w-12 h-12">
+                        </div>
+                        <div
+                            class="border-2 border-amber-950 bg-yellow-200 w-fit lg:text-2xl text-[0.5rem] p-2 m-2 flex items-center justify-center text-center font-bold">
+                            Genba dengan Kebolehkerjaan yang Baik
+                        </div>
+                    </div>
+                    <div
+                        class="p-2 flex w-fit mx-auto border-2 border-amber-950 bg-gray-200 text-blue-600 text-[0.5rem] lg:text-2xl text-center mt-2">
+                        <p>Mewujudkan persekitaran yang dapat menilai sebarang proses yang tidak normal dengan segera
+                            <br><i class="fa-solid fa-arrow-down-long"></i><br>Segera menyelesaikan masalah yang dikenal
+                            pasti semasa Pemerhatian Kerja melalui OJD
+                            Perubahan”
+                        </p>
+                    </div>
+                    <div class="flex justify-center">
+                        <img src="img/apg-15.png" class="w-4/5 h-auto cursor-pointer mt-1 mb-3">
+                    </div>
+                </div>
+        </section>
+        <section id="page13">
+            <div class="section-container w-full h-auto mt-7 p-3">
+                <div class="content-container">
+                    <h2 class="cust-size-question lg:text-3xl text-sm">Mengekalkan Keadaan Standardized Work
+                    </h2>
+                    <p class="relative border-4 rounded-md border-amber-950 bg-amber-200 inline-block p-2 ml-1 lg:ml-[10%] mt-2
+                        text-[0.5rem] lg:text-2xl">Perkara yang Perlu Direalisasikan
+                    </p>
+                    <div
+                        class="border-4 border-amber-950 bg-blue-100 lg:text-4xl text-[0.7rem] lg:py-10 py-5 px-2 lg:mx-80 mx-4 mt-2 flex justify-center">
+                        　<i class="fa-solid fa-caret-down"></i>Pematuhan kepada Standardized Work
+                    </div>
+                    <p class="relative border-4 rounded-md border-amber-950 bg-amber-200 inline-block p-2 ml-1 lg:ml-[10%] mt-2
+                        text-[0.5rem] lg:text-2xl">Perkara yang Perlu Dilakukan
+                    </p>
+                    <div
+                        class="flex flex-col border-4 border-amber-950 bg-amber-50 lg:text-4xl text-[0.7rem] lg:py-10 py-5 px-2 lg:mx-80 mx-4 mt-2 gap-5 justify-center">
+                        <div class="grid grid-cols-5">
+                            <p class="number-circle">1</p>
+                            <p class="col-span-4">Perhatikan pematuhan Kerja oleh Team Member kepada Standardized
+                                Work.<br> (Periksa Ketepatan Kerja, Masa dan Kebolehkesanan)
+                            </p>
+                        </div>
+                        <div class="grid grid-cols-5 border-2 border-black border-dashed p-2 rounded-md text-blue-700"">
+                            <p class=" number-circle">2</p>
+                            <p class="col-span-4">Pembangunan kemahiran
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="page14">
+            <div class="section-container w-full h-auto mt-7 p-3">
+                <div class="content-container">
+                    <h2 class="cust-size-question lg:text-3xl text-sm"><span
+                            class="border-2 border-black px-2 py-1  rounded-md">2</span>Pembangunan
+                        Kemahiran
+                    </h2>
+                    <p class="relative border-4 rounded-md border-amber-950 bg-amber-200 inline-block p-2 ml-1 lg:ml-[10%] mt-2
+                        text-[0.5rem] lg:text-2xl">Konsep Pembangunan Kemahiran
+                    </p>
+                    <div
+                        class="mt-2 border-2 flex flex-col border-amber-950 bg-blue-50 lg:text-2xl text-[0.5rem] w-fit mx-auto">
+                        <div class="p-2 border-4 border-black font-bold">
+                            <p class="text-center">Garis Panduan untuk Skill Development
+                            </p>
+                        </div>
+                        <p><i class="fa-solid fa-square-caret-down"></i>3 atau lebih orang/proses　</p>
+                        <p>Mungkin untuk bertindak semasa change point berlaku</p>
+                        <p><i class="fa-solid fa-square-caret-down mt-2 lg:mt-4"></i>3 atau lebih orang/proses (Sasaran
+                            akhir:
+                            Semua proses/orang)</p>
+                        <p>Penyertaan aktif Pekerja Berkemahiran
+                            (peningkatan motivasi)
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-2 mt-2 lg:mt-4">
+                        <div x-data="fullscreenImage(`img/apg-16.png`)" class="flex justify-center">
+                            <img src="img/apg-16.png" class="w-4/5 h-auto cursor-pointer mt-1 mb-3"
+                                @click="openFullscreen()">
+                        </div>
+                        <div class="flex flex-col text-[0.5rem] lg:text-2xl justify-center items-center">
+                            <div class="border-2 border-black flex flex-col w-fit mx-auto m-2">
+                                <div class="border-2 border-black text-center font-bold">
+                                    Urutan Pembangunan
+                                </div>
+                                <div class="flex items-center justify-center">
+                                    <ol class="list-decimal list-inside">
+                                        <li>Trainer (orang yang mengajar kerja)
+                                        </li>
+                                        <li>
+                                            Proses kekurangan pekerja yang cekap　
+                                        </li>
+                                        <li>
+                                            Pekerja dengan bilangan proses yang tidak mencukupi
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div
+                                class="border-2 border-black p-2 m-2 flex flex-col h-fit rounded-2xl justify-center items-center">
+                                Tahap kemahiran 3 atau lebih tinggi(tidak termasuk TL)
+                            </div>
+                        </div>
+                    </div>
+                    <p class="relative border-4 rounded-md border-amber-950 bg-amber-200 inline-block p-2 ml-1 lg:ml-[10%] mt-2
+                        text-[0.5rem] lg:text-2xl">Ringkasan
+                    </p>
+                    <hr class=" my-4 border-t-4 border-white">
+                    <div class="flex flex-col justify-center items-center">
+                        <div
+                            class="border-2 border-amber-950 bg-yellow-200 text-[0.5rem] lg:text-2xl p-2 m-2 text-center w-4/5">
+                            <p>
+                                Follow up kemajuan berdasarkan Pembangunan<span
+                                    class="text-[0.4rem] lg:text-sm">(training)</span> Plan
+                                <br>(Pembangunan kemahiran tidak boleh dicapai tanpa
+                                Pengurusan Genba Stabil).
+                            </p>
+                        </div>
+                        <p class="text-[0.7rem] lg:text-4xl"><i class="fa-solid fa-arrow-down"></i></p>
+                        <div
+                            class="border-2 border-amber-950 bg-blue-100 text-blue-600 text-[0.5rem] lg:text-2xl w-4/5">
+                            <div class="border-2 border-pink-400 text-left w-fit rounded-tr-lg rounded-br-lg ">
+                                <p class="font-bold bg-pink-400 text-black lg:p-2 p-1">Peranan Kakitangan
+                                    Pengurusan/Penyeliaan
+                                </p>
+                            </div>
+                            <p class="text-center">
+                                Mewujudkan persekitaran di mana Pembangunan<span
+                                    class="text-[0.4rem] lg:text-sm">(training)</span> Perancangan
+                                boleh direalisasikan.
+                                (Bertindak balas terhadap sebarang gangguan untuk menjamin bilangan tenaga kerja dan
+                                lain-lain.)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <section id="page15">
+            <div class="section-container w-full h-auto mt-7 p-3">
+                <div class="content-container">
+                    <h2 class="cust-size-question lg:text-3xl text-sm">Mengekalkan Keadaan untuk Standardized Work
+                        (material)
+                    </h2>
+                    <p class="relative border-4 rounded-md border-amber-950 bg-amber-200 inline-block p-2 ml-1 lg:ml-[10%] mt-2
+                        text-[0.5rem] lg:text-2xl">Perkara yang Perlu Direalisasikan
+                    </p>
+                    <div
+                        class="border-4 border-amber-950 bg-blue-100 lg:text-4xl text-[0.7rem] lg:py-10 py-5 px-2 lg:mx-80 mx-4 mt-2 flex justify-center">
+                        Pengilang menggunakan JIT (Tiada Barang tergendala)
+                    </div>
+                    <p class="relative border-4 rounded-md border-amber-950 bg-amber-200 inline-block p-2 ml-1 lg:ml-[10%] mt-2
+                        text-[0.5rem] lg:text-2xl">Perkara yang Perlu Dilakukan
+                    </p>
+                    <div
+                        class="border-4 border-amber-950 bg-amber-50 lg:text-4xl text-[0.7rem] lg:py-10 py-5 px-2 lg:mx-80 mx-4 mt-2 flex justify-center">
+                        　Mengekalkan keadaan 5S ketika Genba
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="page16">
+            <div class="section-container w-full h-auto mt-7 p-3">
+                <div class="content-container">
+                    <h2 class="cust-size-question lg:text-3xl text-sm">Mengekalkan Keadaan 5S dalam Line
+                    </h2>
+                    <div class="flex justify-center">
+                        <img src="img/apg-17.png" class="w-4/5 h-auto -mt-5 lg:mt-1 mb-3">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="page17">
+            <div class="section-container w-full h-auto mt-7 p-3">
+                <div class="content-container">
+                    <h2 class="cust-size-question lg:text-3xl text-sm">Mengekalkan Keadaan 5S dalam Line (Bahan)
+                    </h2>
+                    <p class="relative border-4 rounded-md border-amber-950 bg-amber-200 inline-block p-2 ml-1 lg:ml-[10%] mt-2
+                        text-[0.5rem] lg:text-2xl">Ringkasan
+                    </p>
+                    <div class="flex justify-center text-center text[0.5rem] lg:text-2xl">
+                        <p>Peranan Pengurusan
+                    </div>
+                    <div class="flex justify-center">
+                        <div
+                            class="border-2 border-black bg-blue-400 p-2 lg:p-4 w-4/5 text-center text-[0.5rem] lg:text-2xl">
+                            <p class="text-[0.6rem] lg:text-3xl">
+                                Pembangunan Sumber Manusia melalui
+                                Penyelesaian Masalah (OJD)
+                            </p>
+                            <p class="text-left lg:mt-4">
+                                <i class="fa-solid fa-circle-right"></i>Peluang disediakan oleh Kakitangan Pengurusan/
+                                Penyeliaan
+                            </p>
+                            <p class="text-left">
+                                <i class="fa-solid fa-circle-right"></i>Melalui OJD, bukan sahaja untuk memahami
+                                "fenomena"
+                                tetapi juga mengamalkan “ 5 Whys ”
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex justify-center lg:mt-8 mt-4">
+                        <div class="border-2 border-black p-2 lg:p-4 w-4/5 text-center text-[0.5rem] lg:text-2xl">
+                            <p class="text-[0.6rem] lg:text-3xl text-blue-800">
+                                Pencegahan dan Penyeragaman Berulang (mewujudkan Persekitaran yang membolehkan Pematuhan
+                                kepada Peraturan)
+                            </p>
+                            <p class="text-left lg:mt-4">
+                                <i class="fa-solid fa-circle-right"></i>Jangan berhenti dalam skop apa yang boleh
+                                dilakukan oleh orang bawahan sahaja,
+                                tetapi juga menentukan keperluan untuk
+                                penglibatan Kakitangan Pengurusan dan Penyeliaan.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="page18">
+            <div class="section-container w-full h-auto mt-7 p-3">
+                <div class="content-container">
+                    <h2 class="cust-size-question lg:text-3xl text-sm"> <span class="number-circle">2</span>Pengurusan
+                        Genba yang Stabil
+                    </h2>
+                    <div class="item flex justify-center">
+                        <span class="relative flex size-3 mb-2"> <span
+                                class="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-75"></span>
+                            <span class="relative inline-flex size-3 rounded-full bg-sky-500"></span></span>
+                        <img src="img/apg-13-1.png" class="w-4/5 h-auto cursor-pointer -mt-5 lg:mt-1 mb-3">
+                    </div>
+                    <div class="panel max-h-0 overflow-hidden opacity-0 transition-all duration-300 ease-out">
+                        <div class="flex justify-center">
+                            <img src="img/apg-13-3.png" class="w-4/5 h-auto -mt-5 lg:mt-1 mb-3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="page19">
+            <div class="section-container w-full h-auto mt-7 p-3">
+                <div class="content-container">
+                    <h2 class="cust-size-question lg:text-3xl text-sm">Sahkan sama ada Keupayaan Proses Dikekalkan atau
+                        tidak (Monitoring)
+                    </h2>
+                    <p class="relative border-4 rounded-md border-amber-950 bg-amber-200 inline-block p-2 ml-1 lg:ml-[10%] mt-2
+                        text-[0.5rem] lg:text-2xl">Visualisasi Progress daripada Production Volume: “Production Control
+                        Board”
+                    </p>
+                    <div class="flex justify-center">
+                        <img src="img/apg-18.png" class="w-4/5 h-auto -mt-5 lg:mt-1 mb-3">
+                    </div>
+                    <hr class=" my-4 border-t-4 border-white">
+                    <p class="relative border-4 rounded-md border-amber-950 bg-amber-200 inline-block p-2 ml-1 lg:ml-[10%] mt-2
+                        text-[0.5rem] lg:text-2xl">Visualisasi Keadaan Operasi : Andon
+                    </p>
+                    <div class="flex justify-center items-center w-4/5 mx-auto mt-2 gap-2">
+                        <div class="flex flex-col border-2 border-black w-1/2 mr-1">
+                            <p class="lg:text-2xl text-[0.6rem] font-bold"><i class="fa-solid fa-square"></i> Process
+                                Andon</p>
+                            <p class="lg:text-xl text-[0.5rem] font-bold"><i class="fa-solid fa-caret-right"></i></i>
+                                Fahami Operasi dalam Line
+                                (Plan, Result)
+                            </p>
+                            <img src="img/apg-19-1.png" class="lg:w-96 lg:h-96 w-28 h-28 mt-2 p-2 mx-auto">
+                        </div>
+                        <div class="flex flex-col border-2 border-black w-1/2 mr-1">
+                            <p class="lg:text-2xl text-[0.6rem] font-bold"><i class="fa-solid fa-square"></i> Process
+                                Andon</p>
+                            <p class="lg:text-xl text-[0.5rem] font-bold"><i class="fa-solid fa-caret-right"></i></i>
+                                Fahami Keadaan Operasi
+                                (Call, Stop, Buffer units)
+                            </p>
+                            <img src="img/apg-19-2.png" class="lg:w-96 lg:h-96 w-28 h-28 mt-2 p-2 mx-auto">
+                        </div>
+                    </div>
+                    <div
+                        class="flex justify-center w-4/5 p-2 lg:p-4 text-[0.6rem] lg:text-3xl mx-auto bg-pink-400 mt-2 border-black border-2 font-bold">
+                        <p class="text-blue-700">Bertindak balas dengan segera kepada sebarang Abnormaliti</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="page20">
+            <div class="section-container w-full h-auto mt-7 p-3">
+                <div class="content-container">
+                    <h2 class="cust-size-question lg:text-3xl text-sm"><span class="number-circle">2</span>Pengurusan
+                        Genba yang Stabil
+                    </h2>
+                    <div class="item flex justify-center">
+                        <span class="relative flex size-3 mb-2"> <span
+                                class="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-75"></span>
+                            <span class="relative inline-flex size-3 rounded-full bg-sky-500"></span></span>
+                        <img src="img/apg-13-1.png" class="w-4/5 h-auto cursor-pointer -mt-5 lg:mt-1 mb-3">
+                    </div>
+                    <div class="panel max-h-0 overflow-hidden opacity-0 transition-all duration-300 ease-out">
+                        <div class="flex flex-col items-center justify-center">
+                            <img src="img/apg-13-2-2.png" class="w-4/5 h-auto -mt-5 lg:mt-1 mb-3">
+                            <img src="img/apg-13-2-3.png" class="w-4/5 h-auto -mt-5 lg:mt-1 mb-3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="page21">
+            <div class="section-container w-full h-auto mt-7 p-3">
+                <div class="content-container">
+                    <h2 class="cust-size-question lg:text-3xl text-sm"><span
+                            class="border-2 border-black px-2 py-1  rounded-md">1</span> Membuat pengkhususan polisi
+                    </h2>
+                    <p class="relative border-4 rounded-md border-amber-950 bg-amber-200 inline-block p-2 ml-1 lg:ml-[10%] mt-2
+                        text-[0.5rem] lg:text-2xl">Apa itu Polisi?
+                    </p>
+                    <div
+                        class="mt-2 lg:p-8 p-4 flex w-1/2 mx-auto lg:text-2xl text-[0.5rem] bg-blue-300 border-2 border-black text-center justify-center">
+                        Aktiviti yang Ditekankan dan Ditetapkan untuk <br> Mencapai Sasaran
+                    </div>
+                    <p class="relative border-4 rounded-md border-amber-950 bg-amber-200 inline-block p-2 ml-1 lg:ml-[10%] mt-2
+                        text-[0.5rem] lg:text-2xl">Perkara semasa membuat polisi
+                    </p>
+                    <div
+                        class="mt-2 lg:p-8 p-4 flex w-1/2 mx-auto lg:text-2xl text-[0.5rem] font-bold text-blue-700 border-2 border-black text-center justify-center">
+                        • Tetapkan Item Tertentu untuk dilaksanakan dan Sasaran Nilai.
+                        <br> Diklasifikasikan dalam lima tugas utama.
+                    </div>
+                    <hr class=" my-4 border-t-4 border-white">
+                    <div class="flex justify-center">
+                        <img src="img/apg-20.png" class="w-4/5 h-auto -mt-5 lg:mt-2 mb-3">
+                    </div>
+                </div>
+        </section>
+        <section id="page22">
+            <div class="section-container w-full h-auto mt-7 p-3">
+                <div class="content-container">
+                    <h2 class="cust-size-question lg:text-3xl text-sm"><span
+                            class="border-2 border-black px-2 py-1  rounded-md">2</span> Visualisasikan dan Tetapkan
+                        Keutamaan Aktiviti
+                    </h2>
+                    <div class="item flex justify-center">
+                        <span class="relative flex size-3 mb-2"> <span
+                                class="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-75"></span>
+                            <span class="relative inline-flex size-3 rounded-full bg-sky-500"></span></span>
+                        <img src="img/apg-21-1.png" class="w-4/5 h-auto cursor-pointer -mt-5 lg:mt-1 mb-3">
+                    </div>
+                    <div class="panel max-h-0 overflow-hidden opacity-0 transition-all duration-300 ease-out">
+                        <div class="flex flex-col items-center justify-center">
+                            <img src="img/apg-21-2.png" class="w-4/5 h-auto -mt-5 lg:mt-1 mb-3">
+                        </div>
+                    </div>
+                    <hr class=" my-4 border-t-4 border-white">
+                    <p class="relative border-4 rounded-md border-amber-950 bg-amber-200 inline-block p-2 ml-1 lg:ml-[10%] mt-2
+                        text-[0.5rem] lg:text-2xl">Genba Management Board
+                    </p>
+                    <div class="flex justify-center text-center lg:text-2xl text-[0.5rem] mt-2">
+                        <p>Apa itu Genba Management Board? (Dinilai secara relatif, secara bulanan)</p>
+                    </div>
+                    <div
+                        class="rounded-xl mt-2 lg:p-8 p-4 flex w-1/2 mx-auto lg:text-2xl text-[0.5rem] bg-blue-300 border-2 border-black text-center justify-center font-bold">
+                        KPI analisis, Dikategorikan dan Disusun daripada Item Pengurusan (kawalan) kepada Section
+                        Aktiviti untuk mencapai sasaran polisi.
+                    </div>
+                    <p class="mt-2 text-purple-700 lg:text-2xl text-[0.5rem] ml-[10%]"><i
+                            class="fa-solid fa-circle-info"></i>
+                        Definisi setiap KPI
+                    </p>
+                    <div class="flex flex-col w-4/5 mx-auto mt-2 lg:text-2xl text-[0.5rem]">
+                        <div class="flex border-2 bg-amber-50 border-black">
+                            <div class="w-[30%] p-2 border-r-2 border-black
+                                flex items-center justify-center text-center">
+                                Main KPI
+                            </div>
+                            <div class="w-[70%] p-2
+                                flex items-center justify-center text-center">
+                                Mewakili KPI Seksyen yang memberi impak langsung kepada Sasaran Pencapaian Jabatan.
+                            </div>
+                        </div>
+                        <div class="flex border-2 border-t-0 bg-amber-50 border-black">
+                            <div class="w-[30%] p-2 border-r-2 border-black
+                                flex items-center justify-center text-center">
+                                Sub KPI
+                            </div>
+                            <div class="w-[70%] p-2
+                                flex items-center justify-center text-center">
+                                Faktor-faktor yang membentuk atau menghalang sasaran Main KPI.
+                            </div>
+                        </div>
+                        <div class="flex border-2 border-t-0 bg-amber-50 border-black">
+                            <div class="w-[30%] p-2 border-r-2 border-black
+                                flex items-center justify-center text-center">
+                                Process KPI
+                            </div>
+                            <div class="w-[70%] p-2
+                                flex items-center justify-center text-center">
+                                Hasil setiap aktiviti yang meningkatkan sub-KPI (berkait dengan Activity Board)
+                            </div>
+                        </div>
+                    </div>
+                    <hr class=" my-4 border-t-4 border-white">
+                    <p class="relative border-4 rounded-md border-amber-950 bg-amber-200 inline-block p-2 ml-1 lg:ml-[10%] mt-2
+                        text-[0.5rem] lg:text-2xl">Board Aktiviti
+                    </p>
+                    <div class="flex justify-center text-center lg:text-2xl text-[0.5rem] mt-2">
+                        <p> Apa itu Board Aktiviti? (Penilaian Keputusan Harian berdasarkan Nilai Mutlak)
+                        </p>
+                    </div>
+
+                    <div
+                        class=" item rounded-xl mt-2 lg:p-8 p-4 flex w-1/2 mx-auto lg:text-2xl text-[0.5rem] bg-red-400 border-2 border-black text-center justify-center font-bold">
+                        <span class="relative flex size-3 mb-2"> <span
+                                class="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-75"></span>
+                            <span class="relative inline-flex size-3 rounded-full bg-sky-500"></span></span>
+                        Board yang Memaparkan Kandungan, Progres, dan Result Aktiviti Harian(Berkait dengan process KPI
+                        / Board Management Genba)
+                    </div>
+                    <div class="flex-col justify-center panel max-h-0 overflow-hidden opacity-0 transition-all
+                        duration-300 ease-out">
+                        <div class="flex">
+                            <p class="mt-2 lg:text-4xl text-[0.8rem] mx-auto">
+                                <i class="fa-solid fa-arrow-down-long"></i>
+                            </p>
+                        </div>
+                        <div
+                            class="flex flex-col lg:gap-4 gap-2 w-4/5 mt-2 border-2 p-2 lg:p-4 border-black mx-auto lg:text-2xl text-[0.5rem]">
+                            <div class="flex flex-row">
+                                <div class="w-[70%]">
+                                    <p><i class="fa-solid fa-caret-down"></i>Orang yang bertanggungjawab (PIC)</p>
+                                </div>
+                                <div class="w-[30%]">
+                                    <p>--- Siapa?
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex flex-row">
+                                <div class="w-[70%]">
+                                    <p><i class="fa-solid fa-caret-down"></i>Pelan Aktiviti</p>
+                                </div>
+                                <div class="w-[30%]">
+                                    <p>--- Sehingga bila?
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex flex-row">
+                                <div class="w-[70%]">
+                                    <p><i class="fa-solid fa-caret-down"></i>PDCA Aktiviti</p>
+                                </div>
+                                <div class="w-[30%]">
+                                    <p>--- Bagaimana?
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex flex-row">
+                                <div class="w-[70%]">
+                                    <p><i class="fa-solid fa-caret-down"></i>Keputusan Aktiviti</p>
+                                </div>
+                                <div class="w-[30%]">
+                                    <p>--- Berapa banyak?
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex flex-row">
+                                <div class="w-[70%]">
+                                    <p><i class="fa-solid fa-caret-down"></i>Masalah dalam melaksanakan Aktiviti</p>
+                                </div>
+                                <div class="w-[30%]">
+                                    <p>--- Apa dan bagaimana?
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="relative border-2 rounded-md border-amber-950 bg-amber-300 inline-block p-2 ml-1 lg:ml-[10%] mt-4
+                        text-[0.5rem] lg:text-2xl">Relationship with the Management Board
+                        </p>
+                        <div class="flex justify-center">
+                            <img src="img/apg-22.png" class="w-4/5 h-auto -mt-5 lg:mt-2 mb-3">
+                        </div>
+                    </div>
+                    <hr class=" my-4 border-t-4 border-white">
+                    <p class="relative border-4 rounded-md border-amber-950 bg-amber-200 inline-block p-2 ml-1 lg:ml-[10%] mt-2
+                        text-[0.5rem] lg:text-2xl">Pengenalan Kes : Board Kawalan Pengurusan Genba
+                    </p>
+                    <p class="relative border-2 rounded-md border-amber-950 bg-amber-300 inline-block p-2 ml-1 lg:ml-[10%] mt-4
+                        text-[0.5rem] lg:text-2xl">Polisi Jabatan ~ digunakan pada Sasaran section
+                    </p>
+                    <div class="flex justify-center">
+                        <img src="img/apg-23.png" class="w-4/6 h-auto -mt-5 lg:mt-2 mb-3">
+                    </div>
+                    <p class="relative border-2 rounded-md border-amber-950 bg-amber-300 inline-block p-2 ml-1 lg:ml-[10%] mt-4
+                        text-[0.5rem] lg:text-2xl">Making of KPI Tree? ( Main KPI )
+                    </p>
+                    <div class="item flex w-4/5 flex-row justify-center items-center mt-2 mx-auto gap-2 lg:gap-4">
+                        <span class="relative flex size-3 mb-2"> <span
+                                class="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-75"></span>
+                            <span class="relative inline-flex size-3 rounded-full bg-sky-500"></span></span>
+                        <div
+                            class="border-2 border-black bg-blue-300 w-[20%] text-center lg:text-2xl text-[0.5rem] p-2 mb-2">
+                            Main KPI
+                        </div>
+                        <div
+                            class="border-2 border-black bg-yellow-100 w-[80%] text-center lg:text-2xl text-[0.5rem] p-2 mb-2">
+                            Aliran Keluar Defect "Sifar" ke Pasaran
+                        </div>
+                    </div>
+                    <div class="panel max-h-0 overflow-hidden opacity-0 transition-all
+                        duration-300 ease-out">
+                        <div class="flex">
+                            <p class="mt-2 lg:text-4xl text-[0.8rem] mx-auto">
+                                <i class="fa-solid fa-arrow-down-long"></i>
+                            </p>
+                        </div>
+                        <div class="flex justify-center">
+                            <img src="img/apg-24.png" class="w-4/6 h-auto -mt-5 lg:mt-2 mb-3">
+                        </div>
+                        <div
+                            class="mt-2 border-2 border-black bg-pink-400 lg:text-2xl text-[0.5rem] px-4 pb-4 lg:px-8 lg:pb-8 w-4/5 mx-auto">
+                            <p class="bg-pink-600 w-fit border-2 border-pink-950 p-2 rounded-xl">Konsep tentang cara
+                                menurunkannya ke
+                                sub-KPI</p>
+                            <p>
+                                Pada FY00, kami akan bekerja berdasarkan konsep
+                                "Tiada Kecacatan Dalam Proses" dan "Tiada Aliran Keluar Kecacatan Dalam Proses".
+                                Di sini, tumpuan adalah pada 'Tiada Kecacatan Dalam Proses' dan menerangkan tentang
+                                bagaimana untuk menurunkannya bagi mencapai KPI.
+                            </p>
+                        </div>
+                    </div>
+                    <hr class=" my-4 border-t-4 border-white">
+                    <p class="relative border-2 rounded-md border-amber-950 bg-amber-300 inline-block p-2 ml-1 lg:ml-[10%] mt-4
+                        text-[0.5rem] lg:text-2xl">Making of KPI Tree? ( Sub KPI )
+                    </p>
+                    <div class="item flex w-4/5 flex-row justify-center items-center mt-2 mx-auto gap-2 lg:gap-4">
+                        <span class="relative flex size-3 mb-2"> <span
+                                class="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-75"></span>
+                            <span class="relative inline-flex size-3 rounded-full bg-sky-500"></span></span>
+                        <div
+                            class="border-2 border-black bg-blue-300 w-[20%] text-center lg:text-2xl text-[0.5rem] p-2 mb-2">
+                            Sub KPI
+                        </div>
+                        <div
+                            class="border-2 border-black bg-yellow-100 w-[80%] text-center lg:text-2xl text-[0.5rem] p-2 mb-2">
+                            Kecacatan Dalam Proses ditemui di QG (Sasaran: Kurang daripada 0.05%)
+                        </div>
+                    </div>
+                    <div class="panel max-h-0 overflow-hidden opacity-0 transition-all
+                        duration-300 ease-out">
+                        <div class="flex">
+                            <p class="mt-2 lg:text-4xl text-[0.8rem] mx-auto">
+                                <i class="fa-solid fa-arrow-down-long"></i>
+                            </p>
+                        </div>
+                        <div class="flex justify-center">
+                            <img src="img/apg-25.png" class="w-4/6 h-auto -mt-5 lg:mt-2 mb-3">
+                        </div>
+                    </div>
+                    <hr class=" my-4 border-t-4 border-white">
+                    <p class="relative border-2 rounded-md border-amber-950 bg-amber-300 inline-block p-2 ml-1 lg:ml-[10%] mt-4
+                        text-[0.5rem] lg:text-2xl">Making of KPI Tree? ( Sub KPI )
+                    </p>
+                    <div class="item flex w-4/5 flex-row justify-center items-center mt-2 mx-auto gap-2 lg:gap-4">
+                        <span class="relative flex size-3 mb-2"> <span
+                                class="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-75"></span>
+                            <span class="relative inline-flex size-3 rounded-full bg-sky-500"></span></span>
+                        <div
+                            class="border-2 border-black bg-blue-300 w-[20%] text-center lg:text-2xl text-[0.5rem] p-2 mb-2">
+                            Process KPI
+                        </div>
+                        <div
+                            class="border-2 border-black bg-yellow-100 w-[80%] text-center lg:text-2xl text-[0.5rem] p-2 mb-2">
+                            Kadar pengambilan tindakan balas Kecacatan QG(Sasaran: 100％)
+                        </div>
+                    </div>
+                    <div class="panel max-h-0 overflow-hidden opacity-0 transition-all
+                        duration-300 ease-out">
+                        <div class="flex">
+                            <p class="mt-2 lg:text-4xl text-[0.8rem] mx-auto">
+                                <i class="fa-solid fa-arrow-down-long"></i>
+                            </p>
+                        </div>
+                        <div class="flex justify-center">
+                            <img src="img/apg-26.png" class="w-4/6 h-auto -mt-5 lg:mt-2 mb-3">
+                        </div>
+                        <div class="flex justify-center">
+                            <img src="img/apg-27.png" class="w-4/6 h-auto -mt-5 lg:mt-2 mb-3">
+                        </div>
+                    </div>
+                    <hr class=" my-4 border-t-4 border-white">
+                    <p class="relative border-2 rounded-md border-amber-950 bg-amber-300 inline-block p-2 ml-1 lg:ml-[10%] mt-4
+                        text-[0.5rem] lg:text-2xl">Bagaimana untuk merangka KPI? (KPI Proses ~ Aktiviti harian)
+                    </p>
+                    <div class="item flex w-4/5 flex-row justify-center items-center mt-2 mx-auto gap-2 lg:gap-4">
+                        <span class="relative flex size-3 mb-2"> <span
+                                class="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-75"></span>
+                            <span class="relative inline-flex size-3 rounded-full bg-sky-500"></span></span>
+                        <div
+                            class="border-2 border-black bg-blue-300 w-[20%] text-center lg:text-2xl text-[0.5rem] p-2 mb-2">
+                            Process KPI
+                        </div>
+                        <div
+                            class="border-2 border-black bg-yellow-100 w-[80%] text-center lg:text-2xl text-[0.5rem] p-2 mb-2">
+                            Kadar pengambilan tindakan balas Kecacatan QG(Sasaran: 100％)
+                        </div>
+                    </div>
+                    <div class="panel max-h-0 overflow-hidden opacity-0 transition-all
+                        duration-300 ease-out">
+                        <div class="flex">
+                            <p class="mt-2 lg:text-4xl text-[0.8rem] mx-auto">
+                                <i class="fa-solid fa-arrow-down-long"></i>
+                            </p>
+                        </div>
+                        <div class="flex justify-center">
+                            <img src="img/apg-28.png" class="w-4/6 h-auto -mt-5 lg:mt-2 mb-3">
+                        </div>
+                    </div>
+                    <hr class=" my-4 border-t-4 border-white">
+                    <p class="relative border-4 rounded-md border-amber-950 bg-amber-200 inline-block p-2 ml-1 lg:ml-[10%] mt-2
+                        text-[0.5rem] lg:text-2xl">Pengenalan kes: Board Aktiviti
+                    </p>
+                    <p class="relative border-2 rounded-md border-amber-950 bg-amber-300 w-fit p-2 ml-1 lg:ml-[10%] mt-4
+                        text-[0.5rem] lg:text-2xl">Untuk merangka rancangan aktiviti
+                    </p>
+                    <div class="flex justify-center">
+                        <img src="img/apg-29.png" class="w-4/6 h-auto -mt-5 lg:mt-2 mb-3">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="page23">
+            <div class="section-container w-full h-auto mt-7 p-3">
+                <div class="content-container">
+                    <h2 class="cust-size-question lg:text-3xl text-sm">Penyelesaian Masalah Harian</h2>
+                    <div class="w-4/5 flex gap-4 lg:gap-2 mx-auto mb-4">
+                        <div
+                            class="w-[10%] border border-black p-2 lg:p-4 bg-blue-50 text-center flex items-center justify-center lg:text-2xl text-[0.5rem]">
+                            <p>1</p>
+                        </div>
+                        <div class="w-[90%] border border-black p-2 lg:p-4 bg-blue-50 lg:text-2xl text-[0.5rem]">
+                            <p>Bahagian: Visualisasi Butiran Aktiviti </p>
+                            <p>Tahap pengurusan: <b class="text-blue-700">Arahan dan Galakan untuk Aktiviti</b></p>
+                        </div>
+                    </div>
+                    <div class="w-4/5 flex gap-4 lg:gap-2 mx-auto">
+                        <div
+                            class="w-[10%] border border-black p-2 lg:p-4 bg-blue-50 text-center flex items-center justify-center lg:text-2xl text-[0.5rem]">
+                            <p>2</p>
+                        </div>
+                        <div class="w-[90%] border border-black p-2 lg:p-4 bg-blue-50 lg:text-2xl text-[0.5rem]">
+                            <p>Bahagian: Visualisasi Tugas dan Kebimbangan ( Check sheet Kenalpasti Masalah )</p>
+                            <p>Tahap pengurusan:<b class="text-blue-700"> Tentukan Tindakan Balas (juga bertindak dan
+                                    bekerjasama dengan aktiviti)</b>
+                        </div>
+                    </div>
+                    <div class="flex justify-center">
+                        <img src="img/apg-30.png" class="w-4/5 h-auto lg:mt-2 mb-3">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="page24">
+            <div class="section-container w-full h-auto mt-7 p-3">
+                <div class="content-container">
+                    <h2 class="cust-size-question lg:text-3xl text-sm"><span class="number-circle">2</span>Pengurusan
+                        Genba yang Stabil</h2>
+                    <p class="relative border-4 rounded-md border-amber-950 bg-amber-200 inline-block p-2 ml-1 lg:ml-[10%] mt-2
+                        text-[0.5rem] lg:text-2xl">Ringkasan
+                    </p>
+                    <div class="item mt-4 border-2 border-black bg-blue-300 flex w-4/5 mx-auto p-4 lg:p-8 text-[0.5rem] lg:text-2xl
+                        justify-center">
+                        <span class="relative flex size-3 mb-2"> <span
+                                class="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-75"></span>
+                            <span class="relative inline-flex size-3 rounded-full bg-sky-500"></span></span>
+                        <p>
+                            Hanya aktiviti Genba yang menghasilkan hasil.
+                        </p>
+                    </div>
+                    <div class="panel max-h-0 overflow-hidden opacity-0 transition-all
+                        duration-300 ease-out">
+                        <div class="flex">
+                            <p class="mt-2 lg:text-4xl text-[0.8rem] mx-auto">
+                                <i class="fa-solid fa-arrow-down-long"></i>
+                            </p>
+                        </div>
+                        <div class="flex justify-center">
+                            <img src="img/apg-31.png" class="w-4/5 h-auto lg:mt-2 mb-3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="page25">
+            <div class="section-container w-full h-auto mt-7 p-3">
+                <div class="content-container">
+                    <h2 class="cust-size-question lg:text-3xl text-sm"><span class="number-circle">3</span>Penilaian
+                        Keputusan & Penyerahan informasi</h2>
+                    <p class="relative border-4 rounded-md border-amber-950 bg-amber-200 inline-block p-2 ml-1 lg:ml-[10%] mt-2
+                        text-[0.5rem] lg:text-2xl">Perkara yang Perlu Direalisasikan
+                    </p>
+                    <div
+                        class="border-4 border-amber-950 bg-blue-100 lg:text-4xl text-[0.7rem] lg:py-10 py-5 px-2 lg:mx-80 mx-4 mt-2 flex justify-center text-center">
+                        Menjamin keadaan untuk shif seterusnya bagi melaksanakan pengeluaran dengan lancer.
+                    </div>
+                    <p class="relative border-4 rounded-md border-amber-950 bg-amber-200 inline-block p-2 ml-1 lg:ml-[10%] mt-2
+                        text-[0.5rem] lg:text-2xl">Perkara yang Perlu Dilakukan
+                    </p>
+                    <div
+                        class="flex flex-col border-4 border-amber-950 bg-amber-50 lg:text-4xl text-[0.7rem] lg:py-10 py-5 px-2 lg:mx-80 mx-4 mt-2 gap-5 justify-center">
+                        <div class="grid grid-cols-5">
+                            <p class="number-circle">1</p>
+                            <p class="col-span-4">Mengekalkan keadaan 5S pada Genba (Part dan Peralatan)
+                            </p>
+                        </div>
+                        <div class="grid grid-cols-5">
+                            <p class="number-circle">2</p>
+                            <p class="col-span-4">Visualisasi Prestasi Operasi (Maklumat)
+                                Penyampaian komen mengenai titik perubahan
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="page26">
+            <div class="section-container w-full h-auto mt-7 p-3">
+                <div class="content-container">
+                    <h2 class="cust-size-question lg:text-3xl text-sm"><span
+                            class="border-2 border-black px-2 py-1  rounded-md">1</span>Mengekalkan keadaan 5S pada
+                        Genba (Material dan Peralatan)
+                    </h2>
+                    <div
+                        class="item w-4/6 flex p-4 lg:text-2xl text-[0.5rem] mx-auto border-2 border-black text-center">
+                        <span class="relative flex size-3 mb-2"> <span
+                                class="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-75"></span>
+                            <span class="relative inline-flex size-3 rounded-full bg-sky-500"></span></span>
+                        <p>Menjamin keadaan untuk shif seterusnya bagi memulakan pengeluaran tanpa kegagalan atau
+                            kehilangan part
+                            = Pentingnya peranan diri sendiri
+                        </p>
+                    </div>
+                    <div class="panel max-h-0 overflow-hidden opacity-0 transition-all
+                        duration-300 ease-out">
+                        <div class="flex">
+                            <p class="mt-2 lg:text-4xl text-[0.8rem] mx-auto">
+                                <i class="fa-solid fa-arrow-down-long"></i>
+                            </p>
+                        </div>
+                        <div class="flex justify-center">
+                            <img src="img/apg-32.png" class="w-4/5 h-auto lg:mt-2 mb-3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="page26">
+            <div class="section-container w-full h-auto mt-7 p-3">
+                <div class="content-container">
+                    <h2 class="cust-size-question lg:text-3xl text-sm"><span
+                            class="border-2 border-black px-2 py-1  rounded-md">2</span>Visualisasi Prestasi Operasi
+                        (Maklumat)
+                    </h2>
+                    <p class="relative border-4 rounded-md border-amber-950 bg-amber-200 inline-block p-2 ml-1 lg:ml-[10%] mt-2
+                        text-[0.5rem] lg:text-2xl">Pendekatan untuk Menyerahkan Mesej
+                    </p>
+                    <div
+                        class="w-4/6 flex p-4 lg:text-2xl text-[0.5rem] mx-auto border-2 border-black text-center bg-blue-400 text-blue-900 mt-4 font-bold">
+                        <p>Menjamin keadaan untuk shif seterusnya bagi memulakan pengeluaran tanpa kegagalan atau
+                            kehilangan part
+                            = Pentingnya peranan diri sendiri
+                        </p>
+                    </div>
+                    <p class="relative border-4 rounded-md border-amber-950 bg-amber-200 inline-block p-2 ml-1 lg:ml-[10%] mt-2
+                        text-[0.5rem] lg:text-2xl"> Item Mesej Utama
+                    </p>
+                    <div class="flex justify-center">
+                        <img src="img/apg-33.png" class="w-4/5 h-auto lg:mt-2 mb-3">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="page27">
+            <div class="section-container w-full h-auto mt-7 p-3">
+                <div class="content-container">
+                    <h2 class="cust-size-question lg:text-3xl text-sm"><span class="number-circle">3</span>Penilaian
+                        Keputusan & Penyerahan informasi</h2>
+                    <p class="relative border-4 rounded-md border-amber-950 bg-amber-200 inline-block p-2 ml-1 lg:ml-[10%] mt-2
+                        text-[0.5rem] lg:text-2xl">Cara Menyerahkan kepada Syif Seterusnya
+                    </p>
+                    <div
+                        class="w-3/6 flex p-4 lg:text-2xl text-[0.5rem] mx-auto border-2 border-black text-center font-bold bg-blue-400 mt-4">
+                        <p>Mengesahkan dan mengisi nota untuk menyerahkan kepada syif seterusnya
+                        </p>
+                    </div>
+                    <div class="flex justify-center">
+                        <img src="img/apg-34.png" class="w-4/5 h-auto lg:mt-2 mb-3">
+                    </div>
+                    <hr class=" my-4 border-t-4 border-white">
+                    <p class="relative border-4 rounded-md border-amber-950 bg-amber-200 inline-block p-2 ml-1 lg:ml-[10%] mt-2
+                        text-[0.5rem] lg:text-2xl">Ringkasan
+                    </p>
+                    <div class="flex justify-center mt-2">
+                        <p class="lg:text-2xl text-[0.5rem]">Perkara yang Perlu Direalisasikan:<br>
+                            Menjamin keadaan untuk shif seterusnya untuk melaksanakan pengeluaran dengan lancar
+                        </p>
+                    </div>
+                    <div class="flex justify-center">
+                        <img src="img/apg-35.png" class="w-4/6 h-auto lg:mt-2 mb-3">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="dragItem" class="navigation-button w-22 h-12 lg:w-24 lg:h-28 fixed lg:bottom-1 lg:left-1
+        hidden lg:flex border border-black/50
+        lg:flex-col items-center gap-3 p-2 shadow-2xl">
+        <button class="nav-button flex items-center justify-center p-1 lg:p-3" id="topBtn">
+            <i class="fas fa-angle-up"></i>
+        </button>
+        <button class="nav-button flex items-center justify-center p-1 lg:p-3" id="backBtn">
+            <i class="fas fa-angle-left"></i>
+        </button>
+    </div>
+
+
+
+
+    <footer class="w-full h-16 bg-black flex justify-center items-center mt-10">
+        <span class="block w-full text-center text-sm text-white">
+            © 2025 Genba Management Dojo | All Rights Reserved.
+        </span>
+    </footer>
+    <!--Content Line-->
+    <!-- <hr class=" my-4 border-t-4 border-white"> -->
+
+    <!--Page Template-->
+    <!-- <section id="page">
+            <div class="section-container w-full h-auto mt-7 p-3">
+                <div class="content-container">
+
+                </div>
+            </div>
+        </section> -->
+
+
+
+
+    <!-- Flowbite JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <!-- Alpine.js -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- Global JS -->
+    <script src="js/global.js"></script>
+</body>
+
+</html>

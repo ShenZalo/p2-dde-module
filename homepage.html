@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/output.css">
+    <link rel="icon" href="img/perodua-favicon.png" type="image/x-icon">
+    <title>DDE e-Module</title>
+    <!-- Loader -->
+    <link rel="stylesheet" href="../css/loader.css">
+    <script src="../js/loader.js" defer></script>
+</head>
+
+<body class="min-h-screen bg-[url('../img/bg-production-line.jpg')] bg-cover bg-center bg-no-repeat z-50">
+    <!-- Loader to hide content until fully loaded -->
+    <div class="preloader" id="preloader">
+        <div class="loader">
+            <span class="loader-text">DDE</span>
+        </div>
+    </div>
+    <nav class="w-full scroll-smooth">
+        <div class="border shadow-xl border-black bg-gray-200 rounded-bl-lg rounded-br-lg block md:hidden">
+            <div class="flex items-center justify-between px-2 py-6">
+                <img src="img/perodua-logo.png" alt="Perodua Logo" class="w-1/4 h-auto">
+                <img src="img/burger-icon.svg" alt="Menu" class="w-1/12 h-auto" id="menuBtn">
+            </div>
+        </div>
+        <div id="mobileMenu"
+            class="lg:hidden w-full hidden flex-col px-4 py-6 bg-gray-100 overflow-hidden transition-all duration-300 max-h-0">
+            <ul class="flex flex-col gap-4 lg:text-2xl font-semibold">
+                <li>
+                    <a href="#"
+                        class="block px-4 py-2 rounded bg-gray-300 hover:bg-gray-600  hover:text-white transition-colors duration-200 ease-in-out cursor-pointer">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="modules.html"
+                        class="block px-4 py-2 rounded hover:bg-gray-600 hover:text-white transition-colors duration-200 ease-in-out cursor-pointer">
+                        Modules
+                    </a>
+                </li>
+                <li>
+                    <a href="#"
+                        class="block px-4 py-2 rounded hover:bg-gray-600 hover:text-white transition-colors duration-200 ease-in-out cursor-pointer">
+                        About
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html"
+                        class="block px-4 py-2 rounded active:bg-gray-600 active:text-white hover:bg-gray-600 hover:text-white transition-colors duration-200 ease-in-out cursor-pointer">
+                        Log Out
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="border border-black shadow-2xl bg-gray-200 rounded-bl-lg rounded-br-lg hidden md:block">
+            <div class="flex items-center justify-between px-4 py-6">
+                <div class="flex items-center">
+                    <img src="img/perodua-logo.png" alt="Perodua Logo" class="w-[10%] h-auto">
+                    <ul class="flex gap-10 ml-6 lg:text-2xl font-semibold">
+                        <li><a href="homepage.html"
+                                class="hover:bg-gray-600 bg-gray-300 p-2 rounded-2xl hover:rounded-none hover:p-5 hover:text-white transition-all duration-200 ease-in-out cursor-pointer">Home</a>
+                        </li>
+                        <li><a href="modules.html"
+                                class="hover:bg-gray-600 hover:p-5 hover:text-white transition-all duration-200 ease-in-out cursor-pointer">Modules</a>
+                        </li>
+                        <li><a href="#"
+                                class="hover:bg-gray-600 hover:p-5 hover:text-white transition-all duration-200 ease-in-out cursor-pointer">About</a>
+                        </li>
+                    </ul>
+                </div>
+                <button class="bg-red-500 hover:bg-red-700 transition-colors duration-200 ease-in-out
+           text-white font-bold py-2 px-4 lg:text-2xl rounded cursor-pointer"
+                    onclick="window.location.href='index.html'">
+                    Logout
+                </button>
+            </div>
+        </div>
+    </nav>
+    <main>
+
+        <div
+            class="mx-auto justify-center shadow-2xl shadow-black bg-white rounded-xl w-fit items-center flex my-2 lg:my-6 p-2 lg:p-5">
+            <img src="img/dde-logo.png" alt="DDE Logo" class="h-auto lg:w-1/2 w-1/2 p-2">
+        </div>
+        <div class="w-[95%] mx-auto py-5 px-2 lg:py-10 lg:px-5 bg-blue-950 rounded-lg shadow-md">
+            <div class="grid grid-cols-2 gap-6 text-center">
+                <!-- Vision -->
+                <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200">
+                    <p class="text-[0.7rem] font-bold text-gray-800 md:text-2xl border-b-2">OUR VISION</p>
+                    <p class="mt-2 text-gray-600 text-[0.5rem] md:text-xl">
+                        To be a leading affordable automotive brand regionally with global standard
+                    </p>
+                </div>
+
+                <!-- Mission -->
+                <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-200">
+                    <p class="text-[0.7rem] font-bold text-gray-800 md:text-2xl border-b-2"">OUR MISSION</p>
+                    <ul class=" mt-2 list-disc text-[0.5rem] md:text-xl text-gray-600">
+                        <li>Cost Competitiveness</li>
+                        <li>Enhancement Human Capital Development</li>
+                        <li>Production Strengthening Capabilities</li>
+                        <li>Production Planning and RnD Capabilities</li>
+                        <li>CSR Compliance and Environment</li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="src/global.js"></script>
+</body>
+
+</html>

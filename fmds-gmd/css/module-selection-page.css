@@ -1,0 +1,115 @@
+/* Module style */
+.section-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(45deg, #a8e6cf, #dcedc1);
+    border-radius: 50px;
+}
+
+.section-container h2 {
+    margin-top: 1.8rem;
+    font-size: 28px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.kandungan-table {
+    margin: 20px 0 40px 0;
+    width: 80%;
+    border-collapse: separate;
+    border: 1px solid #b8d8d8;
+    font-size: 16px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.kandungan-table th,
+.kandungan-table td {
+    border: 1px solid #b8d8d8;
+    padding: 10px;
+    text-align: left;
+}
+
+.kandungan-table thead th {
+    background: #a2d5f2;
+    /* header blue */
+    color: #003b5c;
+    font-weight: bold;
+    text-align: center;
+}
+
+.kandungan-table tbody tr:nth-child(even) {
+    background: #e7f8f2;
+    /* light green tint */
+    transition: background-color 0.3s;
+}
+
+.kandungan-table tbody tr:nth-child(odd) {
+    background: #ffffff;
+    transition: background-color 0.3s;
+}
+
+.kandungan-table tbody tr:hover {
+    background: #cfe9ff;
+    /* hover light blue */
+}
+
+.card-layout {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.module-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    margin: 30px;
+    padding: 15px;
+    width: 300px;
+    height: 400px;
+}
+
+.module-card p {
+    margin: 5px 15px 15px 15px;
+    font-size: 30px;
+    font-weight: 700;
+    padding-bottom: 30px;
+}
+
+.card-image {
+    width: 200px;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.button-layout {
+    margin-top: auto;
+}
+
+.start-button {
+    position: relative;
+    bottom: 10px;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    border: none;
+    background-color: #009688;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.start-button:hover {
+    background-color: rgb(29, 179, 162);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}

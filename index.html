@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DDE e-Module Login</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/splash.css" class="rel">
+</head>
+
+<body>
+    <div class="splash">
+        <img src="img/logo.png" class="logo" alt="Logo">
+    </div>
+    <div class="page-container">
+        <div class="left-side-container">
+            <div class="login-box">
+                <div class="dde-logo">
+                    <img src="img/dde-logo.png" alt="DDE Logo">
+                </div>
+                <h2>Login</h2>
+                <form id="login-form">
+                    <input type="email" id="email" placeholder="Email" required><br>
+                    <input type="password" id="password" placeholder="Password" required><br>
+                    <button type="submit" class="login-button">Login</button>
+                </form>
+                <a class="forgot-password" href="#">Forgot password?</a>
+                <a class="register-link" href="register.html">Don't have an account? Register!</a>
+            </div>
+        </div>
+        <div class="right-side-container">
+            <div class="welcome-box">
+                <h2>Welcome to <br>DDE <br>e-Module</h2>
+                <p>Login to access training materials</p>
+            </div>
+        </div>
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-app.js";
+        import { getAuth, signInWithEmailAndPassword, sendPasswordResetEmail }
+            from "https://www.gstatic.com/firebasejs/12.9.0/firebase-auth.js";
+
+        // Correct Firebase config (same as your current one)
+        const firebaseConfig = {
+            apiKey: "AIzaSyB-4KUBbEw2T6Iftr2se8de4ioa44xMsZE",
+            authDomain: "p2-ddemodule.firebaseapp.com",
+            projectId: "p2-ddemodule",
+            storageBucket: "p2-ddemodule.firebasestorage.app",
+            messagingSenderId: "1033811747299",
+            appId: "1:1033811747299:web:e2e79a784432ae3215c0d6",
+            measurementId: "G-JC4GJVLKP2"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        // Login function
+        const loginForm = document.getElementById("login-form");
+        loginForm.addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value;
+
+            if (!email.endsWith("@perodua.com.my")) {
+                alert("Please use your company email!");
+                return;
+            }
+
+            try {
+                const userCredential = await signInWithEmailAndPassword(auth, email, password);
+                const user = userCredential.user;
+
+                if (!user.emailVerified) {
+                    alert("Please verify your email before logging in.");
+                    return;
+                }
+
+                window.location.href = "homepage.html";
+
+            } catch (error) {
+                alert("Invalid email or password!");
+            }
+        });
+
+        // Forgot password
+        const forgotLink = document.querySelector(".forgot-password");
+        forgotLink.addEventListener("click", async (e) => {
+            e.preventDefault();
+
+            const email = prompt("Please enter your company email:");
+            if (!email) return;
+
+            if (!email.endsWith("@perodua.com.my")) {
+                alert("Please enter a valid company email.");
+                return;
+            }
+
+            try {
+                await sendPasswordResetEmail(auth, email);
+                alert("Password reset email sent.");
+            } catch (error) {
+                alert(error.message);
+            }
+        });
+    </script>
+    <script src="js/splash.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <met a name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FMDS Day 1</title>
+        <link rel="stylesheet" href="css/global.css">
+        <link rel="stylesheet" href="css/module-selection-page.css">
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <!-- Loader -->
+        <link rel="stylesheet" href="../css/loader.css">
+        <script src="../js/loader.js" defer></script>
+</head>
+
+<body>
+    <!-- Loader to hide content until fully loaded -->
+    <div class="preloader" id="preloader">
+        <div class="loader">
+            <span class="loader-text">DDE</span>
+        </div>
+    </div>
+
+    <!-- Header --->
+    <div class="module-overview">
+        <div class="overview-header">
+            <img src="img/safety logo.jpg" alt="FMDS Logo" class="image-logo">
+            <h1>MARI MULA BELAJAR<br> FMDS Module <BR> Day 1</h1>
+            <img src="img/1 team 1 goal.jpg" alt="FMDS Logo" class="image-logo">
+        </div>
+        <div class="overview-subheader">
+            <p>Mulai dengan YOSH <b>mesti selamat</b> dan akhiri dengan YOSH <b>1 team 1 goal</b></p>
+        </div>
+    </div>
+
+    <main>
+        <!-- Table to show what's in the module -->
+        <section class="kandungan-section">
+            <div class="section-container">
+                <h2>KANDUNGAN LATIHAN</h2>
+                <table class="kandungan-table">
+                    <thead>
+                        <tr>
+                            <th>TIME</th>
+                            <th>CONTENT</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>9:00 AM - 9:30 AM</td>
+                            <td>
+                                <b>1) Introduction</b>
+                                <ul>
+                                    <li>Objective latihan</li>
+                                    <li>Tindakan selepas latihan</li>
+                                    <li>Pre Test</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>9:30 AM - 10:30 AM</td>
+                            <td>
+                                <b>2) Roles and Responsibilities</b>
+                                <ul>
+                                    <li>Peranan Supervisor & Team Leader</li>
+                                    <li>Keperluan kemahiran</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>10:40 AM - 12:45 PM</td>
+                            <td>
+                                <b>3) 520 Min. Job Cycle</b>
+                                <ul>
+                                    <li>Persediaan sebelum operasi</li>
+                                    <li>Semasa operasi</li>
+                                    <li>Ketika selesai</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2:00 PM - 3:15 PM</td>
+                            <td>
+                                <b>4) Abnormality Control</b>
+                                <ul>
+                                    <li>Kawalan 3 benda bergerak</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3:15 PM - 4:50 PM</td>
+                            <td>
+                                <b>5) Operator Observation</b>
+                                <ul>
+                                    <li>Pemerhatian kerja orang</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Module Content-->
+        <section class="content-section">
+            <div class="section-container">
+                <h2>MODULE CONTENTS</h2>
+                <div class="card-layout">
+                    <div class="module-card">
+                        <img src="img/introductionday1.gif" alt="Introduction Image" class="card-image">
+                        <p>Introduction</p>
+                        <div class="grid-3-layout">
+                            <!-- fullscreen qr when clicked  -->
+                            <button class="attendance-button" onclick="show(`#prepost-test-qr`)"><i
+                                    class="fas fa-qrcode"></i><br>Scan Pre-Test</button>
+                            <button class="start-button"
+                                onclick="window.location.href=`introduction.html`">Mula</button>
+                            <!-- fullscreen qr when clicked  -->
+                            <button class="attendance-button" onclick="show(`#kesihatan-qr`)"><i
+                                    class="fas fa-qrcode"></i><br>
+                                Scan Kesihatan</button>
+                        </div>
+                    </div>
+                    <div class="module-card">
+                        <img src="img/rolesandresponsibilities.gif" alt="Roles and Responsibilities Image"
+                            class="card-image">
+                        <p>Roles and Responsibilities</p>
+                        <button class="start-button"
+                            onclick="window.location.href=`roles-n-responsibility.html`">Mula</button>
+                    </div>
+                </div>
+                <div class="card-layout">
+                    <div class="module-card">
+                        <img src="img/520min.gif" alt="520 Min Job Cycle Image" class="card-image">
+                        <p>520 Min Job Cycle</p>
+                        <div class="button-layout">
+                            <button class="start-button" onclick="window.location.href=`520min.html`">Mula</button>
+                        </div>
+                    </div>
+                    <div class="module-card">
+                        <img src="img/abnormality-control.gif" alt="Abnormality Control Image" class="card-image">
+                        <p>Abnormality Control</p>
+                        <div class="button-layout">
+                            <button class="start-button"
+                                onclick="window.location.href=`abnormality-control.html`">Mula</button>
+                        </div>
+                    </div>
+                    <div class="module-card">
+                        <img src="img/operator-observation.gif" alt="Operator Observation Image" class="card-image">
+                        <p>Operator Observation</p>
+                        <div class="button-layout">
+                            <button class="start-button"
+                                onclick="window.location.href=`op-observation.html`">Mula</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Genba Management Dojo | All Rights Reserved.</p>
+    </footer>
+
+    <!-- Navigation Button-->
+    <div id="dragItem" class="navigation-button">
+        <button class="nav-button" id="topBtn">
+            <i class="fas fa-angle-up"></i>
+        </button>
+        <button class="nav-button" id="backBtn">
+            <i class="fas fa-angle-left"></i>
+        </button>
+    </div>
+
+    <!-- QR Code -->
+    <div class="qr-popup-container hidden" id="prepost-test-qr" onclick="hide('#prepost-test-qr')">
+        <img src="img/fmds-prepost-qr.png" alt="Pre-Test QR Code" class="qr-image" />
+    </div>
+    <div class="qr-popup-container hidden" id="kesihatan-qr" onclick="hide('#kesihatan-qr')">
+        <img src="img/fmds-sihat-qr.png" alt="Kesihatan QR Code" class="qr-image" />
+    </div>
+
+    <!--- Javascript -->
+    <script src="js/global.js"></script>
+</body>
+
+</html>

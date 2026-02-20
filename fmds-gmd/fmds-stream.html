@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>FMDS Stream</title>
+	<link rel="stylesheet" href="css/stream.css">
+	<link rel="stylesheet" href="css/global.css">
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+		rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+	<!-- Loader -->
+	<link rel="stylesheet" href="../css/loader.css">
+	<script src="../js/loader.js" defer></script>
+</head>
+
+<body>
+	<!-- Loader to hide content until fully loaded -->
+	<div class="preloader" id="preloader">
+		<div class="loader">
+			<span class="loader-text">DDE</span>
+		</div>
+	</div>
+
+	<section id="fmds-stream" class="card">
+		<div class="card-content">
+			<h2 class="large">FMDS STREAM DETAILS</h2>
+			<h3>
+				<center>Click to Reveal</center>
+			</h3>
+			<div class="boards-container">
+				<div class="board" onclick="toggleFlip(this)">
+					<div class="card-front">
+						<h2>Operation Plan</h2>
+					</div>
+					<div class="card-back">
+						<h3>Operation Plan</h3>
+						<p>To <span class="red-text">achieve</span> SQCDM [Hoshin] with<span class="red-text"> increase
+								activity</span> including <span class="red-text">Productivity</span> and <span
+								class="red-text">Quality </span>without<span class="red-text"> Safety Issues.</span></p>
+						<p>1. Basic 520min Job Cycle</p>
+						<p>2. Supervisor Mapping</p>
+						<p>3. Details Job Cycle</p>
+						<p>4. Ideal Condition</p>
+					</div>
+				</div>
+				<div class="board" onclick="toggleFlip(this)">
+					<div class="card-front">
+						<h2>KPI Board</h2>
+					</div>
+					<div class="card-back">
+						<h3>KPI Board</h3>
+						<p>To<span class="red-text"> achive </span>HOSHIN</p>
+						<p>1. Safety</p>
+						<p>2. Quality</p>
+						<p>3. Delivery</p>
+						<p>4. Cost</p>
+						<p>5. Moral</p>
+					</div>
+				</div>
+				<div class="board" onclick="toggleFlip(this)">
+					<div class="card-front">
+						<h2>Henkaten Board</h2>
+					</div>
+					<div class="card-back">
+						<h3>Henkaten Board</h3>
+						<p>No <span class="red-text"> effect </span>on <span class="red-text">quality</span> and <span
+								class="red-text">production</span> when <span class="red-text">changing point</span>
+							happen at 4M.</p>
+						<p>1. Organization Chart</p>
+						<p>2. Section Layout</p>
+						<p>3. Skill Chart Shif A/B</p>
+						<p>4. On Job Training Shif A/B</p>
+						<p>5. Part changer</p>
+					</div>
+				</div>
+
+				<div class="board" onclick="toggleFlip(this)">
+					<div class="card-front">
+						<h2>Operation Observation Board</h2>
+					</div>
+					<div class="card-back">
+						<h3>Operation Observation Board</h3>
+						<p>Team member do the job following the <span class="red-text">SOP standard </span>and <span
+								class="red-text">identify self confirmation </span>in process.</p>
+						<p>1. Excess Part</p>
+						<p>2. Part Reject List</p>
+						<p>3. SCW Check Sheet</p>
+						<p>4. Layout</p>
+						<p>4. Delivery Times pattern</p>
+					</div>
+				</div>
+
+				<div class="board" onclick="toggleFlip(this)">
+					<div class="card-front">
+						<h2>4's Board</h2>
+					</div>
+					<div class="card-back">
+						<h3>4's Board</h3>
+						<p>To<span class="red-text"> find abnormalities </span>and production<span class="red-text">
+								running smoothly.</span></p>
+					</div>
+				</div>
+
+				<div class="board" onclick="toggleFlip(this)">
+					<div class="card-front">
+						<h2>TPS Board</h2>
+					</div>
+					<div class="card-back">
+						<h3>TPS Board</h3>
+						<p><span class="red-text">Efficient process</span> and allow team member to do <span
+								class="red-text">work in cyclic.</span></p>
+					</div>
+				</div>
+
+				<div class="board" onclick="toggleFlip(this)">
+					<div class="card-front">
+						<h2>TPM Board</h2>
+					</div>
+					<div class="card-back">
+						<h3>TPM Board</h3>
+						<p>To <span class="red-text">ensure</span> machine are in <span class="red-text">good condition
+							</span>and early<span class="red-text"> detection </span>on <span class="red-text">minor
+								machine background.</span></p>
+					</div>
+				</div>
+
+				<div class="board" onclick="toggleFlip(this)">
+					<div class="card-front">
+						<h2>QCC Board</h2>
+					</div>
+					<div class="card-back">
+						<h3>QCC Board</h3>
+						<p><span class="red-text">Solve problem </span>in group with the right way and able to<span
+								class="red-text"> share ideas</span> with others.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Navigation Button-->
+	<div id="dragItem" class="navigation-button">
+		<button class="nav-button" id="topBtn">
+			<i class="fas fa-angle-up"></i>
+		</button>
+		<button class="nav-button" id="backBtn">
+			<i class="fas fa-angle-left"></i>
+		</button>
+	</div>
+	<!-- Javascript File -->
+	<script src="js/global.js"></script>
+</body>
+
+</html>

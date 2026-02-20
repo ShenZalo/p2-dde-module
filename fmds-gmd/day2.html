@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <met a name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FMDS Day 2</title>
+        <link rel="stylesheet" href="css/module-selection-page.css">
+        <link rel="stylesheet" href="css/global.css">
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <!-- Loader -->
+        <link rel="stylesheet" href="../css/loader.css">
+        <script src="../js/loader.js" defer></script>
+</head>
+
+<body>
+    <!-- Loader to hide content until fully loaded -->
+    <div class="preloader" id="preloader">
+        <div class="loader">
+            <span class="loader-text">DDE</span>
+        </div>
+    </div>
+
+    <!-- Header --->
+    <div class="module-overview">
+        <div class="overview-header">
+            <img src="img/safety logo.jpg" alt="FMDS Logo" class="image-logo">
+            <h1>MARI MULA BELAJAR<br> FMDS Module <BR> Day 2</h1>
+            <img src="img/1 team 1 goal.jpg" alt="FMDS Logo" class="image-logo">
+        </div>
+        <div class="overview-subheader">
+            <p>Mulai dengan YOSH <b>mesti selamat</b> dan akhiri dengan YOSH <b>1 team 1 goal</b></p>
+        </div>
+    </div>
+
+    <main>
+        <!-- Table to show what's in the module -->
+        <section class="kandungan-section">
+            <div class="section-container">
+                <h2>KANDUNGAN LATIHAN</h2>
+                <table class="kandungan-table">
+                    <thead>
+                        <tr>
+                            <th>TIME</th>
+                            <th>CONTENT</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>9:00 AM - 9:20 AM</td>
+                            <td>
+                                <b>1) Pre-Test Day 2</b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>9:20 AM - 10:20 AM</td>
+                            <td>
+                                <b>2) Hoshin</b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>10:40 AM - 11:40 AM</td>
+                            <td>
+                                <b>3) Operation Plan</b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>11:40 AM - 12:45 PM</td>
+                            <td>
+                                <b>4) Ideal Condition</b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2:00 PM - 3:00 PM</td>
+                            <td>
+                                <b>5) Practical & Memory Games</b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> 3:00 PM - 4:00 PM</td>
+                            <td>
+                                <b>6) Simulation Board</b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4:30 PM - 4:50 PM</td>
+                            <td>
+                                <b>7) Post Test</b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4:50 PM - 5:00 PM</td>
+                            <td>
+                                <b>8) Evaluation</b>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Module Content-->
+        <section class="content-section">
+            <div class="section-container">
+                <h2>MODULE CONTENTS</h2>
+                <div class="card-layout">
+                    <div class="module-card">
+                        <img src="img/roles-day2.gif" alt="Roles and Responsibilities Image" class="card-image">
+                        <p>Roles and Responsibilities</p>
+                        <button class="start-button"
+                            onclick="window.location.href=`roles-responsibility-day2.html`">Mula</button>
+                    </div>
+                </div>
+                <div class="card-layout">
+                    <div class="module-card">
+                        <img src="img/hoshin.gif" alt="Hoshin Image" class="card-image">
+                        <p>Hoshin</p>
+                        <div class="button-layout">
+                            <button class="start-button" onclick="window.location.href=`hoshin.html`">Mula</button>
+                        </div>
+                    </div>
+                    <div class="module-card">
+                        <img src="img/operation-plan.gif" alt="Operation Plan Image" class="card-image">
+                        <p>Operation Plan</p>
+                        <div class="button-layout">
+                            <button class="start-button"
+                                onclick="window.location.href=`operation-plan.html`">Mula</button>
+                        </div>
+                    </div>
+                    <div class="module-card">
+                        <img src="img/ideal-condition.gif" alt="Ideal Condition Image" class="card-image">
+                        <p>Ideal Condition</p>
+                        <div class="button-layout">
+                            <button class="start-button"
+                                onclick="window.location.href=`ideal-condition.html`">Mula</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Genba Management Dojo | All Rights Reserved.</p>
+    </footer>
+
+
+    <!-- Navigation Button-->
+    <div id="dragItem" class="navigation-button">
+        <button class="nav-button" id="topBtn">
+            <i class="fas fa-angle-up"></i>
+        </button>
+        <button class="nav-button" id="backBtn">
+            <i class="fas fa-angle-left"></i>
+        </button>
+    </div>
+
+
+    <!--- Javascript -->
+    <script src="js/global.js"></script>
+
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FMDS - Homepage</title>
+    <link rel="icon" href="../img/perodua-favicon.png" sizes="16x16" type="image/png">
+
+
+    <!-- Flowbite CSS (for interactive components) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.1/flowbite.min.css" rel="stylesheet" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Font Awesome 6 Free -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chiron+Sung+HK:ital,wght@0,200..900;1,200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../src/output.css">
+    <link rel="stylesheet" href="css/homepage.css">
+    <link rel="stylesheet" href="css/global.css">
+    <!-- Loader -->
+    <link rel="stylesheet" href="../css/loader.css">
+    <script src="../js/loader.js" defer></script>
+</head>
+
+<body>
+    <!-- Loader to hide content until fully loaded -->
+    <div class="preloader" id="preloader">
+        <div class="loader">
+            <span class="loader-text">DDE</span>
+        </div>
+    </div>
+    <!-- DESKTOP & TABLET ONLY -->
+    <div class="h-screen w-full hidden lg:flex flex-col lg:flex-row">
+        <!-- LEFT column (larger) -->
+        <div
+            class="lg:order-1 w-full h-1/2 lg:w-2/3 lg:h-full intro-info-container p-4 flex flex-col justify-center items-center relative">
+            <h1 class="text-3xl lg:text-5xl font-bold text-center mb-4 leading-normal">
+                Floor Management<br>Development System<br>[FMDS]
+            </h1>
+            <button data-modal-target="attendance-popup" data-modal-toggle="attendance-popup"
+                class="absolute bottom-4 left-10 w-40 h-20 px-8 py-4 intro-button font-semibold text-2xl flex flex-col items-center justify-center">
+                <i class="fa-solid fa-user-check text-3xl"></i>
+                Kehadiran
+            </button>
+            <button data-modal-target="introduction-popup" data-modal-toggle="introduction-popup"
+                class="absolute bottom-4 left-60 w-40 h-20 px-8 py-4 intro-button font-semibold text-2xl flex flex-col items-center justify-center">
+                <i class="fa-solid fa-circle-info"></i>
+                Pengenalan
+            </button>
+        </div>
+
+
+
+        <!-- RIGHT column (smaller) -->
+        <div
+            class="order-1 lg:order-2 w-full h-1/2 lg:w-1/3 lg:h-full intro-pic-container flex justify-center items-center">
+            <img src="img/fmds-intro-1.jpg" alt="FMDS Intro Image"
+                class="w-full h-full object-cover rounded-lg shadow-lg">
+        </div>
+    </div>
+
+    <!-- MOBILE ONLY -->
+    <div class="flex flex-col lg:hidden h-screen w-screen intro-info-container p-4">
+        <!-- IMAGE ON TOP -->
+        <div class="w-full h-1/3 flex justify-center items-center mt-10 mb-4">
+            <img src="img/fmds-intro-1.jpg" alt="FMDS Intro Image"
+                class="md:w-96 md:h-96 w-72 h-72 object-cover rounded-full shadow-lg">
+        </div>
+        <!-- TEXT BELOW -->
+        <div class="w-full flex mt-10 justify-center items-center text-center">
+            <h1 class=" md:text-5xl font-bold md:leading-normal text-3xl leading-snug">
+                Floor Management Development System<br>[FMDS]
+            </h1>
+        </div>
+        <button data-modal-target="attendance-popup" data-modal-toggle="attendance-popup"
+            class="absolute bottom-4 mx-1 left-0 w-40 h-20 px-8 py-4 intro-button font-semibold text-xl flex flex-col items-center justify-center">
+            <i class="fa-solid fa-user-check text-3xl"></i>
+            Kehadiran
+        </button>
+        <button data-modal-target="introduction-popup" data-modal-toggle="introduction-popup"
+            class="absolute bottom-4 mx-1 right-0 w-40 h-20 px-8 py-4 intro-button font-semibold text-xl flex flex-col items-center justify-center">
+            <i class="fa-solid fa-circle-info"></i>
+            Pengenalan
+        </button>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Class Rules -->
+        <div class="h-auto w-full section-container  mt-10">
+            <h2 class="text-4xl p-10 font-bold underline decoration-double text-center">
+                Class Rules
+            </h2>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 items-center justify-items-center">
+                <a
+                    class="flex flex-col items-center bg-neutral-primary-soft p-6 border border-default rounded-base shadow-xs md:flex-row md:max-w-xl">
+
+                    <img class="object-cover w-full rounded-base h-64 md:h-auto md:w-48 mb-4 md:mb-0"
+                        src="img/rules-phone.png" alt="Handphone must be in silent mode">
+
+                    <div class="flex flex-col justify-between md:p-4 leading-normal text-center md:text-left">
+
+                        <p class="mt-3 text-heading text-xl">
+                            Make sure <b>Handphones</b><br> are in <b>silent mode</b>.
+                        </p>
+                    </div>
+                </a>
+                <a
+                    class="flex flex-col items-center bg-neutral-primary-soft p-6 border border-default rounded-base shadow-xs md:flex-row md:max-w-xl">
+
+                    <img class="object-cover w-full rounded-base h-64 md:h-auto md:w-48 mb-4 md:mb-0"
+                        src="img/rules-attention.png" alt="Give attention in class">
+
+                    <div class="flex flex-col justify-between md:p-4 leading-normal text-center md:text-left">
+
+                        <p class="mt-3 text-heading text-xl">
+                            Always <b>give attention</b> <br>in the class.
+                        </p>
+                    </div>
+                </a>
+                <a
+                    class="flex flex-col items-center bg-neutral-primary-soft p-6 border border-default rounded-base shadow-xs md:flex-row md:max-w-xl">
+
+                    <img class="object-cover w-full rounded-base h-64 md:h-auto md:w-48 mb-4 md:mb-0"
+                        src="img/rules-raise.png" alt="Notify if you need to leave class">
+
+                    <div class="flex flex-col justify-between md:p-4 leading-normal text-center md:text-left">
+
+                        <p class="mt-3 text-heading text-xl">
+                            Please <b>notify</b> the lecturer<br> if you need to <br>leave the class.
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center mt-4 md:mt-10 justify-items-center">
+                <a
+                    class="flex flex-col items-center bg-neutral-primary-soft p-6 border border-default rounded-base shadow-xs md:flex-row md:max-w-xl">
+
+                    <img class="object-cover w-full rounded-base h-64 md:h-auto md:w-48 mb-4 md:mb-0"
+                        src="img/rules-question.png" alt="Raise hand if any question">
+
+                    <div class="flex flex-col justify-between md:p-4 leading-normal text-center md:text-left">
+
+                        <p class="mt-3 text-heading text-xl">
+                            If you have any <b>questions</b>,<br> please raise your hand.
+                        </p>
+                    </div>
+                </a>
+                <a
+                    class="flex flex-col items-center bg-neutral-primary-soft p-6 border border-default rounded-base shadow-xs md:flex-row md:max-w-xl">
+
+                    <img class="object-cover w-full rounded-base h-64 md:h-auto md:w-48 mb-4 md:mb-0"
+                        src="img/rules-communicate.png" alt="Communicate and give idea">
+
+                    <div class="flex flex-col justify-between md:p-4 leading-normal text-center md:text-left">
+
+                        <p class="mt-3 text-heading text-xl">
+                            Feel free to <b>communicate</b><br> and <b>give ideas</b>.
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="h-auto w-full section-container mt-10">
+            <div class="border-b-2 border-gray-300">
+                <h2 class="text-4xl p-10 font-bold underline decoration-double text-center">
+                    General
+                </h2>
+            </div>
+            <div class="module-container flex justify-center items-center">
+                <div class="module-card p-6 m-5 w-full max-w-md lg:max-w-lg xl:max-w-xl">
+                    <img src="img/introduction.png" class="mx-auto block" alt="Introduction Section">
+                    <h4 class="text-center text-4xl font-medium text-heading mt-4">Pengenalan</h4>
+                    <div class="text-center mt-5">
+                        <a href="fmds-introduction.html" class="start-button px-6 py-4">Mula</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="h-auto w-full section-container mt-10">
+            <div class="border-b-2 border-gray-300">
+                <h2 class="text-4xl p-10 font-bold underline decoration-double text-center">
+                    Module
+                </h2>
+            </div>
+            <div class="module-container grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="module-card p-6 m-5 w-auto max-w-md lg:max-w-lg xl:max-w-xl flex flex-col">
+                    <div class="grow">
+                        <img src="img/hoshin-kanri.png" class="mx-auto block" alt="Hoshin Section">
+                        <h4 class="text-center text-4xl font-medium text-heading mt-4">Hoshin Kanri</h4>
+                    </div>
+                    <div class="text-center mt-5">
+                        <a href="fmds-hoshin.html" class="start-button px-6 py-4">Mula</a>
+                    </div>
+                </div>
+
+                <div class="module-card p-6 m-5 w-auto max-w-md lg:max-w-lg xl:max-w-xl flex flex-col">
+                    <div class="grow">
+                        <img src="img/operation-plan.png" class="mx-auto block" alt="Operation Plan Section">
+                        <h4 class="text-center text-4xl font-medium text-heading mt-4">Operation Plan</h4>
+                    </div>
+                    <div class="text-center mt-5">
+                        <a href="fmds-op.html" class="start-button px-6 py-4">Mula</a>
+                    </div>
+                </div>
+
+                <div class="module-card p-6 m-5 w-auto max-w-md lg:max-w-lg xl:max-w-xl flex flex-col">
+                    <div class="grow">
+                        <img src="img/pengurusan-genba.png" class="mx-auto block" alt="Asas Pengurusan Genba Section">
+                        <h4 class="text-center text-4xl font-medium text-heading mt-4">Asas Pengurusan Genba</h4>
+                    </div>
+                    <div class="text-center mt-5">
+                        <a href="fmds-apg.html" class="start-button px-6 py-4">Mula</a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </main>
+
+    <!-- Modal -->
+    <!-- Attendance Modal Popup -->
+    <div id="attendance-popup" tabindex="-1" aria-hidden="true"
+        class="hidden fixed inset-0 z-50 justify-center items-center bg-black/50 overflow-y-auto">
+        <div class="relative w-full h-full max-w-full max-h-full p-4 md:h-auto">
+            <div class="relative w-full h-auto lg:h-full item bg-white rounded-xl p-6 overflow-y-auto">
+                <div class="flex justify-between items-center mb-4">
+                    <img src="img/perodua-logo.png" alt="Perodua Logo" class="lg:w-40 lg:h-32 w-16 h-12">
+                    <h2 class="text-center font-semibold text-heading lg:text-4xl">Attendance</h2>
+                    <img src="img/dde-logo.png" alt="DDE Logo" class="lg:w-40 lg:h-32 w-16 h-12">
+                </div>
+                <figure class="max-w-full mx-auto">
+                    <img class="h-auto max-w-full block mx-auto" src="img/contoh-attendance.png"
+                        alt="image description">
+                    <figcaption class="mt-2 text-sm lg:text-xl text-center text-body">
+                        Example to fill in attendance sheet
+                    </figcaption>
+                </figure>
+
+                <div class="mt-6 flex justify-center">
+                    <button data-modal-hide="attendance-popup"
+                        class="px-4 py-2 w-auto text-center font-semibold text-lg close-button">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Introduction Modal Popup -->
+    <div id="introduction-popup" tabindex="-1" aria-hidden="true"
+        class="hidden fixed inset-0 z-50 justify-center items-center bg-black/50 overflow-y-auto">
+        <div class="relative w-full h-full max-w-full max-h-full p-4 md:h-auto">
+            <div class="relative w-full h-full bg-white rounded-xl p-6 overflow-y-auto">
+                <div class="flex justify-between items-center mb-5">
+                    <img src="img/perodua-logo.png" alt="Perodua Logo" class="lg:w-40 lg:h-32 w-20 h-16">
+                    <h2 class="text-center font-semibold text-heading lg:text-4xl">Introduction</h2>
+                    <img src="img/dde-logo.png" alt="DDE Logo" class="lg:w-40 lg:h-32 w-20 h-16">
+                </div>
+                <div class="md:flex justify-center mt-10">
+                    <div
+                        class="trainer-info-card grid grid-cols-1 md:grid-flow-col md:auto-rows-auto md:gap-4 md:w-auto md:h-auto">
+                        <div class="trainer-photo-container row-span-3 flex justify-center md:block">
+                            <img src="img/trainer-photo.png" alt="Trainer Photo" class="trainer-photo rounded-lg">
+                        </div>
+
+                        <div class="trainer-biodata-container col-span-4 row-span-2 p-2">
+                            <h3 class="trainer-name text-sm lg:text-2xl font-bold">Anuar Bin Borhan</h3>
+                            <div class="trainer-biodata mt-4">
+                                <h3 class="trainer-biodata-title text-sm lg:text-xl font-semibold mb-2">Background</h3>
+                                <ul class="trainer-biodata-list text-xs lg:text-lg list-disc list-inside mb-4">
+                                    <li>Position: Asst Manager / Trainer</li>
+                                    <li>Age: 49 Years Old</li>
+                                    <li>Status: Married</li>
+                                    <li>Living Area: Bukit Beruntung Adenium</li>
+                                    <li>Hobby: Golf & Fishing</li>
+                                    <li>Years of Services: 1994 - Present</li>
+                                    <li>Company Email: anuarb@perodua.com.my</li>
+                                </ul>
+
+                                <h3 class="trainer-biodata-title text-sm lg:text-xl font-semibold mb-2">Past Experience
+                                </h3>
+                                <h4 class="trainer-biodata-subtitle text-sm lg:text-lg font-semibold mb-2">Assembly Shop
+                                </h4>
+                                <ul class="trainer-biodata-list text-xs lg:text-lg list-disc list-inside">
+                                    <li>1994 - 1996: TM -> Trim, Final Line & Repairman</li>
+                                    <li>1997 - 1994: T/Leader -> Trim, Chassis, Final Line</li>
+                                    <li>2000 - 2004: Executive -> Project Team</li>
+                                    <li>2005 - 2008: Executive -> Committee Prod Strategy (CPS)</li>
+                                    <li>2009 - 2024: Asst Manager > Production A2 Line</li>
+                                    <li>2024 - Present: Assistant Manager -> Development & Dojo Education</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-6 flex justify-center">
+                    <button data-modal-hide="introduction-popup"
+                        class="px-4 py-2 w-auto text-center font-semibold text-lg close-button">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer class="w-full h-16 bg-black flex justify-center items-center mt-10">
+        <span class="block w-full text-center text-sm text-white">
+            © 2025 Genba Management Dojo | All Rights Reserved.
+        </span>
+    </footer>
+
+
+
+
+
+
+    <!-- Flowbite JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <!-- Alpine.js -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Global JS -->
+    <script src="js/global.js"></script>
+</body>
+
+</html>

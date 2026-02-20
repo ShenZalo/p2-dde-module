@@ -1,0 +1,44 @@
+.fmds-title {
+    background-color: white;
+    display: flex;
+    border: 2px solid var(--primary-blue);
+    box-sizing: border-box; /* include border & padding inside width */
+    width: 80%;
+    margin: 0 auto;
+    padding: 1% 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.fmds-title h2{
+    font-size: clamp(1rem, 4vw, 3rem);
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+}
+
+.text-red {
+    color: red; 
+}
+
+.definition {
+    display: flex;
+    font-weight: 500;
+    padding: 1%;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: fit-content;
+    background-color: #F5DF4D;
+    transition: var(--transition);
+}
+
+.definition:hover{
+    background-color: rgb(221, 198, 83);
+    transform: scale(1.02);
+    transition: var(--transition);
+}
+
+.def-mark{
+    display:inline;
+    font-weight: bold;
+}

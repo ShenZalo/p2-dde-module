@@ -1,0 +1,237 @@
+.collapsible-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    border: 2px solid #b2f5c8;
+    border-radius: 10px;
+    width: 80%;
+    height: auto;
+}
+
+.collapsible-bar {
+    height: 100px;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #009688;
+    color: white;
+    border: 2px solid #009688;
+    border-radius: 8px;
+    padding: 16px;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.collapsible-bar:hover {
+    background-color: #009688;
+    border: 2px solid #009688;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02);
+}
+
+.collapsible-card {
+    font-size: 1.3rem;
+    background-color: #e0f7fa;
+    border-radius: 10px;
+    padding: 0;
+    /* collapsed padding */
+    margin: 0 20px;
+    /* no bottom margin when hidden */
+    height: auto;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    border: none;
+    /* remove hidden border gap */
+    transition:
+        max-height 0.5s ease,
+        opacity 0.5s ease,
+        padding 0.5s ease,
+        margin 0.3s ease;
+}
+
+.collapsible-card.expand {
+    padding: 20px;
+    margin: 10px 20px 20px 20px;
+    /* restore margin */
+    border: 2px solid #009688;
+    opacity: 1;
+    max-height: none;
+    /* large enough for full content */
+}
+
+/* Add collapsible indicator integration */
+.collapsible-bar .indicator {
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.collapsible-bar .indicator.expand {
+    transform: rotate(90deg);
+}
+
+.four-box-content-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0px;
+    position: relative;
+    font-size: 1.4rem;
+}
+
+.four-box-item-row {
+    display: grid;
+    grid-template-rows:  auto auto;
+    grid-template-columns: auto auto;
+}
+
+
+.four-box-item {
+    background-color: blanchedalmond;
+    width: 350px;
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid #009688;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+}
+
+.four-box-title{
+    position: absolute;
+    background-color: blanchedalmond;
+    width: 250px;
+    height: 150px;
+    margin: 10px;
+    border-radius: 10px;
+    bottom: 150px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid #009688;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+}
+
+.content-grid-box-layout {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto;               
+    gap: 10px;                          
+}
+
+.content-grid-box{
+    background-color: blanchedalmond;
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid #009688;
+    font-size: 1.2rem;
+}
+
+.content-grid-box h4 {
+    margin-top: 0px;
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: thistle;
+    border-radius: 10px;
+}
+
+.side-image-content-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 50px;
+}
+
+.side-image {
+    width: 400px;
+    height: 300px; /* fixed height */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid #009688;
+    overflow: hidden; /* hide any overflow from the image */
+}
+
+.side-image img {
+    width: 100%;
+    height: 100%;     /* fill the container */
+    object-fit: cover; /* crop & fill the container */
+    display: block;
+}
+
+.side-content {
+    font-size: 1.3rem;
+    max-width: 400px;
+    margin-left: 20px;
+    background-color: rgb(227, 196, 149);
+    border:#009688 2px solid;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.kahoot-card {
+    background-color: #efefef;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid #3f3f3f;
+    padding: 20px;
+    margin: 20px auto;
+    width: 400px;
+    height: 300px;
+    text-align: center;
+    font-size: 1.4rem;
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    justify-items: center;
+}
+
+.kahoot-card img{
+    width: 200px;
+    height: 150px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.kahoot-card button{
+    margin-top: 15px;
+    background-color: #009688;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.kahoot-card button:hover {
+    background-color: #00796b;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.kahoot-card .content-title {
+    font-size: 1rem;
+}
+
+.row-layout {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}

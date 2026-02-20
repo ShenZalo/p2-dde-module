@@ -1,0 +1,201 @@
+.content-grid-box-layout {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto;
+    gap: 10px;
+}
+
+.content-grid-box {
+    background-color: blanchedalmond;
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid #009688;
+    font-size: 1.2rem;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-grid-box h4 {
+    margin-top: 0px;
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: thistle;
+    border-radius: 10px;
+}
+
+.box {
+    border: 2px solid #000000;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 5px;
+}
+
+
+.step-flow-layout {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px;
+}
+
+.step-flow-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    font-size: 1.2rem;
+    background-color: lightcyan;
+    border: 2px solid #009688;
+    border-radius: 10px;
+    padding: 5px 10px;
+    position: relative;
+}
+
+.step-flow-box p {
+    margin-top: 60px;
+}
+
+.step-flow-arrow {
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 30px solid #009688;
+    align-self: center;
+    margin-top: 80px;
+}
+
+
+.point-circle-indicator {
+    width: 50px;
+    height: 50px;
+    background-color: #009688;
+    border-radius: 50%;
+    position: absolute;
+    top: -30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+}
+
+.point-box {
+    position: relative;
+    margin-top: 30px;
+    background-color: lightyellow;
+    border: 2px solid #009688;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 1.3rem;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}
+
+.row-layout {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.big-equal-icon {
+    font-size: 80px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.present-row-layout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 4 equal columns */
+    gap: 10px; /* spacing between boards */
+    padding: 10px; /* optional padding around grid */
+    justify-items: center; /* center items horizontally */
+}
+/*Stolen from previous module*/
+.board {
+    width: 350px;       /* now fits the column */
+    max-width: 100%;   /* ensures it doesn’t overflow */
+    height: 350px;     
+    perspective: 1000px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    position: relative; 
+}
+
+.card-front, .card-back {
+    /* width: 100%;
+    height: 100%; */
+    width: 100%;
+    height: 80%;
+    padding: 20px;
+    color: white;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    transition: transform 0.6s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.card-front {
+    background: linear-gradient(135deg, #009688, #004d40);
+    transform: rotateY(0deg);
+}
+
+.card-back {
+    background: #00796b;
+    transform: rotateY(180deg);
+    padding: 1.5rem;
+    font-size: 2rem;
+    line-height: 1.4;
+    text-align: center;
+    overflow-y: auto;
+}
+
+.board.flipped .card-front {
+    transform: rotateY(-180deg);
+}
+
+.board.flipped .card-back {
+    transform: rotateY(0deg);
+}
+
+/* Enhanced text and shadow for a more interesting look */
+.card-front h3, .card-back h3 {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.card-back p {
+    font-size: 1rem;
+    margin-top: 1rem;
+    color: white;
+}
+
+/* Optional: Hover effect */
+.board:hover .card-front {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+

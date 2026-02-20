@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>FMDS Board Layout</title>
+	<link rel="stylesheet" href="css/board-layout.css">
+	<link rel="stylesheet" href="css/global.css">
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+		rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+	<!-- Loader -->
+	<link rel="stylesheet" href="../css/loader.css">
+	<script src="../js/loader.js" defer></script>
+</head>
+
+<body>
+	<!-- Loader to hide content until fully loaded -->
+	<div class="preloader" id="preloader">
+		<div class="loader">
+			<span class="loader-text">DDE</span>
+		</div>
+	</div>
+
+	<!-- Layout Image Section -->
+	<section id="layout-image-section" class="card">
+		<div class="kepala">
+			<h1>FMDS Board Layout</h1>
+		</div>
+
+		<img src="img/layout-perodua-fmds.png" alt="FMDS Layout" class="layout-image"
+			onclick="openFullscreen('img/layout-perodua-fmds.png')">
+		<p class="layout-description">Overview of the FMDS board layout in Perodua.</p>
+	</section>
+
+	<!-- Company Details Section -->
+	<section id="company-details">
+		<div class="company-card" id="company1">
+			<h2>PMSB</h2>
+			<p>Press - 3</p>
+			<p>Body - 9</p>
+			<p>Paint - 5</p>
+			<p>Assembly - 10</p>
+		</div>
+		<div class="company-card" id="company2">
+			<h2>PEMSB</h2>
+			<p>Logistic - 9</p>
+			<p>Engine - 6</p>
+			<p>Machining - 3</p>
+			<p>casting - 1</p>
+
+		</div>
+		<div class="company-card" id="company3">
+			<h2>PGMSB</h2>
+			<p>Body - 7</p>
+			<p>Paint - 9</p>
+			<p>Logistic - 2</p>
+		</div>
+	</section>
+	<footer>
+		<p>&copy; 2025 Genba Management Dojo | All Rights Reserved.</p>
+	</footer>
+
+	<!-- Navigation Button-->
+	<div id="dragItem" class="navigation-button">
+		<button class="nav-button" id="topBtn">
+			<i class="fas fa-angle-up"></i>
+		</button>
+		<button class="nav-button" id="backBtn">
+			<i class="fas fa-angle-left"></i>
+		</button>
+	</div>
+	<!-- Javascript Files -->
+	<script src="js/global.js"></script>
+</body>
+
+</html>

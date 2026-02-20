@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karakuri - Introduction</title>
+    <link rel="stylesheet" href="../src/output.css">
+    <link rel="stylesheet" href="css/global.css">
+    <!-- Font Awesome Free -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Boostrap Icon  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- Loader -->
+    <link rel="stylesheet" href="../css/loader.css">
+    <script src="../js/loader.js" defer></script>
+</head>
+
+<body>
+    <!-- Loader to hide content until fully loaded -->
+    <div class="preloader" id="preloader">
+        <div class="loader">
+            <span class="loader-text">DDE</span>
+        </div>
+    </div>
+    <div class="flex flex-col bg-white rounded-b-xl w-full px-10 py-20">
+        <div class="flex justify-between">
+            <div class="">
+                <img src="img/mestiselamat.jpg" class="w-32 h-auto">
+            </div>
+            <div class="flex flex-col text-center justify-center align-middle">
+                <p class="font-bold lg:text-5xl mb-11">MARI MULA BELAJAR<br>Karakuri</p>
+                <p class="font-bold lg:text-5xl leading-loose">Introduction</p>
+            </div>
+            <div class="">
+                <img src="img/1team1goal.jpg" class="w-32 h-auto">
+            </div>
+        </div>
+        <p class="text-center mt-10 text-lg">Mulai dengan YOSH <b>mesti selamat</b> dan akhiri dengan YOSH <b>1 team 1
+                goal</b>
+        </p>
+    </div>
+    <main>
+        <div
+            class="flex flex-col items-center mt-5 bg-stone-50 border-4 rounded-2xl border-stone-600 w-[80%] mx-auto p-4">
+            <p class="text-center text-3xl">
+                <span class="font-bold">DOJO MANAGEMENT EXPECTATION</span><br>[<i>Harapan Pengurusan</i>]
+            <p class="text-center text-2xl">
+            <ul class="list-disc text-2xl mx-20 my-10">
+                <li class="mb-4">
+                    Harapan untuk menjadi (Syarikat) yang mampu <b class="text-orange-400">melaksanakan
+                        [Mono-zukuri]</b> dengan cara
+                    pengurusan
+                    <b class="text-orange-400">yang tepat, transformasi diri, transformasi tempat kerja</b> dan <b
+                        class="text-orange-400">transformasi bawahan</b>.
+                    Pekerja dan
+                    keluarga mereka akan menjadi lebih baik.
+                </li>
+                <li class="mb-4">
+                    Untuk <b class="text-orange-400">menghasilkan Produk (Product)</b>, produk kereta <b
+                        class="text-orange-400">berkualiti tinggi</b> yang sesuai
+                    <b class="text-orange-400">mengikut masa
+                        penghantaran</b> yang diberikan <b class="text-orange-400">dengan lancar</b> untuk pelanggan
+                    .
+                </li>
+                <li>
+                    Pelatih dapat <b class="text-orange-400">memahami</b> apa yang <b class="text-orange-400">mereka
+                        pelajari</b>, dapat <b class="text-orange-400">mengajar</b> dan
+                    <b class="text-orange-400">berkongsi dengan orang lain</b>,
+                    <b class="text-orange-400">mengubah diri</b>, <b class="text-orange-400">melaksanakan</b>, <b
+                        class="text-orange-400">mengubah tempat kerja dan Pembangunan Manusia</b>
+                    & Yokoten aktiviti
+                    (Kembangkan)
+                </li>
+            </ul>
+            </p>
+        </div>
+
+        <div class="w-full h-auto bg-stone-200 rounded-xl p-4 mt-5">
+            <h2 class="p-2 text-3xl bg-red-500 rounded-t-full text-center text-white font-bold">Jadual Latihan</h2>
+            <div x-data="fullscreenImage(`img/jadual-latihan.png`)" class="flex justify-center w-full">
+                <img src="img/jadual-latihan.png" alt="assembly-point"
+                    class="w-[90%] h-auto rounded-xl mt-2 cursor-zoom-in" @click="openFullscreen()">
+            </div>
+        </div>
+        <div class="w-full h-auto bg-stone-200 rounded-xl p-4 mt-5">
+            <h2 class="p-2 text-3xl bg-red-500 rounded-t-full text-center text-white font-bold">Introduction to Karakuri
+            </h2>
+            <div class="flex justify-center w-full p-4">
+                <div class="flex justify-center mt-5">
+                    <iframe src="https://drive.google.com/file/d/1mOpB1wZjWefnJ85mZM_27HjvFYO8T54R/preview"
+                        class="w-4xl h-auto rounded-xl" style="aspect-ratio:16/9;" frameborder="0"
+                        allow="autoplay; encrypted-media" allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+        <div class="w-full h-auto bg-stone-200 rounded-xl p-4 mt-5">
+            <h2 class="p-2 text-3xl bg-red-500 rounded-t-full text-center text-white font-bold">Home Structure of TPS
+            </h2>
+            <div x-data="fullscreenImage(`img/tps-cs-wbg.png`)" class="flex justify-center w-full">
+                <img src="img/tps-cs.png" alt="Home Structure of TPS"
+                    class="w-[80%] h-auto rounded-xl mt-2 cursor-zoom-in" @click="openFullscreen()">
+            </div>
+        </div>
+        <div class="w-full h-auto bg-stone-200 rounded-xl p-4 mt-5">
+            <h2 class="p-2 text-3xl bg-red-500 rounded-t-full text-center text-white font-bold">TPS & SSC
+            </h2>
+            <div class="flex flex-col bg-stone-100 m-10 rounded-2xl">
+                <div class="bg-yellow-100 pt-4 rounded-t-2xl">
+                    <p class="font-semibold text-center lg:text-2xl border-b-2 border-yellow-400 border-dashed">Apa itu
+                        <span class="text-red-500">TPS</span> & <span class="text-red-500">SSC</span>?
+                    </p>
+                </div>
+                <p class="lg:text-2xl m-10"><i class="fa-solid fa-hand-point-right"></i>Asas pembuatan untuk
+                    <b>PERODUA</b>
+                </p>
+                <p class="lg:text-2xl m-10"><i class="fa-solid fa-hand-point-right"></i>Kaedah @ alat untuk melaksanakan
+                    <span class="text-red-500">TPS</span> & <span class="text-red-500">SSC</span> adalah
+                    <b>KARAKURI</b>
+                </p>
+            </div>
+        </div>
+        <div class="w-full h-auto bg-stone-200 rounded-xl p-4 mt-5">
+            <h2 class="p-2 text-3xl bg-red-500 rounded-t-full text-center text-white font-bold">Tiang Utama TPS
+            </h2>
+            <div class="flex flex-col bg-stone-100 m-10 rounded-2xl">
+                <div class="bg-yellow-100 pt-4 rounded-t-2xl">
+                    <p class="font-semibold text-center lg:text-2xl border-b-2 border-yellow-400 border-dashed">2 Tiang
+                        Utama TPS?
+                    </p>
+                </div>
+                <div class="mx-2 bg-stone-300 border-2 border-dashed border-stone-400 rounded-xl lg:text-2xl my-4">
+                    <p class="lg:text-2xl bg-stone-100 p-5 rounded-xl"><b>1. Just In Time</b></p>
+                    <p class="m-4 lg:text-2xl">Cara pemikiran dan sistem pengangkutan untuk pengeluaran <span
+                            class="text-red-600">barang</span> yang diperlukan pada <span
+                            class="text-red-600">masa</span>
+                        ia
+                        diperlukan dalam kuantiti yang diperlukan</p>
+                </div>
+                <div class="mx-2 bg-stone-300 border-2 border-dashed border-stone-400 rounded-xl lg:text-2xl my-4">
+                    <p class="lg:text-2xl bg-stone-100 p-5 rounded-xl"><b>2. Jidouka</b></p>
+                    <p class="m-4 lg:text-2xl">Menjadikan <span class="text-red-600">mesin@equipment</span> supaya boleh
+                        <span class="text-red-600">mengesan</span> dan <span class="text-red-600">berhenti</span>
+                        sendiri secara <span class="text-red-600">automatik</span> jika berlaku <span
+                            class="text-red-600">abnormaliti</span> pada mesin, kualiti atau kelewatan proses disamping
+                        boleh <span class="text-red-600">diberhentikan</span> oleh operator dengan menekan butang stop
+                    </p>
+                </div>
+            </div>
+            <div class="w-[90%] mx-auto grid grid-cols-2 gap-2 border-2 border-black p-2 lg:text-2xl mt-4">
+                <div class="border-2 border-stone-500 text-center">
+                    <b>Bina <span class="text-red-600">Kualiti</span> Dalam Proses</b>
+                </div>
+                <div class="border-2 border-stone-500 text-center">
+                    <b>Proses Seterusnya Adalah <span class="text-red-600">Pelanggan</span></b>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full h-auto bg-stone-200 rounded-xl p-4 mt-5">
+            <h2 class="p-2 text-3xl bg-red-500 rounded-t-full text-center text-white font-bold">Konsep Asas TPS
+            </h2>
+            <div class="w-full bg-stone-100 flex flex-col lg:text-2xl mt-4 p-4 rounded-xl">
+                <p class="text-center"><b class="text-red-600">Mengurangkan kos</b> dengan menghapuskan <b
+                        class="text-red-600">pembaziran</b> secara menyeluruh</p>
+                <ul class="list-inside list-disc mx-auto mt-5">
+                    <li>Pengeluaran yang efisyen <br> <i class="fa-solid fa-hand-point-right"></i></i> <b
+                            class="text-red-600">Jimat
+                            kos</b> jika <b class="text-red-600">MUDA</b> kurang keuntungan</li>
+                </ul>
+                <p class="text-center text-red-600 lg:text-5xl mt-2"><i class="fa-solid fa-down-long"></i></p>
+                <ul class="list-inside list-disc mx-auto mt-5">
+                    <li>Sasarkan pengeluaran yang efisyen <br><i class="fa-solid fa-hand-point-right"></i> Pengeluaran
+                        dengan <span class="text-red-600">bilangan manpower</span> yang kurang,<br><span
+                            class="text-red-600 ml-10">mesin</span> yang lebih murah, <span
+                            class="text-red-600">material</span> lebih murah
+                        dan tiada <b class="text-red-600">MUDA</b>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="w-full h-auto bg-stone-200 rounded-xl p-4 mt-5">
+            <h2 class="p-2 text-3xl bg-red-500 rounded-t-full text-center text-white font-bold">MUDA
+            </h2>
+            <div class="flex flex-col bg-stone-100 m-10 rounded-2xl">
+                <div class="bg-yellow-100 pt-4 rounded-t-2xl">
+                    <p class="font-semibold text-center lg:text-2xl border-b-2 border-yellow-400 border-dashed">Apa itu
+                        MUDA?
+                    </p>
+                </div>
+                <p class="text-center lg:text-2xl m-4">Segala <b class=text-red-600>elemen</b> yang meningkatan <b
+                        class="text-red-600">kos</b><i class="fa-solid fa-arrow-right-long"></i>Sesuatu yang <b
+                        class="text-red-600">tiada
+                        nilai</b>
+                    tambah<br>(Manusia <i class="fa-solid fa-arrow-right"></i> Pergerakan - kerja = MUDA)</p>
+            </div>
+            <div x-data="fullscreenImage(`img/apa-muda.png`)" class="flex justify-center w-full">
+                <img src="img/apa-muda.png" alt="Apa itu MUDA" class="w-full h-auto rounded-xl mt-2 cursor-zoom-in"
+                    @click="openFullscreen()">
+            </div>
+        </div>
+        <div class="w-full h-auto bg-stone-200 rounded-xl p-4 mt-5">
+            <h2 class="p-2 text-3xl bg-red-500 rounded-t-full text-center text-white font-bold">7 MUDA
+            </h2>
+            <div class="mt-5 bg-stone-300 p-2 rounded-lg">
+                <div class="bg-stone-100 lg:text-2xl text-center rounded-md">
+                    <p class="p-2 border-dashed border-b-5 border-stone-400"><i class="fa-solid fa-1"></i> MUDA <b
+                            class="text-red-600">Pengeluaran Berlebihan</b> (Sistem, Pengurusan)</p>
+                </div>
+                <p class="text-center lg:text-2xl p-4">Pengeluaran melebihi dari jumlah pengeluaran yang diperlukan</p>
+                <div class="flex justify-center">
+                    <img src="img/muda-1.png" alt="muda-1" class="w-2xl h-auto rounded-xl mt-2">
+                </div>
+            </div>
+            <div class="mt-5 bg-stone-300 p-2 rounded-lg">
+                <div class="bg-stone-100 lg:text-2xl text-center rounded-md">
+                    <p class="p-2 border-dashed border-b-5 border-stone-400"><i class="fa-solid fa-2"></i> MUDA <b
+                            class="text-red-600">Lebihan Penyimpanan</b> (Sistem, Pengurusan)</p>
+                </div>
+                <p class="text-center lg:text-2xl p-4">Simpan bahan (material), simpan barang siap dibuat</p>
+                <div class="flex justify-center">
+                    <img src="img/muda-2.png" alt="muda-2" class="w-2xl h-auto rounded-xl mt-2">
+                </div>
+            </div>
+            <div class="mt-5 bg-stone-300 p-2 rounded-lg">
+                <div class="bg-stone-100 lg:text-2xl text-center rounded-md">
+                    <p class="p-2 border-dashed border-b-5 border-stone-400"><i class="fa-solid fa-3"></i> MUDA <b
+                            class="text-red-600">Lebihan Proses</b> (Sistem, Pengurusan)</p>
+                </div>
+                <p class="text-center lg:text-2xl p-4">Kerja yang tidak perlu <br> Cth: Sembur cat di bahagian yang
+                    tertutup oleh Trim</p>
+                <div class="flex justify-center">
+                    <img src="img/muda-3.png" alt="muda-3" class="w-2xl h-auto rounded-xl mt-2">
+                </div>
+            </div>
+            <div class="mt-5 bg-stone-300 p-2 rounded-lg">
+                <div class="bg-stone-100 lg:text-2xl text-center rounded-md">
+                    <p class="p-2 border-dashed border-b-5 border-stone-400"><i class="fa-solid fa-4"></i> MUDA <b
+                            class="text-red-600">Defect, Repair</b> (Monozukuri)</p>
+                </div>
+                <p class="text-center lg:text-2xl p-4">Tambahan sumber (manusia, masa, bahan)</p>
+                <p class="w-fit mx-auto p-2 lg:text-2xl text-center border-2 border-red"><b
+                        class="text-red-600">MUDA</b> yang mudah
+                    di
+                    kaizen dengan
+                    <b class="text-red-600">KARAKURI</b>
+                </p>
+                <div class="flex justify-center">
+                    <img src="img/muda-4.png" alt="muda-4" class="w-2xl h-auto rounded-xl mt-2">
+                </div>
+            </div>
+            <div class="mt-5 bg-stone-300 p-2 rounded-lg">
+                <div class="bg-stone-100 lg:text-2xl text-center rounded-md">
+                    <p class="p-2 border-dashed border-b-5 border-stone-400"><i class="fa-solid fa-5"></i> MUDA <b
+                            class="text-red-600">Pergerakan</b> (Monozukuri)</p>
+                </div>
+                <p class="text-center lg:text-2xl p-4">Jarak langkah, pergerakan anggota<br>(tangan, kaki, pinggang,
+                    berpaling, penglihatan)</p>
+                <p class="w-fit mx-auto p-2 lg:text-2xl text-center border-2 border-red"><b
+                        class="text-red-600">MUDA</b> yang mudah
+                    di
+                    kaizen dengan
+                    <b class="text-red-600">KARAKURI</b>
+                </p>
+                <div class="flex justify-center">
+                    <img src="img/muda-5.png" alt="muda-5" class="w-2xl h-auto rounded-xl mt-2">
+                </div>
+            </div>
+            <div class="mt-5 bg-stone-300 p-2 rounded-lg">
+                <div class="bg-stone-100 lg:text-2xl text-center rounded-md">
+                    <p class="p-2 border-dashed border-b-5 border-stone-400"><i class="fa-solid fa-6"></i> MUDA <b
+                            class="text-red-600">Menunggu</b> (Sistem, Pengurusan)</p>
+                </div>
+                <p class="text-center lg:text-2xl p-4">Tidak buat apa-apa kerja @ tidak boleh buat kerja<br>(Kerja
+                    beramai, menunggu mesin berhetnti)</p>
+                <div class="flex justify-center">
+                    <img src="img/muda-6.png" alt="muda-6" class="w-2xl h-auto rounded-xl mt-2">
+                </div>
+            </div>
+            <div class="mt-5 bg-stone-300 p-2 rounded-lg">
+                <div class="bg-stone-100 lg:text-2xl text-center rounded-md">
+                    <p class="p-2 border-dashed border-b-5 border-stone-400"><i class="fa-solid fa-7"></i> MUDA <b
+                            class="text-red-600">Penghantaran</b> (Monozukuri)</p>
+                </div>
+                <p class="text-center lg:text-2xl p-4">Penghantaran adalah kerja yang tiada hasil tambah</p>
+                <p class="w-fit mx-auto p-2 lg:text-2xl text-center border-2 border-red"><b
+                        class="text-red-600">MUDA</b> yang mudah
+                    di
+                    kaizen dengan
+                    <b class="text-red-600">KARAKURI</b>
+                </p>
+                <div class="flex justify-center">
+                    <img src="img/muda-7.png" alt="muda-7" class="w-2xl h-auto rounded-xl mt-2">
+                </div>
+            </div>
+        </div>
+        <div class="w-full h-auto bg-stone-200 rounded-xl p-4 mt-5">
+            <h2 class="p-2 text-3xl bg-red-500 rounded-t-full text-center text-white font-bold">3 Element Standard Work
+            </h2>
+            <div class="w-full bg-stone-100 flex flex-col lg:text-2xl mt-4 p-4 rounded-xl">
+                <div class="flex flex-row">
+                    <div class="w-1/4">
+                        <p><i class="fa-solid fa-arrows-to-dot"></i> <b>Takt Time</b> <i
+                                class="fa-solid fa-ellipsis"></i>
+                        </p>
+                    </div>
+                    <div class="w-3/4">
+                        <p>Satu nilai jangkamasa yang diperlukan untuk menghasilkan 1
+                            barang @ 1 unit part　　
+                        </p>
+                    </div>
+                </div>
+                <div class="flex flex-row mt-2 mb-2">
+                    <div class="w-1/4">
+                        <p><i class="fa-solid fa-arrows-to-dot"></i> <b>Work Sequence</b> <i
+                                class="fa-solid fa-ellipsis"></i>
+                        </p>
+                    </div>
+                    <div class="w-3/4">
+                        <p>Aturan kerja yang efisyen disamping menjamin kualiti barang
+                            <br>(aturan kerja bukan aturan aliran produk)
+                        </p>
+                    </div>
+                </div>
+                <div class="flex flex-row">
+                    <div class="w-1/4">
+                        <p><i class="fa-solid fa-arrows-to-dot"></i> <b>Standard WIP</b> <i
+                                class="fa-solid fa-ellipsis"></i>
+                        </p>
+                    </div>
+                    <div class="w-3/4">
+                        <p>WIP berkuantiti minima dalam satu proses agar aturan kerja dan
+                            pergerakan dapat diulang dalam satu kitaran
+                        </p>
+                    </div>
+                </div>
+                <div class="mt-4 justify-center flex">
+                    <img src="img/3e-sw.png" alt="3 Element Standard Work" class="w-4xl h-auto rounded-xl mt-2">
+                </div>
+            </div>
+        </div>
+        <div class="w-full h-auto bg-stone-200 rounded-xl p-4 mt-5">
+            <h2 class="p-2 text-3xl bg-red-500 rounded-t-full text-center text-white font-bold">Muri, Muda, Mura
+            </h2>
+            <div class="flex text-center mt-2 w-full">
+                <p class="lg:text-2xl mx-auto">
+                    Kenalpasti <b>MURI</b>, <b>MURA</b>, <b>MUDA</b> melalui pemerhatian kerja
+                </p>
+            </div>
+            <div class="w-[90%] mx-auto flex flex-col lg:text-2xl bg-stone-100 border-2 border-red-600">
+                <p class="p-4 text-center font-bold text-red-600 bg-red-10 border-red-600 border-dashed border-b-2">
+                    MURI, MURA,
+                    MUDA</p>
+                <div class="m-4">
+                    <p class="m-2"><i class="fa-solid fa-hand-point-right"></i><b class="font-red-600">MURI</b>: Kerja
+                        melebihi
+                        keupayaan (Manusia @ mesin)</p>
+                    <p class="m-2"><i class="fa-solid fa-hand-point-right"></i><b class="font-red-600">MURA</b>: Tidak
+                        seragam
+                        dengan
+                        standard</p>
+                    <p class="m-2"><i class="fa-solid fa-hand-point-right"></i><b class="font-red-600">MUDA</b>: Segala
+                        elemen yang
+                        meningkatkan kos tetapi tidak
+                        menambah nilai
+                    </p>
+                </div>
+            </div>
+            <div class="flex w-fit mx-auto p-4 font-black lg:text-2xl border-4 border-red-700 mt-4">
+                <p><b class="font-red-600">KARAKURI</b> adalah alat untuk kaizen <b class="font-red-600">3M</b></p>
+            </div>
+        </div>
+        <div class="w-full h-auto bg-stone-200 rounded-xl p-4 mt-5">
+            <h2 class="p-2 text-3xl bg-red-500 rounded-t-full text-center text-white font-bold">Konsep Kaizen 3M
+            </h2>
+            <div class="mt-4 lg:text-2xl border-2 border-stone-500 bg-stone-100 flex flex-col w-full">
+                <p class="text-center bg-amber-100 border-b-2 border-dashed p-2">Lihat Dari Segi <b>Standard Work</b>
+                </p>
+                <div class="flex flex-col border-b-2 border-stone-500 p-4">
+                    <p class=><i class="bi bi-1-circle"></i> <span class="font-red-600">Kaizen kerja manusia</span>
+                        (Pergerakan
+                        Team Member)</p>
+                    <ul class="list-inside list-disc ml-10">
+                        <li class="mb-2">
+                            Kurangkan cycle time berbeza-beza
+                            <br>(Kesukaran kerja, berjalan)
+                        </li>
+                        <li>
+                            Pendekkan cycle time
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex flex-col p-4">
+                    <p><i class="bi bi-2-circle"></i> <span class="font-red-600">Kaizen kerja mesin</span>
+                        (Proses yang bottleneck/kritikal)</p>
+                    <ul class="list-inside list-disc ml-10">
+                        <li>
+                            Pendekkan machine time (MCT)
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="w-full h-auto bg-stone-200 rounded-xl p-4 mt-5">
+            <h2 class="p-2 text-3xl bg-red-500 rounded-t-full text-center text-white font-bold">Kaizen kerja manusia
+            </h2>
+            <div class="flex flex-row mt-4">
+                <div class="h-auto flex flex-col lg:text-2xl justify-around">
+                    <div class="flex flex-col h-fit">
+                        <p
+                            class="p-2 font-bold bg-amber-200 text-center border-b-2  border-t-2 border-t-stone-500 border-l-2 border-l-stone-500  border-r-2 border-r-stone-500">
+                            Pemerhatian
+                        </p>
+                        <p class="p-2 border-r-2 border-l-2 border-stone-500 bg-stone-100">Ambil masa untuk minimum
+                            kitaran
+                            10 kerja
+                        </p>
+                        <ul
+                            class="list-inside list-disc p-2 border-r-2 border-l-2 border-b-2 border-stone-500 bg-stone-100">
+                            <li class="mb-2">Ada ketidakseragaman?
+                            </li>
+                            <li class="mb-2">Proses paling lambat -
+                                manusia/mesin
+                            </li>
+                            <li class="mb-2">Hasil keluaran seragam?
+                            </li>
+                            <li class="mb-2">Kualiti baik?
+                            </li>
+                            <li class="mb-2">Ada abnormal pada mesin?
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="flex m-20 mx-auto">
+                        <p class="lg:text-7xl"><i class="bi bi-arrow-up"></i></p>
+                    </div>
+                    <div class="font-bold p-4 bg-yellow-300 border-2 border-stone-500 text-center">
+                        <p>Standard Work</p>
+                    </div>
+                </div>
+                <div class="flex m-5 mx-auto flex-col justify-between">
+                    <p class="lg:text-7xl"><i class="bi bi-arrow-right"></i></p>
+                    <p class="lg:text-7xl"><i class="bi bi-arrow-left"></i></p>
+                </div>
+                <div class="flex items-center">
+                    <p class="lg:text-7xl"><i class="fa-solid fa-arrow-down-long"></i></p>
+                </div>
+                <div class="flex flex-col w-fit h-auto justify-between">
+                    <div class="flex flex-col lg:text-2xl border-2 border-stone-500 bg-stone-100">
+                        <p class="p-2 font-bold bg-amber-200 border-b-2 border-dashed text-center">
+                            <span class="text-red-600"><i class="fa-solid fa-a"></i></span><i
+                                class="fa-solid fa-chevron-left"></i>Bagaimana Lihat Perbezaan<i
+                                class="fa-solid fa-chevron-right"></i>
+                        </p>
+                        <ul class="list-inside list-disc ml-4 p-2">
+                            <li class="mb-2">Kerja dilaksanakan dengan lancar?</li>
+                            <li class="mb-2">Kerja susah yang memerlukan idea</li>
+                            <li class="mb-2">Ada kerja yang memerlukan keputusan sendiri?</li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-col lg:text-2xl border-2 border-stone-500 bg-stone-100">
+                        <p class="p-2 font-bold bg-amber-200 border-b-2 border-dashed text-center">
+                            <span class="text-red-600"><i class="fa-solid fa-b"></i></span>Punca sebenar melibatkan
+                            <span class="font-black">MURI<i class="bi bi-dot"></i>MURA<i
+                                    class="bi bi-dot"></i>MUDA</span>
+                        </p>
+                        <div
+                            class="font-bold p-2 w-fit mx-auto m-2  bg-yellow-300 border-2 border-stone-500 text-center">
+                            <p>Boleh Karakuri?</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col lg:text-2xl border-2 border-stone-500 bg-stone-100">
+                        <p class="p-2 font-bold bg-amber-200 border-b-2 border-dashed text-center">
+                            <span class="text-red-600"><i class="fa-solid fa-c"></i></span><i
+                                class="fa-solid fa-chevron-left"></i>Kaizen sepenuhnya<i
+                                class="fa-solid fa-chevron-right"></i>
+                        </p>
+                        <ul class="list-inside list-disc ml-4 p-2">
+                            <li class="mb-2">Kaizen jig dan tool</li>
+                            <li class="mb-2">Pengambilan dari tempat dan kuantiti tetap</li>
+                            <li class="mb-2">Serahkan kerja fuzui kepada indirect proses</li>
+                            <li class="mb-2">Kaizen kerja tiada nilai tambah (hapus, kurang)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-full h-auto bg-stone-200 rounded-xl p-4 mt-5">
+            <h2 class="p-2 text-3xl bg-red-500 rounded-t-full text-center text-white font-bold">Bagaimana Melihat 3M
+            </h2>
+            <p class="mt-4 lg:text-2xl text-center">
+                Dari perbezaan dan cari "Kesukaran Kerja"
+            </p>
+            <div class="border-stone-500 border-2 bg-stone-100 flex flex-row p-2 m-2 justify-center mx-auto">
+                <div class="w-1/4 border-2 border-dashed border-red-600 rounded-2xl flex flex-row lg:text-2xl p-2">
+                    <div class="10%">
+                        <p><span class="text-red-600"><i class="fa-solid fa-a"></i></span></p>
+                    </div>
+                    <div class="flex flex-col">
+                        <p>Berat</p>
+                        <p>Besar</p>
+                        <p>Panjang</p>
+                        <p>Tebal</p>
+                        <p>Kuat</p>
+                        <p>Banyak</p>
+                    </div>
+                </div>
+                <div class="w-fit lg:text-4xl flex justify-center flex-col items-center text-red-600">
+                    <p><i class="fa-solid fa-arrow-right"></i></p>
+                    <p><i class="fa-solid fa-arrow-right"></i></p>
+                    <p><i class="fa-solid fa-arrow-right"></i></p>
+                    <p><i class="fa-solid fa-arrow-right"></i></p>
+                    <p><i class="fa-solid fa-arrow-right"></i></p>
+                </div>
+                <div class="w-1/4 border-2 border-dashed border-red-600 rounded-2xl flex flex-row lg:text-2xl p-2">
+                    <div class="10%">
+                        <p><span class="text-red-600"><i class="fa-solid fa-b"></i></span></p>
+                    </div>
+                    <div class="flex flex-col">
+                        <p>Ringan</p>
+                        <p>Kecil</p>
+                        <p>Pendek</p>
+                        <p>Nipis</p>
+                        <p>Lemah</p>
+                        <p>Sedikit</p>
+                    </div>
+                </div>
+                <div class="w-1/4 lg:text-6xl flex justify-center items-center flex-col text-green-500">
+                    <p><i class="fa-solid fa-circle-arrow-left"></i></p>
+                </div>
+                <div class="w-1/4 border-dashed border-red-600 border-2 p-4 m-auto">
+                    <p class="lg:text-2xl"><span class="text-red-600"><i class="fa-solid fa-b"></i></span></p>
+                    <p class="lg:text-2xl text-center font-bold">Karakuri</p>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <p class="lg:text-2xl">
+                    Ambil kisah： Walaupun 1 saat, 1 titik, 1 langkah, 1 unit, 1 mm, 1 g, 1 sen
+                </p>
+            </div>
+        </div>
+        <div class="w-full h-auto bg-stone-200 rounded-xl p-4 mt-5">
+            <h2 class="p-2 text-3xl bg-red-500 rounded-t-full text-center text-white font-bold">Peranan Karakuri dalam
+                TPS
+            </h2>
+            <div class="w-fit border-2 mx-auto border-stone-500 bg-stone-100 flex flex-col mt-5 p-4 rounded-xl">
+                <p class="w-1/2 lg:text-2xl mx-auto text-center">
+                    Idea asas <span class="text-red-600">TPS</span> dimana penghapusan
+                    “<span class="text-red-600">MUDA</span>” secara menyeluruh boleh dijadikan
+                    untuk <span class="text-red-600">pengurangan kos</span> bahan
+                </p>
+                <div class="mt-8 flex justify-center text-red-600">
+                    <p class="lg:text-5xl mt-2"><i class="fa-solid fa-down-long"></i></p>
+                </div>
+                <div class="mt-8 border-2 border-stone-500 font-bold p-2 w-fit mx-auto text-center">
+                    <p class="lg:text-2xl">Just in Time</p>
+                </div>
+                <div class="mt-8 flex justify-center text-red-600">
+                    <p class="lg:text-5xl mt-2"><i class="fa-solid fa-down-long"></i></p>
+                </div>
+                <div class="relative w-full flex items-center mt-2 mb-2">
+                    <div class="absolute left-1/2 -translate-x-1/2">
+                        <div class="mt-2 border-2 border-stone-500 font-bold p-2 w-fit text-center">
+                            <p class="lg:text-2xl">
+                                <span class="text-red-600">Penghapusan</span> kerja yang tidak<br>
+                                memberi <span class="text-red-600">tambah nilai</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="ml-5 flex items-center gap-3">
+                        <div class="flex flex-col">
+                            <p class="lg:text-2xl text-white font-bold text-center border-2 bg-red-600">
+                                Karakuri Kaizen<br>diperlukan disini
+                            </p>
+                            <p class="lg:text-2xl text-center">Kaizenkan kesukaran<br>supaya
+                                dapat gembirakan TM
+                            </p>
+                        </div>
+                        <p class="lg:text-5xl mt-2">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </p>
+                    </div>
+                </div>
+                <div class=" flex justify-center text-red-600">
+                    <p class="lg:text-5xl mt-2"><i class="fa-solid fa-down-long"></i></p>
+                </div>
+                <div class="mt-8 border-2 border-stone-500 font-bold p-2 w-fit mx-auto text-center">
+                    <p class="lg:text-2xl"><span class="text-red-600">Meningkat</span> kadar <span
+                            class="text-red-600">kerja Shoumi</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="w-full h-auto bg-stone-200 rounded-xl p-4 mt-5">
+            <h2 class="p-2 text-3xl bg-red-500 rounded-t-full text-center text-white font-bold">Elemen Penting Dalam
+                Karakuri
+            </h2>
+            <div class="justify-center flex mt-4">
+                <img src="img/element-penting.png" alt="Elemen Penting Dalam Karakuri" class="w-5xl h-auto rounded-xl">
+            </div>
+        </div>
+    </main>
+    <div id="dragItem" class="navigation-button w-22 h-12 lg:w-24 lg:h-28 fixed lg:bottom-1 lg:left-1
+        hidden lg:flex border border-black/50
+        lg:flex-col items-center gap-3 p-2 shadow-2xl">
+        <button class="nav-button flex items-center justify-center p-1 lg:p-3" id="topBtn">
+            <i class="fas fa-angle-up"></i>
+        </button>
+        <button class="nav-button flex items-center justify-center p-1 lg:p-3" id="backBtn">
+            <i class="fas fa-angle-left"></i>
+        </button>
+    </div>
+    <script src="js/global.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+</body>
+
+</html>

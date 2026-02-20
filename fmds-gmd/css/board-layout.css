@@ -1,0 +1,108 @@
+
+/* ============== Base Styles ============== */
+
+body {
+    background-color: #435351;
+}
+.large{
+	font-size:40px;
+	text-align: center;
+}
+.red-text {
+    color: red;
+	font-weight: bold;
+}
+
+    
+.card {
+    background: linear-gradient(135deg, #f4f9fc, #e0e7ec); /* Light gradient background */
+    padding: 3rem 1.5rem;
+    border-radius: 10px;
+    max-width: 1300px;
+    margin: 2rem auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	 text-align: center;
+    /* Additional styles for centering */
+   
+}
+
+    .kepala {
+        text-align: center;
+        padding: 20px;
+		margin: 10px;
+        background-color: #009688;
+        color: #ffffff;
+    }
+
+    /* Layout Image Section */
+    #layout-image-section {
+        text-align: center;
+        padding: 20px;
+        margin: 0 auto; /* This helps ensure the section is centered */
+		margin-top: 40px;
+    }
+
+    .layout-image {
+        width: 80%;
+        max-width: 1000px;
+        border: 4px solid #009688;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        margin-bottom: 10px;
+        cursor: zoom-in;
+    }
+
+    .layout-description {
+        font-size: 1.2rem;
+        color: #555;
+        margin-top: 8px;
+    }
+
+    /* Company Details Section */
+    #company-details {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 20px;
+    }
+
+    .company-card {
+        background-color: #ffffff;
+        border: 2px solid #009688;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        padding: 20px;
+        margin: 15px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        text-align: center;
+    }
+
+    .company-card h2 {
+        color: #009688;
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .company-card p {
+        color: #333;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    /* Hover Effects */
+    .company-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Footer */
+    footer {
+        text-align: center;
+        padding: 15px;
+        background-color: #009688;
+        color: white;
+        margin-top: 20px;
+        font-size: 0.9rem;
+    }
+	

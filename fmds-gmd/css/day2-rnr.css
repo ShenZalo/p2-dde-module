@@ -1,0 +1,385 @@
+.collapsible-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    border: 2px solid #b2f5c8;
+    border-radius: 10px;
+    width: 80%;
+    height: auto;
+}
+
+.collapsible-bar {
+    height: 100px;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #009688;
+    color: white;
+    border: 2px solid #009688;
+    border-radius: 8px;
+    padding: 16px;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.collapsible-bar:hover {
+    background-color: #009688;
+    border: 2px solid #009688;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02);
+}
+
+.collapsible-card {
+    font-size: 1.3rem;
+    background-color: #e0f7fa;
+    border-radius: 10px;
+    padding: 0; /* collapsed padding */
+    margin: 0 20px; /* no bottom margin when hidden */
+    height: auto;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    border: none; /* remove hidden border gap */
+    transition: 
+        max-height 0.5s ease,
+        opacity 0.5s ease,
+        padding 0.5s ease,
+        margin 0.3s ease;
+}
+
+.collapsible-card.expand {
+    padding: 20px;
+    margin: 10px 20px 20px 20px; /* restore margin */
+    border: 2px solid #009688;
+    opacity: 1;
+    max-height: none; /* large enough for full content */
+}
+
+/* Add collapsible indicator integration */
+.collapsible-bar .indicator {
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.collapsible-bar .indicator.expand {
+    transform: rotate(90deg); 
+}
+
+.three-section-pyramid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.pyramid-wrap {
+    position: relative;
+    width: 500px;
+    /* matches largest width */
+    height: auto;
+    /* enough space for triangle */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.pyramid-text {
+    position: absolute;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    font-size: 22px;
+    width: 70%;
+    pointer-events: none;
+}
+
+.pyramid-top {
+    text-align: center;
+    border-bottom: 300px solid #0dd13b;
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    margin-bottom: 2px;
+    /* reduced spacing */
+    transition: transform 0.2s ease-in-out, border-bottom-color 0.2s;
+    display: inline-block;
+}
+
+.pyramid-top:hover {
+    border-bottom-color: #0bb32f;
+    transform: scale(1.02);
+}
+
+.pyramid-top:active {
+    transform: scale(0.95);
+}
+
+
+
+.pyramid-middle {
+    width: 300px;
+    height: 0;
+    border-bottom: 180px solid #0dd13b;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    margin-bottom: 2px;
+    /* reduced spacing */
+    transition: transform 0.2s ease-in-out, border-bottom-color 0.2s;
+    display: inline-block;
+}
+
+.pyramid-middle:hover {
+    border-bottom-color: #0bb32f;
+    transform: scale(1.02);
+}
+
+.pyramid-middle:active {
+    transform: scale(0.95);
+}
+
+
+.pyramid-bottom {
+    width: 500px;
+    height: 0;
+    border-bottom: 180px solid #0dd13b;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    margin-bottom: 2px;
+    /* reduced spacing */
+    transition: transform 0.2s ease-in-out, border-bottom-color 0.2s;
+    display: inline-block;
+}
+
+
+.pyramid-bottom:hover {
+    border-bottom-color: #0bb32f;
+    transform: scale(1.02);
+}
+
+.pyramid-bottom:active {
+    transform: scale(0.95);
+}
+
+.numbered-list {
+    counter-reset: num;
+    list-style: none;
+    padding-left: 0;
+    margin: 28px auto;
+    max-width: 600px;
+}
+
+.numbered-list li {
+    counter-increment: num;
+    background: #f4fff6;
+    /* soft tinted green background */
+    border-radius: 10px;
+    margin-bottom: 16px;
+    padding: 32px 22px 16px 54px;
+    font-size: 1.8rem;
+    color: #0a3b15;
+    /* dark forest text for contrast */
+    position: relative;
+    box-shadow: 0 1px 4px rgba(0, 60, 20, 0.08);
+    transition: box-shadow 0.18s, transform 0.18s;
+    border: 1px solid #b2f5c8;
+    /* subtle light border */
+}
+
+.numbered-list li::before {
+    content: counter(num);
+    position: absolute;
+    left: 18px;
+    top: 12px;
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(120deg, #0dd13b 0%, #0bb32f 100%);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.18em;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(0, 60, 20, 0.18);
+}
+
+.numbered-list li:hover {
+    box-shadow: 0 4px 16px rgba(0, 60, 20, 0.18);
+    transform: translateY(-2px) scale(1.03);
+    background: #e7ffe9;
+    /* slight brighten on hover */
+}
+
+.numbered-list-layout {
+    display: flex;
+    align-items: flex-start;
+}
+
+.flow-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+    margin: 20px;
+}
+
+.flow-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, max-content)); /* Use max-content instead of 1fr */
+    gap: 10px; /* Adjust spacing between items */
+    justify-content: center; /* Center the grid items */
+}
+
+.flow-grid.down {
+    display: grid;
+    grid-template-columns: 1fr;   /* single column */
+    justify-items: center;        /* center each item horizontally */
+}
+
+.flow-chart-box {
+    background-color: #88abaf;
+    border: 2px solid #009688;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.flow-arrow {
+    justify-content: center;
+    font-size: 2rem;
+    color: #009688;
+    display: flex;
+    align-items: center;
+}
+
+.topic-box-wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap:0px;
+    justify-items: center;
+}
+
+.topic-box-title{
+    background-color: #009688;
+    color: white;
+    padding: 10px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.topic-box-item {
+    background-color: #e0f7fa;
+    border: 2px solid #009688;
+    color: #004d40;
+    padding: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;               /* enable flexbox */
+    flex-direction: column;;
+    justify-content: center;      /* center horizontally */
+    align-items: center;          /* center vertically */
+    text-align: center;           /* optional: center text lines */
+}
+
+
+.topic-box-title,
+.topic-box-item {
+    box-sizing: border-box;
+    width: 300px;
+}
+
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.drag-container {
+    position: relative;
+}
+
+#draggableItem {
+    position: absolute;
+    touch-action: none; 
+    cursor: grab;
+}
+#draggableItem:active {
+    cursor: grabbing;
+}
+.content-table {
+    width: 90%;                 /* makes table bigger */
+    margin: 20px auto;          /* centers the table horizontally */
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    table-layout: fixed;        /* ensures columns are even and text wraps */
+}
+
+/* Header */
+.content-table thead th {
+    background: #9fd3eb;
+    color: #003b5c;
+    font-weight: 600;
+    text-align: center;
+    padding: 16px;              /* taller header */
+    border-bottom: 2px solid #86c3df;
+    
+}
+
+/* Cells */
+.content-table th,
+.content-table td {
+    border: 1px solid #c9e1e1;
+    padding: 14px 12px;
+    text-align: left;
+    word-wrap: break-word;
+    vertical-align: top;
+    font-size: 1.5rem;
+}
+
+/* Row colors */
+.content-table tbody tr:nth-child(even) {
+    background: #eefaf3;
+    transition: background-color 0.3s;
+}
+
+.content-table tbody tr:nth-child(odd) {
+    background: #ffffff;
+    transition: background-color 0.3s;
+}
+
+/* Hover */
+.content-table tbody tr:hover {
+    background: #d8ecff;
+}
+
+/* Empty cells */
+.content-table td:empty {
+    background: #f3f3f3;
+    color: #777;
+    font-style: italic;
+}

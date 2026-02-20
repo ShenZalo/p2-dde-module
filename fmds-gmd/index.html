@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FMDS Login</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="page-container">
+        <div class="left-side-container">
+            <div class="login-box">
+                <div class="dde-logo">
+                    <img src="img/dde-logo.png" alt="DDE Logo">
+                </div>
+                <h2>Login</h2>
+                <form id="login-form">
+                    <input type="email" id="email" placeholder="Email" required><br>
+                    <input type="password" id="password" placeholder="Password" required><br>
+                    <button type="submit" class="login-button">Login</button>
+                </form>
+                <a class="forgot-password" href="#">Forgot password?</a>
+                <a class="register-link" href="register.html">Don't have an account? Register!</a>
+            </div>
+        </div>
+        <div class="right-side-container">
+            <div class="welcome-box">
+                <h2>Welcome to <br>FMDS <br>e-Module</h2>
+                <p>Login to access training materials</p>
+            </div>
+        </div>
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+        import { getAuth, signInWithEmailAndPassword, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+
+        // Firebase config
+        const firebaseConfig = {
+            apiKey: "AIzaSyAzhBwJ-zTOEopDgUmwKXzVB_obQ3iGWjY",
+            authDomain: "fmdsemodule.firebaseapp.com",
+            projectId: "fmdsemodule",
+            storageBucket: "fmdsemodule.firebasestorage.app",
+            messagingSenderId: "1033730497984",
+            appId: "1:1033730497984:web:90b7af2cff747e134d3c25",
+            measurementId: "G-R37MT23RSJ"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        // Login function
+        const loginForm = document.getElementById("login-form");
+        loginForm.addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value;
+
+            if (!email.endsWith("@perodua.com.my")) {
+                alert("Please use your company email!");
+                return;
+            }
+
+            try {
+                const userCredential = await signInWithEmailAndPassword(auth, email, password);
+                const user = userCredential.user;
+
+                if (!user.emailVerified) {
+                    alert("Please verify your email before logging in. Check your Outlook and junk folder for the verification email.");
+                    return;
+                }
+
+                console.log("User logged in:", user);
+                window.location.href = "fmds-homepage.html"; // redirect after login
+
+            } catch (error) {
+                console.error("Login error:", error);
+                alert("Invalid email or password!");
+            }
+        });
+
+        // Forgot password
+        const forgotLink = document.querySelector(".forgot-password");
+        forgotLink.addEventListener("click", async (e) => {
+            e.preventDefault();
+
+            const email = prompt("Please enter your company email to reset password:");
+            if (!email) return;
+
+            if (!email.endsWith("@perodua.com.my")) {
+                alert("Please enter a valid company email.");
+                return;
+            }
+
+            try {
+                await sendPasswordResetEmail(auth, email);
+                alert("Password reset email sent. Please check your inbox.");
+            } catch (error) {
+                console.error("Password reset error:", error);
+                alert(error.message);
+            }
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FMDS Day 1 - 520 Minutes Job Cycle</title>
+    <link rel="stylesheet" href="css/day1.css">
+    <link rel="stylesheet" href="css/global.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Loader -->
+    <link rel="stylesheet" href="../css/loader.css">
+    <script src="../js/loader.js" defer></script>
+</head>
+
+<body>
+    <!-- Loader to hide content until fully loaded -->
+    <div class="preloader" id="preloader">
+        <div class="loader">
+            <span class="loader-text">DDE</span>
+        </div>
+    </div>
+
+    <!-- Header --->
+    <section class="module-overview">
+        <div class="module-overview">
+            <div class="overview-header">
+                <img src="img/safety logo.jpg" alt="FMDS Logo" class="image-logo">
+                <h1>MARI MULA BELAJAR<br> FMDS Module <br><br> 520 Minutes Job Cycle</h1>
+                <img src="img/1 team 1 goal.jpg" alt="FMDS Logo" class="image-logo">
+            </div>
+            <div class="overview-subheader">
+                <p>Mulai dengan YOSH <b>mesti selamat</b> dan akhiri dengan YOSH <b>1 team 1 goal</b></p>
+            </div>
+        </div>
+    </section>
+    <main>
+        <div class="content-container">
+            <section clasids="cont1">
+                <h2 class="content-container-title">Zon A, B dan C</h2>
+                <div class="large-image-container">
+                    <img src="img/zonabc.png" alt="Large Content Image" class="large-image"
+                        onclick="openFullscreen('img/zonabc.png')">
+                </div>
+            </section>
+            <section id="cont2">
+                <div class="card-layout-3x1">
+                    <div class="corner-box"><span>
+                            <!-- Zon A -->
+                            <div class="content-card-3x1" onclick="toggleCard(this)">
+                                <h3 style="color:red">Zon A</h3>
+                                <h4>Mengekalkan / Menjamin keadaan yang boleh menjalankan pengeluaran dilakukan </h4>
+                                <div class="content">
+                                    <ul>
+                                        <li>Informasi & Komunikasi</li>
+                                        <li>Kehadiran & Kesihatan (Taiso, PPE)</li>
+                                        <li>Man</li>
+                                        <li>Machine</li>
+                                        <li>Material</li>
+                                        <li>Method</li>
+                                        <li>Safety</li>
+                                        <li>WIP / Buffer</li>
+                                        <li>4S</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </span></div>
+                    <!-- Zon B -->
+                    <div class="corner-box"><span>
+                            <div class="content-card-3x1" onclick="toggleCard(this)">
+                                <h3 style="color:green">Zon B</h3>
+                                <h4>Pelaksanaan pengekalan</h4>
+                                <br><br>
+                                <div class="content">
+                                    <ul>
+                                        <li>Komunikasi & Pemerhatian Operator</li>
+                                        <li>Operator Observation</li>
+                                        <li>Safety Patrol</li>
+                                        <li>Quality Check</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </span></div>
+
+                    <!-- Zon C -->
+                    <div class="corner-box"><span>
+                            <div class="content-card-3x1" onclick="toggleCard(this)">
+                                <h3 style="color: yellow">Zon C</h3>
+                                <h4>Keadaan akhir</h4>
+                                <br><br>
+                                <div class="content">
+                                    <p>Benda berubah</p>
+                                    <ul>
+                                        <li>Informasi</li>
+                                        <li>Man</li>
+                                        <li>Machine</li>
+                                        <li>Material</li>
+                                        <li>Method</li>
+                                        <li>Safety</li>
+                                        <li>WIP / Buffer</li>
+                                        <li>4S</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </span></div>
+                </div>
+            </section>
+        </div>
+
+
+        <div class="content-container">
+            <h2 class="content-container-title">Zone A</h2>
+            <h3 class="content-container-subtitle">Masa persediaan untuk production</h3>
+            <section id="cont3">
+                <h3 style="text-align:center;">Pemeriksaan & pengesahan kepada <b>benda yang berubah [Henkaten]</b></h3>
+                <div class="large-image-container">
+                    <img src="img/pengesahan-henkaten.png" alt="Pengesahan Henkaten" class="large-image"
+                        onclick="openFullscreen('img/pengesahan-henkaten.png')">
+                </div>
+            </section>
+            <!--Small box, hard to see on TV, so use popup-->
+            <section id="cont4">
+                <div class="card-layout-4x1">
+                    <div class="content-card-4x1" onclick="show(`#zoneA-Man`)">
+                        <h3>Man</h3>
+                    </div>
+                    <div class="content-card-4x1" onclick="show(`#zoneA-Machine`)">
+                        <h3>Machine</h3>
+                    </div>
+                    <div class="content-card-4x1" onclick="show(`#zoneA-Material`)">
+                        <h3>Material</h3>
+                    </div>
+                    <div class="content-card-4x1" onclick="show(`#zoneA-Method`)">
+                        <h3>Method</h3>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Popup for Zone A Man-->
+        <div id="zoneA-Man" class="popup-container hidden">
+            <h2 class="content-container-title">Man</h2>
+            <h3 class="content-container-subtitle">Pengesahan kehadiran</h3>
+            <div class="content-container">
+                <div class="content-box">
+                    <p>Adakah Team Member mencukupi?</p>
+                </div>
+                <div class="content-sub-box-layout">
+                    <div class="content-sub-box">
+                        <p>Tidak hadir? Cuti mengejut?</p>
+                    </div>
+                    <div class="content-sub-box">
+                        <p>[El]/Lewat? <b>Kenapa?</b></p>
+                    </div>
+                </div>
+                <div class="content-sub-box-layout">
+                    <div class="content-sub-box">
+                        <p><i><b>Replacement manpower</b></i></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-container">
+                <h3 style="text-align: center; font-size: 1.5rem; margin-bottom: 5px;">Attendance Control Board</h3>
+                <div class="large-image-container">
+                    <img src="img/attendance-control-board.png" alt="Large Content Image" class="large-image"
+                        onclick="openFullscreen('img/attendance-control-board.png')">
+                </div>
+            </div>
+
+            <div class="content-container">
+                <div class="image-interactive-point">
+                    <div class="image-interactive-point-question">
+                        <div class="topic-image-container">
+                            <img src="img/attendance-control-board-real.jpg" alt="Attendance Control Board Real"
+                                class="topic-image large-image"
+                                onclick="openFullscreen('img/attendance-control-board-real.jpg')">
+                        </div>
+                        <div class="corner-box"><span>
+                                <h3 class="topic-question" onclick="toggleAnswers()">Apakah tujuan Attendance
+                                    Control Board?
+                                </h3>
+                            </span></div>
+                    </div>
+                    <div class="image-interactive-point-answer">
+                        <div class="topic-answer">
+                            Kawal jumlah kehadiran
+                        </div>
+                        <div class="topic-answer">
+                            Tahu siapa yang hadir @ cuti
+                        </div>
+                        <div class="topic-answer">
+                            Tahu attendance rate
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-container">
+                <h2 class="content-container-title">Contoh: Attendance Control Board</h2>
+                <h3 style="text-align: center; font-size: 1.5rem; margin-bottom: 5px;">Control board yang
+                    kebiasaannya dilihat</h3>
+                <div class="image-container">
+                    <img src="img/normal-attendance-control-board.png" alt="Normal Attendance Control Board"
+                        class="image" onclick="openFullscreen('img/normal-attendance-control-board.png')">
+                </div>
+                <div class="content-box">
+                    <p>Apa yang tidak cukup? Tetapkan standard</p>
+                </div>
+                <div class="bubble-map-container">
+                    <div class="bubble-map-item-layout">
+                        <div class="bubble-map-item hidden">
+                            5 orang bercuti
+                        </div>
+                        <div class="bubble-map-item hidden">
+                            Attendance rate
+                        </div>
+                    </div>
+                    <div class="corner-box"><span>
+                            <div class="bubble-map-topic" onclick="toggleBubble(`#zoneA-Man`)">
+                                Normal @ Abnormal
+                            </div>
+                        </span></div>
+                    <div class="bubble-map-item-layout">
+                        <div class="bubble-map-item hidden">
+                            AL? EL? MC?
+                        </div>
+                        <div class="bubble-map-item hidden">
+                            Berapa orang cuti?
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-container">
+                <h2 class="content-container-title">Contoh: Replacement Manpower</h2>
+                <div class="large-image-container">
+                    <img src="img/replacement-manpower.png" alt="Replacement Manpower" class="image"
+                        onclick="openFullscreen('img/replacement-manpower.png')">
+                </div>
+            </div>
+
+            <div class="close-div">
+                <button class="close-button" onclick="hide('#zoneA-Man')"><i class="fas fa-times"></i>
+                    Tutup</button>
+            </div>
+        </div>
+
+        <!-- Popup for Zone A Machine-->
+        <div class="popup-container hidden" id="zoneA-Machine">
+            <h2 class="content-container-title">Machine</h2>
+            <div class="content-container">
+                <div class="content-box">
+                    <p>Adakah mesin beroperasi secara normal?</p>
+                </div>
+                <div class="topic-list">
+                    <div class="topic">
+                        Pastikan tiada abnormal pada:
+                    </div>
+                    <div class="list">
+                        <ul>
+                            <li><i>Pressure gauge</i></li>
+                            <li><i>Power supply</i></li>
+                            <li><i>Push button</i></li>
+                            <li>Minyak</li>
+                            <li><i>Coolant</i></li>
+                            <li><i>Jig</i></li>
+                            <li>Kebocoran angin</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-container">
+                <h2 class="content-container-title">Pengesahan Operasi Mesin</h2>
+                <div class="image-container">
+                    <img src="img/pengesahan-operasi-mesin.png" alt="Pengesahan Operasi Mesin" class="image"
+                        onclick="openFullscreen('img/pengesahan-operasi-mesin.png')">
+                </div>
+                <div class="content-box">
+                    <p>Pemeriksaan guna checklist berdasarkan <b>5W1H</b></p>
+                </div>
+            </div>
+            <div class="close-div">
+                <button class="close-button" onclick="hide('#zoneA-Machine')"><i class="fas fa-times"></i>
+                    Tutup</button>
+            </div>
+        </div>
+
+        <!-- Popup for Zone A Material -->
+        <div class="popup-container hidden" id="zoneA-Material">
+            <h2 class="content-container-title">Material</h2>
+            <div class="content-container">
+                <div class="bubble-map-container">
+                    <div class="bubble-map-item-layout">
+                        <div class="bubble-map-item hidden">
+                            <div class="bubble-image">
+                                <img src="img/check-part.png " alt="Check Part">
+                            </div>
+                            <h4 class="bubble-map-title">Part</h4>
+                            Pallet part, polybox part, etc.
+                        </div>
+                        <div class="bubble-map-item hidden">
+                            <div class="bubble-image">
+                                <img src="img/check-material.png " alt="Check Part">
+                            </div>
+                            <h4 class="bubble-map-title">Material</h4>
+                            Plat besi, minyak, pelekat, etc.
+                        </div>
+                    </div>
+                    <div class="corner-box"><span>
+                            <div class="bubble-map-topic" onclick="toggleBubble(`#zoneA-Material`)">
+                                Pengesahan persediaan part
+                            </div>
+                        </span></div>
+                    <div class="bubble-map-item-layout">
+                        <div class="bubble-map-item hidden">
+                            <div class="bubble-image">
+                                <img src="img/check-buffer.png " alt="Check Part">
+                            </div>
+                            <h4 class="bubble-map-title">Buffer/WIP</h4>
+                            Proses, robot, WBS, PBS, etc.
+                        </div>
+                        <div class="bubble-map-item hidden">
+                            <div class="bubble-image">
+                                <img src="img/check-tools.png " alt="Check Part">
+                            </div>
+                            <h4 class="bubble-map-title">Tools</h4>
+                            Impact, wrench, sander, spray gun, etc.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="close-div">
+                <button class="close-button" onclick="hide('#zoneA-Material')"><i class="fas fa-times"></i>
+                    Tutup</button>
+            </div>
+        </div>
+
+        <!-- Popup for Zone A Method -->
+        <div class="popup-container hidden" id="zoneA-Method">
+            <h2 class="content-container-title">Method</h2>
+            <div class="content-container">
+                <div class="bubble-map-container">
+                    <div class="bubble-map-item-layout">
+                        <div class="bubble-map-item hidden">
+                            Safety
+                        </div>
+                        <div class="bubble-map-item hidden">
+                            Quality
+                        </div>
+                    </div>
+                    <div class="corner-box"><span>
+                            <div class="bubble-map-topic" onclick="toggleBubble(`#zoneA-Method`)">
+                                Pengesahan Informasi berkaitan<br>
+                                [Communication Book]
+                            </div>
+                        </span></div>
+                    <div class="bubble-map-item-layout">
+                        <div class="bubble-map-item hidden">
+                            Production
+                        </div>
+                        <div class="bubble-map-item hidden">
+                            Others
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-container">
+                <div class="content-box">
+                    <p>Maklumat disampaikan kepada shift bertentangan setiap hari!</p>
+                    <p>Jika tiada informasi, apa akan berlaku?</p>
+                </div>
+            </div>
+            <div class="close-div">
+                <button class="close-button" onclick="hide('#zoneA-Method')"><i class="fas fa-times"></i>
+                    Tutup</button>
+            </div>
+        </div>
+
+
+
+
+        <div class="content-container">
+            <h2 class="content-container-title">Zone B</h2>
+            <h3 class="content-container-subtitle">Semasa <i>production</i> beroperasi</h3>
+            <section id="cont5">
+                <h3 style="text-align: center;">Pemeriksaan & pengesahan kepada <b>abnormal</b></h3>
+                <div class="large-image-container">
+                    <img src="img/zoneb-sqdc.png" alt="Zone B SQDC" class="large-image"
+                        onclick="openFullscreen('img/zoneb-sqdc.png')">
+                </div>
+
+                <div class="content-box">
+                    <p>Pengesahan untuk mengekalkan perlu dibuat dengan melihat sendiri di <i>genba</i></p>
+                </div>
+            </section>
+            <br><br>
+            <section id="cont6">
+                <!--Small box, hard to see on TV, so use popup-->
+                <div class="card-layout-4x1">
+                    <div class="content-card-4x1" onclick="show(`#zoneB-Safety`)">
+                        <h3>Safety</h3>
+                    </div>
+                    <div class="content-card-4x1" onclick="show(`#zoneB-Quality`)">
+                        <h3>Quality</h3>
+                    </div>
+                    <div class="content-card-4x1" onclick="show(`#zoneB-Production`)">
+                        <h3>Production</h3>
+                    </div>
+                    <div class="content-card-4x1" onclick="show(`#zoneB-Observation`)">
+                        <h3>Observation</h3>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Popup for Zone B Safety-->
+            <div id="zoneB-Safety" class="popup-container hidden" id="zoneB-Safety">
+                <h2 class="content-container-title">Safety</h2>
+                <div class="content-container">
+                    <div class="bubble-map-container">
+                        <div class="bubble-map-item-layout">
+                            <div class="bubble-map-item hidden">
+                                <div class="bubble-image">
+                                    <img src="img/check-kawasan-kerja.jpg " alt="Check Kawasan Kerja">
+                                </div>
+                                <h4 class="bubble-map-title">
+                                    Kawasan kerja
+                                </h4>
+                                Tiada bahaya <br>[Unsafe condition/USC]
+                            </div>
+                            <div class="bubble-map-item hidden">
+                                <div class="bubble-image">
+                                    <img src="img/check-ua.jpg " alt="Check UA">
+                                </div>
+                                <h4 class="bubble-map-title">
+                                    Perbuatan
+                                </h4>
+                                Tiada bahaya <br>[Unsafe action/USA]
+                            </div>
+                        </div>
+                        <div class="corner-box"><span>
+                                <div class="bubble-map-topic" onclick="toggleBubble(`#zoneB-Safety`)">
+                                    Pengesahan Keselamatan
+                                </div>
+                            </span></div>
+                        <div class="bubble-map-item-layout">
+                            <div class="bubble-map-item hidden">
+                                <div class="bubble-image">
+                                    <img src="img/check-ppe.png" alt="Check PPE">
+                                </div>
+                                <h4 class="bubble-map-title">
+                                    Pemakaian PPE
+                                </h4>
+                                Betul & sempurna
+                            </div>
+                            <div class="bubble-map-item hidden">
+                                <div class="bubble-image">
+                                    <img src="img/check-barang.png" alt="Check Barang">
+                                </div>
+                                <h4 class="bubble-map-title">
+                                    Letak barang
+                                </h4>
+                                Tiada halangan
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="close-div">
+                    <button class="close-button" onclick="hide('#zoneB-Safety')"><i class="fas fa-times"></i>
+                        Tutup</button>
+                </div>
+            </div>
+
+            <!-- Popup for Zone B Quality-->
+            <div id="zoneB-Quality" class="popup-container hidden" id="zoneB-Quality">
+                <h2 class="content-container-title">Quality</h2>
+                <div class="content-container">
+                    <div class="bubble-map-container">
+                        <div class="bubble-map-item-layout">
+                            <div class="bubble-map-item hidden">
+                                <div class="bubble-image">
+                                    <img src="img/check-quality-control.png " alt="Check Quality Control">
+                                </div>
+                                <h4 class="bubble-map-title">
+                                    Quality Control
+                                </h4>
+                                Kualiti penting
+                            </div>
+                            <div class="bubble-map-item hidden">
+                                <div class="bubble-image">
+                                    <img src="img/check-defect.png" alt="Check Defect">
+                                </div>
+                                <h4 class="bubble-map-title">
+                                    Quality Gate
+                                </h4>
+                                Tiada defect terhasil
+                            </div>
+                        </div>
+                        <div class="corner-box"><span>
+                                <div class="bubble-map-topic" onclick="toggleBubble(`#zoneB-Quality`)">
+                                    Pengesahan Kualiti
+                                </div>
+                            </span></div>
+                        <div class="bubble-map-item-layout">
+                            <div class="bubble-map-item hidden">
+                                <div class="bubble-image">
+                                    <img src="img/check-quality-resutl.png" alt="Check Quality Result">
+                                </div>
+                                <h4 class="bubble-map-title">
+                                    Quality Result
+                                </h4>
+                                Hasil OK @ NG
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="close-div">
+                    <button class="close-button" onclick="hide('#zoneB-Quality')"><i class="fas fa-times"></i>
+                        Tutup</button>
+                </div>
+            </div>
+
+            <!-- Popup for Zone B Production-->
+            <div id="zoneB-Production" class="popup-container hidden" id="zoneB-Production">
+                <h2 class="content-container-title">Production</h2>
+                <div class="content-container">
+                    <div class="bubble-map-container">
+                        <div class="bubble-map-item-layout">
+                            <div class="bubble-map-item hidden">
+                                <div class="bubble-image">
+                                    <img src="img/check-production-volume.png " alt="Check Production Volume">
+                                </div>
+                                <h4 class="bubble-map-title">
+                                    Production volume
+                                </h4>
+                                Penetapan sasaran
+                            </div>
+                            <div class="bubble-map-item hidden">
+                                <div class="bubble-image">
+                                    <img src="img/check-downtime.png " alt="Check Downtime">
+                                </div>
+                                <h4 class="bubble-map-title">
+                                    Downtime
+                                </h4>
+                                Kelewatan pengeluaran
+                            </div>
+                        </div>
+                        <div class="corner-box"><span>
+                                <div class="bubble-map-topic" onclick="toggleBubble(`#zoneB-Production`)">
+                                    Pengesahan Pengeluaran
+                                </div>
+                            </span></div>
+                        <div class="bubble-map-item-layout">
+                            <div class="bubble-map-item hidden">
+                                <div class="bubble-image">
+                                    <img src="img/check-production-progress.png " alt="Check Production Progress">
+                                </div>
+                                <h4 class="bubble-map-title">
+                                    Production progress
+                                </h4>
+                                Plan vs actual
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-container">
+                    <h3 class="content-container-title">Contoh pengawalan - Production Monitoring Board</h3>
+                    <div class="large-image-container">
+                        <img src="img/production-monitoring-board.png" alt="Production Monitoring Board"
+                            class="large-image" onclick="openFullscreen('img/production-monitoring-board.png')">
+                    </div>
+                    <div class="ul-content-box">
+                        <ul>
+                            <li>Pengiraan & memahami Production Volume</li>
+                            <li>Pengesahan tiada abnormal semasa production</li>
+                            <li>Tindakan perlu diambil - Temporary @ Permenant
+                                Countermeasure</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="close-div">
+                    <button class="close-button" onclick="hide('#zoneB-Production')"><i class="fas fa-times"></i>
+                        Tutup</button>
+                </div>
+            </div>
+
+            <!-- Popup for Zone B Observation-->
+            <div id="zoneB-Observation" class="popup-container hidden" id="zoneB-Observation">
+                <h2 class="content-container-title">Observation</h2>
+                <div class="content-container">
+                    <div class="bubble-map-container">
+                        <div class="corner-box"><span>
+                                <div class="bubble-map-topic" onclick="toggleBubble(`#zoneB-Observation`)">
+                                    Pemerhatian Kerja
+                                </div>
+                            </span></div>
+                        <div class="bubble-map-item-layout">
+                            <div class="bubble-map-item hidden">
+                                <div class="bubble-image">
+                                    <img src="img/check-observation.png " alt="Check Observation">
+                                </div>
+                                <h4 class="bubble-map-title">
+                                    Observation
+                                </h4>
+                                <ul>
+                                    <li>Cara kerja</li>
+                                    <li>Keselamatan</li>
+                                    <li>Peralatan</li>
+                                    <li>PPE</li>
+                                </ul>
+                            </div>
+                            <div class="bubble-map-item hidden">
+                                <div class="bubble-image">
+                                    <img src="img/check-communication.png " alt="Check Communication">
+                                </div>
+                                <h4 class="bubble-map-title">
+                                    Communication
+                                </h4>
+                                <ul>
+                                    <li>Kesihatan</li>
+                                    <li>Masalah</li>
+                                    <li>Gangguan</li>
+                                    <li>Halangan</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-container">
+                    <h3 class="content-container-title">Contoh pengawalan - Operator Observation Board</h3>
+                    <div class="large-image-container">
+                        <img src="img/operator-observation.png" alt="Operator Observation" class="large-image"
+                            onclick="openFullscreen('img/operator-observation.png')">
+                    </div>
+                </div>
+                <div class="content-container">
+                    <h2 class="content-container-title">Standard Operation [Operasi Standard]</h2>
+                    <div class="topic-content-2x1">
+                        <div class="topic-2x1" style="background-color:greenyellow;">
+                            Normal
+                        </div>
+                        <div class="content-2x1" style="background-color:greenyellow;">
+                            <ul>
+                                <li>Hasilkan & tetapkan operasi standard</li>
+                                <li>Mengekalkan - Nilai sasaran</li>
+                                <li>SQCD</li>
+                                <li>Lakukan <i>KAIZEN</i> - Kenalpasti <i>MUDA</i></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="topic-content-2x1">
+                        <div class="topic-2x1" style="background-color:red; color:white;">
+                            Abnormal
+                        </div>
+                        <div class="content-2x1" style="background-color:red; color:white;">
+                            <ul>
+                                <li>Tindakan terhadap abnormal / pencegahan dari berulang</li>
+                                <li><i>KAIZEN</i>/Mewujudkan sistem </li>
+                                <li>Kenalpasti <i>MUDA</i></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="close-div">
+                    <button class="close-button" onclick="hide('#zoneB-Observation')"><i class="fas fa-times"></i>
+                        Tutup</button>
+                </div>
+            </div>
+        </div>
+        <div class="content-container">
+            <h2 class="content-container-title">Zone C</h2>
+            <h3 class="content-container-subtitle">Masa keadaan ketika selesai</h3>
+            <section class="cont7">
+                <h3 style="text-align:center;">Pemeriksaan & pengesahan kepada <b>benda yang berubah [Henkaten]</b></h3>
+                <div class="large-image-container">
+                    <img src="img/pengesahan-henkaten-c.png" alt="Pengesahan Henkaten C" class="large-image"
+                        onclick="openFullscreen('img/pengesahan-henkaten-c.png')">
+                </div>
+            </section>
+            <section class="cont8">
+                <div class="card-layout-2x1">
+                    <div class="content-card-2x1" onclick="show(`#zoneC-FinalCondition`)">
+                        <h3>Final Condition</h3>
+                    </div>
+                    <div class="content-card-2x1" onclick="show(`#zoneC-520min`)">
+                        <h3>Cara Kerja 520 Minit</h3>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Zone C Final Condition Popup-->
+            <div class="popup-container hidden" id="zoneC-FinalCondition">
+                <h2 class="content-container-title">Final Condition</h2>
+                <div class="content-container">
+                    <div class="content-box" style="display:flex; flex-direction:column;">
+                        <p>Kenapa perlu ada final condition?</p>
+
+                        <div class="ul-content-box">
+                            <ul>
+                                <li>Sebab ada <b>standard</b> yang perlu <b>diperiksa</b></li>
+                                <li><b>Tidak boleh lebih @ kurang - abnormal pada zon A</b></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bubble-map-container">
+                        <div class="bubble-map-item-layout">
+                            <div class="bubble-map-item hidden">
+                                Information
+                            </div>
+                            <div class="bubble-map-item hidden">
+                                Material
+                            </div>
+                            <div class="bubble-map-item hidden">
+                                Machine
+                            </div>
+                        </div>
+                        <div class="corner-box"><span>
+                                <div class="bubble-map-topic" onclick="toggleBubble(`#zoneC-FinalCondition`)">
+                                    Item perlu diperiksa
+                                </div>
+                            </span></div>
+                        <div class="bubble-map-item-layout">
+                            <div class="bubble-map-item hidden">
+                                Buffer/WIP
+                            </div>
+                            <div class="bubble-map-item hidden">
+                                4S/Safety
+                            </div>
+                            <div class="bubble-map-item hidden">
+                                Tools
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-container">
+                    <h3 style="text-align: center;">Final condition: Jika pulang dalam keadaan sebegini:</h3>
+                    <div class="large-image-container">
+                        <img src="img/final-condition.png" alt="Final Condition" class="large-image"
+                            onclick="openFullscreen('img/final-condition.png')">
+                    </div>
+                </div>
+                <div class="close-div">
+                    <button class="close-button" onclick="hide('#zoneC-FinalCondition')"><i class="fas fa-times"></i>
+                        Tutup</button>
+                </div>
+            </div>
+        </div>
+        <!--Zone C Cara Kerja 5 Minute-->
+        <div class="popup-container hidden" id="zoneC-520min">
+            <h2 class="content-container-title">Cara Kerja 520 Minit</h2>
+            <div class="content-container">
+                <div class="bubble-map-container">
+                    <div class="bubble-map-item-layout">
+                        <div class="bubble-map-item hidden">
+                            Cari masalah yang belum selesai di genba
+                        </div>
+                    </div>
+                    <div class="corner-box"><span>
+                            <div class="bubble-map-topic" onclick="toggleBubble(`#zoneC-520min`)">
+                                Bagaimana untuk menjayakan pengurusan peningkatan?
+                            </div>
+                        </span></div>
+                    <div class="bubble-map-item-layout">
+                        <div class="bubble-map-item hidden">
+                            Buat kaizen untuk tingkatkan KPI [Hoshin]
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-container">
+                <h2 class="content-container-title">Ideal Condition</h2>
+                <div class="large-image-container">
+                    <img src="img/ideal-condition.png" alt="Ideal Condition" class="large-image"
+                        onclick="openFullscreen('img/ideal-condition.png')">
+                </div>
+            </div>
+            <div class="close-div">
+                <button class="close-button" onclick="hide('#zoneC-520min')"><i class="fas fa-times"></i>
+                    Tutup</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Genba Management Dojo | All Rights Reserved.</p>
+    </footer>
+
+
+    <!-- Navigation Button-->
+    <div id="dragItem" class="navigation-button">
+        <button class="nav-button" id="topBtn">
+            <i class="fas fa-angle-up"></i>
+        </button>
+        <button class="nav-button" id="backBtn">
+            <i class="fas fa-angle-left"></i>
+        </button>
+    </div>
+    <!--- Javascript -->
+    <script src="js/global.js"></script>
+    <script src="js/520min.js"></script>
+</body>
+
+
+</html>

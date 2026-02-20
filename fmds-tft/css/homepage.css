@@ -1,0 +1,41 @@
+.intro-info-container {
+    background: rgb(153, 204, 255);
+    border-radius: 15px;
+    color: black;
+}
+
+.intro-pic-container {
+    border-radius: 15px;
+}
+
+.intro-button {
+    background: rgb(255, 209, 102);
+    color: black;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+
+.trainer-info-card {
+    background: rgba(59, 130, 246, 0.15); /* light blue */
+    backdrop-filter: blur(4px);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* soft shadow */
+}
+
+.module-card {
+    border:rgba(0, 0, 0, 0.15) 2px solid;
+    border-radius: 12px;
+}
+
+.start-button {
+    background: rgb(34, 197, 94);
+    color: white;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.start-button:hover {
+    background: rgb(22, 163, 74);
+}
+

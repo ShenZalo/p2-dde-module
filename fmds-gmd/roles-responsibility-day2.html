@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FMDS Day 2 - Roles and Responsibilities</title>
+    <link rel="stylesheet" href="css/day2-rnr.css">
+    <link rel="stylesheet" href="css/global.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Loader -->
+    <link rel="stylesheet" href="../css/loader.css">
+    <script src="../js/loader.js" defer></script>
+</head>
+
+<body>
+    <!-- Loader to hide content until fully loaded -->
+    <div class="preloader" id="preloader">
+        <div class="loader">
+            <span class="loader-text">DDE</span>
+        </div>
+    </div>
+
+    <!-- Header --->
+    <section class="module-overview">
+        <div class="module-overview">
+            <div class="overview-header">
+                <img src="img/safety logo.jpg" alt="FMDS Logo" class="image-logo">
+                <h1>MARI MULA BELAJAR<br> FMDS Module <br><br> Roles and Responsibilities</h1>
+                <img src="img/1 team 1 goal.jpg" alt="FMDS Logo" class="image-logo">
+            </div>
+            <div class="overview-subheader">
+                <p>Mulai dengan YOSH <b>mesti selamat</b> dan akhiri dengan YOSH <b>1 team 1 goal</b></p>
+            </div>
+        </div>
+    </section>
+    <main>
+
+        <div class="content-container">
+            <section id="cont1">
+                <h2 class="content-container-title">Definisi</h2>
+                <div class="collapsible-wrapper">
+                    <div class="collapsible-bar" onclick="toggleCollapsible(this)">
+                        <p>Apakah maksud Peranan?</p>
+                        <span class="indicator">&gt;</span>
+                    </div>
+                    <div class="collapsible-card">
+                        <p>Tugas/ kerja yang dilakukan untuk menjayakan sesuatu</p>
+                    </div>
+                </div>
+                <div class="collapsible-wrapper">
+                    <div class="collapsible-bar" onclick="toggleCollapsible(this)">
+                        <p>Apakah maksud Tanggungjawab?</p>
+                        <span class="indicator">&gt;</span>
+                    </div>
+                    <div class="collapsible-card">
+                        <p>Sesuatu tugas/ kerja yang mesti dilaksanakan</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="cont2">
+                <div class="large-image-container">
+                    <img src="img/benefitsrr.png" alt="Benefits of Roles and Responsibilities Image" class="large-image"
+                        onclick="openFullscreen('img/benefitsrr.png')">
+                </div>
+                <div class="content-box">
+                    <p>Kereta dapat dijual + Perodua <i>Happy</i> + Kita dapat Gaji + Family <i>Happy</i> = Semua
+                        <i>happy</i>
+                    </p>
+                </div>
+            </section>
+        </div>
+        <div class="content-container">
+            <section id="cont3">
+                <h2 class="content-container-title">Perlaksanaan</h2>
+                <div class="image-container" style="border:none;">
+                    <img src="img/perlaksanaanrr.png" onclick="openFullscreen('img/perlaksanaanrr.png')">
+                </div>
+            </section>
+        </div>
+        <div class="content-container">
+            <section id="cont4">
+                <h2 class="content-container-title">Bagaimana capai?</h2>
+                <div class="large-image-container">
+                    <img src="img/control-item-rrday2.png" alt="Control Item Roles and Responsibilities Day 2 Image"
+                        class="large-image" onclick="openFullscreen('img/control-item-rrday2.png')">
+                </div>
+            </section>
+        </div>
+
+        <section id="cont5">
+            <div class="content-container">
+                <h2 class="content-container-title">R&R</h2>
+                <div class="three-section-pyramid">
+                    <div class="pyramid-wrap" onclick="show(`#perananSV`)">
+                        <div class="pyramid-top">
+                        </div>
+                        <div class="pyramid-text">
+                            SUPERVISOR
+                        </div>
+                    </div>
+                    <div class="pyramid-wrap" onclick="show(`#perananTL`)">
+                        <div class="pyramid-middle">
+
+                        </div>
+                        <div class="pyramid-text">
+                            TEAM LEADER
+                        </div>
+                    </div>
+                    <div class="pyramid-wrap" onclick="show(`#perananTM`)">
+                        <div class="pyramid-bottom">
+
+                        </div>
+                        <div class="pyramid-text">
+                            TEAM MEMBER
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popup for the pyramidoooooooo-->
+        <div class="popup-container hidden" id="perananSV">
+            <h2 class="content-container-title">Peranan Supervisor</h2>
+            <div class="popup-content-box">
+                <div class="numbered-list-layout">
+                    <ol class="numbered-list">
+                        <li>Buat peraturan & standard</li>
+                        <li>Kawal abnormaliti</li>
+                        <li>Selesai cepat abnormaliti</li>
+                        <li>Buat keputusan</li>
+                        <li>Pembangunan manusia</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="close-div">
+                <button class="close-button" onclick="hide('#perananSV')"><i class="fas fa-times"></i>
+                    Tutup</button>
+            </div>
+        </div>
+
+        <div class="popup-container hidden" id="perananTL">
+            <h2 class="content-container-title">Peranan Team Leader</h2>
+            <div class="popup-content-box">
+                <div class="numbered-list-layout">
+                    <ol class="numbered-list">
+                        <li>Pastikan 4M ikut standard</li>
+                        <li>Beri arahan</li>
+                        <li><i>Follow up</i></li>
+                        <li>Lapor abnormaliti</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="close-div">
+                <button class="close-button" onclick="hide('#perananTL')"><i class="fas fa-times"></i>
+                    Tutup</button>
+            </div>
+        </div>
+
+        <div class="popup-container hidden" id="perananTM">
+            <h2 class="content-container-title">Peranan Team Member</h2>
+            <div class="popup-content-box">
+                <div class="numbered-list-layout">
+                    <ol class="numbered-list">
+                        <li>Patuhi peraturan & SOP</li>
+                        <li><i>Stop Call Wait</i></li>
+                    </ol>
+                </div>
+            </div>
+            <div class="close-div">
+                <button class="close-button" onclick="hide('#perananTM')"><i class="fas fa-times"></i>
+                    Tutup</button>
+            </div>
+        </div>
+        <!-- End of Popup for the pyramidoooooooo-->
+        <div class="content-container">
+            <h2 class="content-container-title">Mengembalikan <b>abnormal</b> kepada <b>normal</b></h2>
+            <section id="cont6">
+                <div class="collapsible-wrapper">
+                    <div class="collapsible-bar" onclick="toggleCollapsible(this)">
+                        <p>Apa itu <b>Abnormal?</b></p>
+                        <span class="indicator">&gt;</span>
+                    </div>
+                    <div class="collapsible-card">
+                        <p>Semua yang tidak normal</p>
+                    </div>
+                </div>
+                <div class="collapsible-wrapper">
+                    <div class="collapsible-bar" onclick="toggleCollapsible(this)">
+                        <p>Apa itu <b>Normal?</b></p>
+                        <span class="indicator">&gt;</span>
+                    </div>
+                    <div class="collapsible-card">
+                        <p>Semua perkara yang ditetapkan</p>
+                    </div>
+                </div>
+                <div class="flow-grid down">
+                    <div class="flow-chart-box" style="width: auto;">
+                        <p>Normal ⇔ abnormal dinilai dengan apa?</p>
+                    </div>
+                    <div class="flow-arrow">
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
+                    <div class="flow-chart-box">
+                        <p>Mesti ada <b>standard</b>, tidak boleh dinilai</p>
+                    </div>
+                    <div class="flow-arrow">
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
+                    <div class="flow-chart-box">
+                        <p>(Asas dan standard seperti SOP/WIP etc.)</p>
+                    </div>
+                </div>
+                <div class="content-box">
+                    <p><b>Mengetahui asas</b> dan <b>standard</b>, menilai dan <b>mengembalikan ke normal</b></p>
+                </div>
+                <div class="drag-container">
+                    <div class="topic-box-wrapper">
+                        <div class="topic-box-title">
+                            <h3>Normal⇔Abnormal?</h3>
+                        </div>
+                        <div class="topic-box-item">
+                            <div class="circle" style="background-color: aqua;">OK/NG?</div>
+                            <div class="circle" style="background-color: lightgreen; border-style:dashed;">OK/NG?</div>
+                        </div>
+                    </div>
+                    <div id="draggableItem" class="circle"
+                        style="background-color: yellow; border-style:dashed; right: 0px; bottom: 0px;">
+                        Standard
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="content-container">
+            <h2 class="content-container-title">Roles & Responsibility: Supervisor</h2>
+            <section id="cont7">
+                <table class="content-table">
+                    <thead>
+                        <tr>
+                            <th>Roles</th>
+                            <th>Skills Requirement</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Buat peraturan dan standard</td>
+                            <td>Boleh lakukan kerja <i>Team Leader</i> & <i>Team Member</i></td>
+                        </tr>
+                        <tr>
+                            <td>Kawal abnormaliti</td>
+                            <td>Boleh ajar <i>Team Leader</i> dan <i>Team Member</i></td>
+                        </tr>
+                        <tr>
+                            <td>Selesai cepat abnormaliti</td>
+                            <td>Boleh perhatikan proses <i>Team Leader</i> & <i>Team Member</i></td>
+                        </tr>
+                        <tr>
+                            <td>Buat keputusan</td>
+                            <td>Boleh beri teguran dan motivasi</td>
+                        </tr>
+                        <tr>
+                            <td>Pembangunan manusia</td>
+                            <td>Boleh berfikir dan ada idea</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+        <div class="content-container">
+            <h2 class="content-container-title"><i>Ideal Condition</i> untuk <i>Supervisor</i></h2>
+            <div class="numbered-list-layout">
+                <ol class="numbered-list">
+                    <li><b><i>Supervisor</i></b> memahami standardized work
+                        kumpulan sendiri - menguasai semua
+                        basic skill
+                    </li>
+                    <li><b>Supervisor</b> - menguruskan kumpulan -
+                        lancar - kawalan abnormaliti
+                        berdasarkan <i>Genba, Genchi, Genbutsu</i>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Genba Management Dojo | All Rights Reserved.</p>
+    </footer>
+
+
+    <!-- Navigation Button-->
+    <div id="dragItem" class="navigation-button">
+        <button class="nav-button" id="topBtn">
+            <i class="fas fa-angle-up"></i>
+        </button>
+        <button class="nav-button" id="backBtn">
+            <i class="fas fa-angle-left"></i>
+        </button>
+    </div>
+
+
+    <!--- Javascript -->
+    <script src="js/global.js"></script>
+    <script src="js/520min.js"></script>
+    <script src="js/dragItem.js"></script>
+</body>
+
+
+</html>

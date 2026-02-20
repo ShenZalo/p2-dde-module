@@ -1,0 +1,155 @@
+body {
+    position: relative;
+    min-height: 100vh;
+    background-image: url("../img/bg-production-line.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-color: rgba(88, 28, 135, 0.55); /* purplish */
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* overlay */
+.overlay-bg {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 40;
+}
+
+/* lock page scroll */
+.no-scroll {
+  overflow: hidden;
+}
+
+/* popup container (generic) */
+.popup {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* visible state */
+.popup.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* popup content scroll only */
+.popup > .popup-content {
+  overflow-y: auto;
+}
+
+.qr-popup-container {
+    position: fixed;
+    background: rgb(100, 93, 93);
+    z-index: 1001;
+    inset: 0;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    overflow: auto;
+     opacity: 0;
+    transform: scale(0.95);
+    transition: opacity .25s ease, transform .25s ease;
+}
+
+/* when visible */
+.qr-popup-container.visible {
+    opacity: 1;
+    transform: scale(1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+     background: rgba(255, 255, 255, 0.1); /* thin transparent layer */
+    backdrop-filter: blur(8px);           /* the actual blur */
+}
+
+.qr-image {
+    display: block;
+    margin: 50px auto;
+    width: 300px;
+    height: 300px;
+    /* keeps QR perfectly readable */
+    padding: 20px; /* quiet zone */
+    background: white;
+    border-radius: 16px; /* slightly round but safe */
+    box-shadow: 0 6px 18px rgba(0,0,0,0.18); /* deeper shadow for contrast */
+    object-fit: contain;
+}
+
+
+/*Navigation Buttons */
+
+.navigation-button {
+    background-color: white;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: rgb(200, 37, 37);
+}
+
+/* Collapsible Bar Styles */
+.collapsible-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.25s ease;
+    opacity: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.collapsible-answer.open {
+    opacity: 1;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.answer-indicator i {
+    display: inline-block;
+    transition: transform 0.4s cubic-bezier(.4,0,.2,1);
+    will-change: transform;
+}
+
+/* Answer Image Toggle Animation */
+.answer-toggle {
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.answer-toggle.swap-out {
+    opacity: 0;
+    transform: scale(0.98);
+}

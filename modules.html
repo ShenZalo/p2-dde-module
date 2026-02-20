@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/output.css">
+    <link rel="icon" href="img/perodua-favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="src/homepage.css">
+    <title>DDE e-Module</title>
+    <!-- Loader -->
+    <link rel="stylesheet" href="../css/loader.css">
+    <script src="../js/loader.js" defer></script>
+</head>
+
+<body class="min-h-screen bg-[url('../img/bg-production-line.jpg')] bg-cover bg-center bg-no-repeat z-50">
+    <!-- Loader to hide content until fully loaded -->
+    <div class="preloader" id="preloader">
+        <div class="loader">
+            <span class="loader-text">DDE</span>
+        </div>
+    </div>
+    <nav class="w-full scroll-smooth">
+        <div class="border shadow-xl border-black bg-gray-200 rounded-bl-lg rounded-br-lg block md:hidden">
+            <div class="flex items-center justify-between px-2 py-6">
+                <img src="img/perodua-logo.png" alt="Perodua Logo" class="w-1/4 h-auto">
+                <img src="img/burger-icon.svg" alt="Menu" class="w-1/12 h-auto" id="menuBtn">
+            </div>
+        </div>
+        <div id="mobileMenu"
+            class="lg:hidden w-full flex flex-col px-4 py-6 bg-gray-100 overflow-hidden transition-all duration-300 max-h-0">
+            <ul class="flex flex-col gap-4 lg:text-2xl font-semibold">
+                <li>
+                    <a href="homepage.html"
+                        class="block px-4 py-2 rounded active:bg-gray-600 active:text-white hover:bg-gray-600 hover:text-white transition-colors duration-200 ease-in-out cursor-pointer">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#"
+                        class="block px-4 py-2 rounded active:bg-gray-600 bg-gray-300 active:text-white hover:bg-gray-600 hover:text-white   transition-colors duration-200 ease-in-out cursor-pointer">
+                        Modules
+                    </a>
+                </li>
+                <li>
+                    <a href="#"
+                        class="block px-4 py-2 rounded active:bg-gray-600 active:text-white hover:bg-gray-600 hover:text-white transition-colors duration-200 ease-in-out cursor-pointer">
+                        About
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html"
+                        class="block px-4 py-2 rounded active:bg-gray-600 active:text-white hover:bg-gray-600 hover:text-white transition-colors duration-200 ease-in-out cursor-pointer">
+                        Log Out
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="border border-black shadow-2xl bg-gray-200 rounded-bl-lg rounded-br-lg hidden md:block">
+            <div class="flex items-center justify-between px-4 py-6">
+                <div class="flex items-center">
+                    <img src="img/perodua-logo.png" alt="Perodua Logo" class="w-[10%] h-auto">
+                    <ul class="flex gap-10 ml-6 lg:text-2xl font-semibold">
+                        <li><a href="homepage.html"
+                                class="hover:bg-gray-600 hover:p-5 hover:text-white transition-all duration-200 ease-in-out cursor-pointer">Home</a>
+                        </li>
+                        <li><a href="#"
+                                class="hover:bg-gray-600 hover:p-5 bg-gray-300 p-2 rounded-2xl hover:rounded-none  hover:text-white transition-all duration-200 ease-in-out cursor-pointer">Modules</a>
+                        </li>
+                        <li><a href="#"
+                                class="hover:bg-gray-600 hover:p-5 hover:text-white transition-all duration-200 ease-in-out cursor-pointer">About</a>
+                        </li>
+                    </ul>
+                </div>
+                <button class="bg-red-500 hover:bg-red-700 transition-colors duration-200 ease-in-out
+           text-white font-bold py-2 px-4 lg:text-2xl rounded cursor-pointer"
+                    onclick="window.location.href='index.html'">
+                    Logout
+                </button>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="w-[95%] mx-auto py-5 px-2 md:py-10 md:px-5 bg-blue-950 rounded-lg shadow-md mt-2">
+            <div class="mt-2 bg-white flex flex-row justify-around border-t-8 border-gray-700">
+                <div class="btn-gmd flex justify-center text-center border-2 border-gray-500 h-full w-full p-4
+                font-bold hover:text-white hover:bg-gray-600 transition-all duration-200 ease-in-out cursor-pointer">
+                    <p>GMD</p>
+                </div>
+                <div
+                    class="btn-tft flex justify-center text-center border-2 border-gray-500 h-full w-full p-4 font-bold hover:text-white hover:bg-gray-600 transition-all duration-200 ease-in-out cursor-pointer">
+                    <p>TFT</p>
+                </div>
+                <div
+                    class="btn-sd flex justify-center text-center border-2 border-gray-500 h-full w-full p-4 font-bold hover:text-white hover:bg-gray-600 transition-all duration-200 ease-in-out cursor-pointer">
+                    <p>SD</p>
+                </div>
+            </div>
+            <div class="module-gmd overflow-hidden max-h-0 opacity-0 transition-all duration-300 ease-in-out">
+                <p class="underline text-center text-white font-bold md:text-2xl text-sm mb-2">Genba Management Dojo</p>
+                </p>
+                <div class="grid grid-cols-3 gap-6 text-center md:text-xl text-xs">
+                    <a href="fmds-gmd/fmds-homepage.html">
+                        <div
+                            class="group border-2 border-t-8 border-t-blue-900 bg-white flex flex-col items-center justify-center rounded-lg shadow-lg p-4 hover:scale-105 hover:border-t-orange-400 transition-all duration-200 ease-in-out">
+                            <div
+                                class="md:w-32 md:h-32 w-16 h-16 rounded-full border-2 border-black flex items-center justify-center">
+                                <img src="img/fmds-icon.png"
+                                    class="w-1/2 h-auto group-hover:rotate-6 transition-all duration-200 ease-in-out"
+                                    alt="FMDS Icon">
+                            </div>
+                            <p class="text-center">Floor Management Development System</p>
+                        </div>
+                    </a>
+                    <div
+                        class="group border-2 border-t-8 border-t-blue-900 bg-white flex flex-col items-center justify-center rounded-lg shadow-lg p-4 hover:scale-105 hover:border-t-orange-400 transition-all duration-200 ease-in-out">
+                        <div
+                            class="md:w-32 md:h-32 w-16 h-16 rounded-full border-2 border-black flex items-center justify-center">
+                            <img src="img/tps-icon.png"
+                                class="w-1/2 h-auto group-hover:rotate-6 transition-all duration-200 ease-in-out"
+                                alt="TPS Icon">
+                        </div>
+                        <p class="text-center">Toyota Production System</p>
+                    </div>
+                    <div
+                        class="group border-2 border-t-8 border-t-blue-900 bg-white flex flex-col items-center justify-center rounded-lg shadow-lg p-4 hover:scale-105 hover:border-t-orange-400 transition-all duration-200 ease-in-out">
+                        <div
+                            class="md:w-32 md:h-32 w-16 h-16 rounded-full border-2 border-black flex items-center justify-center">
+                            <img src="img/tpm-icon.png"
+                                class="w-1/2 h-auto group-hover:rotate-6 transition-all duration-200 ease-in-out"
+                                alt="TPM Icon">
+                        </div>
+                        <p class="text-center">Total Productive Maintenance</p>
+                    </div>
+                    <a href="karakuri-gmd/homepage.html">
+                        <div
+                            class="group border-2 border-t-8 border-t-blue-900 bg-white flex flex-col items-center justify-center rounded-lg shadow-lg p-4 hover:scale-105 hover:border-t-orange-400 transition-all duration-200 ease-in-out">
+                            <div
+                                class="md:w-32 md:h-32 w-16 h-16 rounded-full border-2 border-black flex items-center justify-center">
+                                <img src="img/karakuri-icon.png"
+                                    class="w-1/2 h-auto group-hover:rotate-6 transition-all duration-200 ease-in-ou"
+                                    alt="Karakuri Icon">
+                            </div>
+                            <p class="text-center">Karakuri</p>
+                        </div>
+                    </a>
+                    <div
+                        class="group border-2 border-t-8 border-t-blue-900 bg-white flex flex-col items-center justify-center rounded-lg shadow-lg p-4 hover:scale-105 hover:border-t-orange-400 transition-all duration-200 ease-in-out">
+                        <div
+                            class="md:w-32 md:h-32 w-16 h-16 rounded-full border-2 border-black flex items-center justify-center">
+                            <img src="img/5s-icon.png"
+                                class="w-1/2 h-auto group-hover:rotate-6 transition-all duration-200 ease-in-ou"
+                                alt="5S Icon">
+                        </div>
+                        <p class="text-center">5S</p>
+                    </div>
+                    <div
+                        class="border-2 border-t-8 border-t-blue-900 bg-white flex flex-col items-center justify-center rounded-lg shadow-lg p-4 hover:scale-105 hover:border-t-orange-400 transition-all duration-200 ease-in-out group">
+                        <div
+                            class="md:w-32 md:h-32 w-16 h-16 rounded-full border-2 border-black flex items-center justify-center">
+                            <img src="img/qcc-icon.png"
+                                class="w-1/2 h-auto group-hover:rotate-6 transition-all duration-200 ease-in-out"
+                                alt="QCC Icon">
+                        </div>
+                        <p class="text-center">Quality Control Circle</p>
+                    </div>
+                    <div
+                        class="col-start-2 border-2 border-t-8 border-t-blue-900 bg-white flex flex-col items-center justify-center rounded-lg shadow-lg p-4 hover:scale-105 hover:border-t-orange-400 transition-all duration-200 ease-in-out group">
+                        <div
+                            class="md:w-32 md:h-32 w-16 h-16 rounded-full border-2 border-black flex items-center justify-center">
+                            <img src="img/pps-icon.png"
+                                class="w-1/2 h-auto group-hover:rotate-6 transition-all duration-200 ease-in-out"
+                                alt="PPS Icon">
+                        </div>
+                        <p class="text-center">Perodua Problem Solving</p>
+                    </div>
+                </div>
+            </div>
+            <div class="module-tft overflow-hidden max-h-0 opacity-0 transition-all duration-300 ease-in-out">
+                <p class="underline text-center text-white font-bold md:text-2xl text-sm mb-2">Training For Trainer</p>
+                </p>
+                <div class="grid grid-cols-3 gap-6 text-center md:text-xl text-xs">
+                    <a href="fmds-tft/fmds-homepage.html">
+                        <div
+                            class="group border-2 border-t-8 border-t-blue-900 bg-white flex flex-col items-center justify-center rounded-lg shadow-lg p-4 hover:scale-105 hover:border-t-orange-400 transition-all duration-200 ease-in-out">
+                            <div
+                                class="md:w-32 md:h-32 w-16 h-16 rounded-full border-2 border-black flex items-center justify-center">
+                                <img src="img/fmds-icon.png"
+                                    class="w-1/2 h-auto group-hover:rotate-6 transition-all duration-200 ease-in-out"
+                                    alt="FMDs Icon">
+                            </div>
+                            <p class="text-center">Floor Management Development System</p>
+                        </div>
+                    </a>
+                    <div
+                        class="group border-2 border-t-8 border-t-blue-900 bg-white flex flex-col items-center justify-center rounded-lg shadow-lg p-4 hover:scale-105 hover:border-t-orange-400 transition-all duration-200 ease-in-out">
+                        <div
+                            class="md:w-32 md:h-32 w-16 h-16 rounded-full border-2 border-black flex items-center justify-center">
+                            <img src="img/safety-icon.png"
+                                class="w-1/2 h-auto group-hover:rotate-6 transition-all duration-200 ease-in-out"
+                                alt="Safety Icon">
+                        </div>
+                        <p class="text-center">Safety</p>
+                    </div>
+                    <div
+                        class="group border-2 border-t-8 border-t-blue-900 bg-white flex flex-col items-center justify-center rounded-lg shadow-lg p-4 hover:scale-105 hover:border-t-orange-400 transition-all duration-200 ease-in-out">
+                        <div
+                            class="md:w-32 md:h-32 w-16 h-16 rounded-full border-2 border-black flex items-center justify-center">
+                            <img src="img/5s-icon.png"
+                                class="w-1/2 h-auto group-hover:rotate-6 transition-all duration-200 ease-in-ou"
+                                alt="5S Icon">
+                        </div>
+                        <p class="text-center">5S</p>
+                    </div>
+                </div>
+            </div>
+            <div class="module-sd overflow-hidden max-h-0 opacity-0 transition-all duration-300 ease-in-out">
+                <p class="underline text-center text-white font-bold md:text-2xl text-sm mb-2">Skill Dojo</p>
+                </p>
+                <div class="grid grid-cols-3 gap-6 text-center md:text-xl text-xs">
+                    <div
+                        class="group border-2 border-t-8 border-t-blue-900 bg-white flex flex-col items-center justify-center rounded-lg shadow-lg p-4 hover:scale-105 hover:border-t-orange-400 transition-all duration-200 ease-in-out">
+                        <div
+                            class="md:w-32 md:h-32 w-16 h-16 rounded-full border-2 border-black flex items-center justify-center">
+                            <img src="img/engine-icon.png"
+                                class="w-1/2 h-auto group-hover:rotate-6 transition-all duration-200 ease-in-out"
+                                alt="Engine Icon">
+                        </div>
+                        <p class="text-center">Engine</p>
+                    </div>
+
+                    <div
+                        class="group border-2 border-t-8 border-t-blue-900 bg-white flex flex-col items-center justify-center rounded-lg shadow-lg p-4 hover:scale-105 hover:border-t-orange-400 transition-all duration-200 ease-in-out">
+                        <div
+                            class="md:w-32 md:h-32 w-16 h-16 rounded-full border-2 border-black flex items-center justify-center">
+                            <img src="img/safety-icon.png"
+                                class="w-1/2 h-auto group-hover:rotate-6 transition-all duration-200 ease-in-out"
+                                alt="Safety Icon">
+                        </div>
+                        <p class="text-center">TBA</p>
+                    </div>
+                    <div
+                        class="group border-2 border-t-8 border-t-blue-900 bg-white flex flex-col items-center justify-center rounded-lg shadow-lg p-4 hover:scale-105 hover:border-t-orange-400 transition-all duration-200 ease-in-out">
+                        <div
+                            class="md:w-32 md:h-32 w-16 h-16 rounded-full border-2 border-black flex items-center justify-center">
+                            <img src="img/5s-icon.png"
+                                class="w-1/2 h-auto group-hover:rotate-6 transition-all duration-200 ease-in-ou"
+                                alt="5S Icon">
+                        </div>
+                        <p class="text-center">TBA</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="src/global.js"></script>
+</body>
+
+</html>

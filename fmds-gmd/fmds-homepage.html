@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FMDS Homepage</title>
+    <link rel="stylesheet" href="css/homepage.css">
+    <link rel="stylesheet" href="css/global.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Loader -->
+    <link rel="stylesheet" href="../css/loader.css">
+    <script src="../js/loader.js" defer></script>
+</head>
+
+<body>
+    <!-- Loader to hide content until fully loaded -->
+    <div class="preloader" id="preloader">
+        <div class="loader">
+            <span class="loader-text">DDE</span>
+        </div>
+    </div>
+
+
+
+    <!-- Welcome Section  -->
+    <section id="welcome-section">
+        <div class="welcome-container">
+            <div class="welcome-left-side">
+                <div class="class-starter">
+                    <img src="img/safety logo.jpg" alt="FMDS Logo" class="image-logo">
+                    <img src="img/1 team 1 goal.jpg" alt="FMDS Logo" class="image-logo">
+                </div>
+                <p class="welcome-message">Selamat datang ke kelas</p>
+
+                <h1 class="module-title">Floor Management <br>Development System <br> [FMDS]</h1>
+
+                <div class="introduction-section">
+                    <!-- Onclick, popup will appear, refer to div with said ID-->
+                    <button class="intro-button" onclick="show(`#attendance-popup`)"><i class="fas fa-user-check"></i>
+                        Kehadiran</button>
+                    <button class="intro-button" onclick="show(`#introduction-popup`)"><i
+                            class="fas fa-info-circle"></i>
+                        Pengenalan</button>
+                </div>
+            </div>
+            <!-- Affected by homepage.js, welcome-background will cycle resulting in changes every few seconds -->
+            <div class="welcome-right-side">
+                <img src="img/welcome-background-1.jpg" alt="Welcome Background" class="welcome-background">
+            </div>
+
+            <!-- Popup Section -->
+            <!-- Attendance Popup-->
+            <div id="attendance-popup" class="popup-container hidden">
+                <div class="content-container">
+                    <!-- hidden css class, hide the popup at page load -->
+                    <div class="popup-header">
+                        <img src="img/perodua-logo.png" alt="Perodua Logo" class="popup-header-logo">
+                        <h2>KEHADIRAN DAN PRE-TEST</h2>
+                        <img src="img/dde-logo.png" alt="DDE Logo" class="popup-header-logo">
+                    </div>
+                    <div class="attendance-text">
+                        <h3>Maklumat Latihan</h3>
+                        <p>Tajuk Latihan: Floor Management Development System</p>
+                        <p>Tempat Latihan: FMDS Training Room</p>
+                        <p>Nama Trainer: Hanizam bin Aziz <br> Asmawi Abd Rahman</p>
+                    </div>
+                    <h3> Cara Isi Kehadiran </h3>
+                    <div class="large-image-container">
+                        <img src="img/cara-isi-kehadiran.png" alt="Cara Isi Kehadiran" class="large-image" />
+                        <!-- fullscreen when clicked  -->
+                    </div>
+                    <div class="attendance-qr">
+                        <button class="attendance-button" onclick="show(`#prepost-test-qr`)"><i
+                                class="fas fa-qrcode"></i> Scan Pre-Test</button>
+                        <!-- fullscreen qr when clicked  -->
+                        <button class="attendance-button" onclick="show(`#kesihatan-qr`)"><i class="fas fa-qrcode"></i>
+                            Scan Kesihatan</button> <!-- fullscreen qr when clicked  -->
+                    </div>
+                </div>
+                <div class="close-div">
+                    <button class="close-button" onclick="hide('#attendance-popup')"><i class="fas fa-times"></i>
+                        Tutup</button> <!--close popup when clicked yey-->
+                </div>
+            </div>
+            <div class="qr-popup-container hidden" id="prepost-test-qr" onclick="hide('#prepost-test-qr')">
+                <img src="img/fmds-prepost-qr.png" alt="Pre-Test QR Code" class="qr-image" />
+            </div>
+            <div class="qr-popup-container hidden" id="kesihatan-qr" onclick="hide('#kesihatan-qr')">
+                <img src="img/fmds-sihat-qr.png" alt="Kesihatan QR Code" class="qr-image" />
+            </div>
+        </div>
+
+        <!--The rest of popup works the same way-->
+        <!--hidden at page load, open when button for popup is clicked, closed when Tutup button is clicked -->
+        <!-- Introduction Popup -->
+        <div id="introduction-popup" class="popup-container hidden">
+            <div class="content-container">
+                <div class="popup-header">
+                    <img src="img/perodua-logo.png" alt="Perodua Logo" class="popup-header-logo">
+                    <h2>SESI PENGENALAN</h2>
+                    <img src="img/dde-logo.png" alt="DDE Logo" class="popup-header-logo">
+                </div>
+                <div class="introduction-text">
+                    <h3>Kenali Trainer Anda</h3>
+                </div>
+                <div class="trainer-container">
+                    <div class="trainer-card-container">
+                        <div class="trainer-card" onclick="toggleCard(this)">
+                            <!-- Expand card when clicked, shows the rest of info-->
+                            <!-- All card behaves the same way -->
+                            <!-- Minimal info when unexpanded, full info whenn expanded -->
+                            <div class="trainer-picture-container">
+                                <img src="img/encik-nizam-suit.jpg" alt="Trainer Picture" class="trainer-picture">
+                            </div>
+                            <div class="trainer-info">
+                                <h3>Hanizam Bin Aziz</h3>
+                                <ul>
+                                    <li>
+                                        <strong>Company:</strong> Perodua Manufacturing Sdn Bhd
+                                    </li>
+                                    <li>
+                                        <strong>Position:</strong> Executive / Trainer
+                                    </li>
+                                    <li>
+                                        <strong>Years of Services:</strong> 1994 - present
+                                    </li>
+                                    <li>
+                                        <strong>Education:</strong>
+                                        <ul>
+                                            <li>Certified Train the Trainer (18560)</li>
+                                            <li>Sijil Pelajaran Malaysia</li>
+                                            <li>Sijil Kemahiran Malaysia - Level 3</li>
+                                            <li>Diploma Kemahiran Malaysia</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <strong>Program Specialization:</strong> Manufacturing Course Programme
+                                    </li>
+                                    <li>
+                                        <strong>Experience:</strong>
+                                        <ul>
+                                            <li>1994 - 2014: Assembly Shop (Production)</li>
+                                            <li>2014 - present: Developmental & Dojo Education</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trainer-card" onclick="toggleCard(this)">
+                        <div class="trainer-picture-container">
+                            <img src="img/encik-awi-suit.jpg" alt="Trainer Picture" class="trainer-picture">
+                        </div>
+
+                        <div class="trainer-info">
+                            <h3>Asmawi Abd Rahman</h3>
+                            <ul>
+                                <li><strong>Company:</strong> Perodua Manufacturing Sdn Bhd</li>
+                                <li><strong>Position:</strong> Trainer</li>
+                                <li><strong>Years of Services:</strong> 1994 - present</li>
+                                <li>
+                                    <strong>Qualification:</strong>
+                                    <ul>
+                                        <li>Certified Train the Trainer (14559)</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>Program Specialization:</strong>
+                                    <ul>
+                                        <li>Floor Management Development System (FMDS)</li>
+                                        <li>Basic Manufacturing Technology</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>Experience:</strong>
+                                    <ul>
+                                        <li>1994 - 2022: Logistic Shop (Support Production)</li>
+                                        <li>2022 - present: Developmental & Dojo Education</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+                <!-- Trainee Introduction-->
+                <div class="trainee-container">
+                    <h3>Perkenalkan diri anda</h3>
+                    <div class="trainee-card" onclick="toggleCard(this)">
+                        <div class="trainee-picture-container">
+                            <img src="img/anonymous.png" alt="Anonymous Trainee" class="trainee-picture" />
+                        </div>
+                        <div class="trainee-info">
+                            <h3>Siapa Anda ? </h3>
+                            <p><strong>Nama:</strong> </p>
+                            <p><strong>Umur:</strong> </p>
+                            <p><strong>D.O.J:</strong> </p>
+                            <p><strong>Jawatan:</strong></p>
+                            <p><strong>Jabatan:</strong> </p>
+                            <p><strong>Status:</strong> </p>
+                            <p><strong>Hobi @ Minat:</strong> </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="close-div">
+                    <button class="close-button" onclick="hide('#introduction-popup')"><i class="fas fa-times"></i>
+                        Tutup</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Rules Section -->
+    <section id="rules-section">
+        <div class="content-container">
+            <h2><i class="fas fa-book"></i> Peraturan Kelas</h2>
+            <div class="rules-layout">
+                <div class="rules-item">
+                    <div class="rules-picture-container">
+                        <img src="img/rules-talk.jpg" alt="Rule 1" class="rules-picture" />
+                    </div>
+                    <div class="rules-text">
+                        Fokus dan tidak dibenarkan berbual
+                    </div>
+                </div>
+                <div class="rules-item">
+                    <div class="rules-picture-container">
+                        <img src="img/rules-phone.jpg" alt="Rule 2" class="rules-picture" />
+                    </div>
+                    <div class="rules-text">
+                        Tidak dibenarkan guna telefon bimbit tanpa arahan
+                    </div>
+                </div>
+                <div class="rules-item">
+                    <div class="rules-picture-container">
+                        <img src="img/rules-raise.jpg" alt="Rule 3" class="rules-picture" />
+                    </div>
+                    <div class="rules-text">
+                        Angkat tangan jika mahu bertanya.​
+                    </div>
+                </div>
+                <div class="rules-item">
+                    <div class="rules-picture-container">
+                        <img src="img/rules-time.jpg" alt="Rule 4" class="rules-picture" />
+                    </div>
+                    <div class="rules-text">
+                        Tepati masa
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The start of module content-->
+    <section id="content-section">
+        <div class="content-container">
+            <div class="content-header-container">
+                <div class="content-header">
+                    <img src="img/safety logo.jpg" alt="Safety Logo" class="content-header-logo">
+                    <h1>MARI MULA BELAJAR!</h1>
+                    <img src="img/1 team 1 goal.jpg" alt="1 Team 1 Goal" class="content-header-logo">
+                </div>
+                <div class="content-subheader">
+                    <p>Mulai dengan YOSH <b>mesti selamat</b> dan akhiri dengan YOSH <b>1 team 1 goal</b></p>
+                </div>
+            </div>
+            <section id="general-section">
+                <div class="general-card">
+                    <div class="general-header">
+                        <h2>General</h2>
+                    </div>
+                    <div class="general-row">
+                        <div class="general-left-side">
+                            <img src="img/introduction.gif" alt="Introduction Image" class="general-image">
+                            <p>Background of FMDS</p>
+                            <button class="start-button" onclick="show(`#fmds-background`)">Mula</button>
+                        </div>
+
+                        <div class="general-right-side">
+                            <img src="img/charts.gif" alt="Charts Image" class="general-image">
+                            <p>Trainer Materials</p>
+                            <button class="start-button" onclick="show(`#trainer-materials`)">Mula</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Popup for Background of FMDS -->
+            <div id="fmds-background" class="popup-container hidden">
+                <div class="content-container">
+                    <div class="popup-header">
+                        <img src="img/perodua-logo.png" alt="Perodua Logo" class="popup-header-logo">
+                        <h2>BACKGROUND OF FMDS</h2>
+                        <img src="img/dde-logo.png" alt="DDE Logo" class="popup-header-logo">
+                    </div>
+
+                    <div class="fmds-intro">
+                        <strong>Floor Management Development System (FMDS)</strong> merupakan satu<span
+                            class="red-text">
+                            sistem pembangunan pengurusan tempat kerja.</span><br> Kaedah
+                        pengurusan genba yang ideal menggunakan konsep "Mieruka" [visualization] dan sifat
+                        bertanggungjawab [accountability]
+                    </div>
+                    <div class="background-content">
+                        <div class="background-item">
+                            <h3>Sejarah dan Permulaan</h3>
+                            <p>
+                                FMDS direka sebagai sebahagian daripada Sistem Pengeluaran Toyota (TPS) dan amalan untuk
+                                meningkatkan pengurusan di tempat kerja.
+                                Pihak pengurusan terlibat secara langsung dengan proses, menekankan penyelesaian masalah
+                                secara masa nyata.
+                            </p>
+                        </div>
+                        <div class="background-item">
+                            <h3>Objektif</h3>
+                            <ul>
+                                <li>Mampu kembalikan abnormal pada normal.</li>
+                                <li>Mampu & faham peranan & tanggungjawab.</li>
+                                <li>Mampu membuat kawalan harian.</li>
+                            </ul>
+                        </div>
+                        <div class="background-item">
+                            <h3>Tujuan FMDS</h3>
+                            <ul>
+                                <li>Menggalakkan persekitaran kerja Kaizen.</li>
+                                <li>Meningkatkan kualiti kerja.</li>
+                                <li>Meningkatkan keupayaan penyelesaian masalah.</li>
+                            </ul>
+                        </div>
+                        <div class="background-item">
+                            <h3>Misi</h3>
+                            <p>
+                                Untuk menghasilkan produk berkualiti tinggi pada kos yang lebih rendah, tepat pada
+                                masanya,
+                                dan dalam keadaan selamat.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-container">
+                    <div class="large-image-container" style="border:none;">
+                        <img src="img/sejarahFMDS.png" alt="Sejarah FMDS Image" class="large-image"
+                            onclick="openFullscreen(`img/sejarahFMDS.png`)" />
+                    </div>
+                </div>
+                <div class="close-div">
+                    <button class="close-button" onclick="hide('#fmds-background')"><i class="fas fa-times"></i>
+                        Tutup</button>
+                </div>
+            </div>
+
+            <!-- Popup for Trainer Materials -->
+            <div id="trainer-materials" class="popup-container hidden">
+                <div class="content-container">
+                    <div class="popup-header">
+                        <img src="img/perodua-logo.png" alt="Perodua Logo" class="popup-header-logo">
+                        <h2>TRAINER MATERIALS</h2>
+                        <img src="img/dde-logo.png" alt="DDE Logo" class="popup-header-logo">
+                    </div>
+                    <div class="trainer-material-container">
+                        <div class="trainer-materials-item">
+                            <img src="img/fmds-stream.gif" alt="FMDS Stream Image" class="trainer-materials-image">
+                            <p>FMDS Stream</p>
+                            <button class="see-button" onclick="window.location.href=`fmds-stream.html`">Lihat</button>
+                        </div>
+                        <div class="trainer-materials-item">
+                            <img src="img/fmds-board-layout.gif" alt="FMDS Board Layout Image"
+                                class="trainer-materials-image">
+                            <p>FMDS Board Layout</p>
+                            <button class="see-button"
+                                onclick="window.location.href=`fmds-board-layout.html`">Lihat</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="close-div">
+                    <button class="close-button" onclick="hide('#trainer-materials')"><i class="fas fa-times"></i>
+                        Tutup</button>
+                </div>
+            </div>
+
+            <section id="module-section">
+                <div class="module-card">
+                    <div class="module-header">
+                        <h2>Module</h2>
+                    </div>
+                    <div class="module-fmds">
+                        <h2>PCSB</h2>
+                        <div class="module-row">
+                            <div class="module-left-side">
+                                <img src="img/module.gif" alt="Module Image" class="module-image">
+                                <p>Day 1</p>
+                                <button class="start-button"
+                                    onclick="window.location.href=`pcsb-day1.html`">Mula</button>
+                            </div>
+                            <div class="module-right-side">
+                                <img src="img/module.gif" alt="Module Image" class="module-image">
+                                <p>Day 2</p>
+                                <button class="start-button" onclick="window.location.href=`day2.html`">Mula</button>
+                            </div>
+                        </div>
+                        <h2>Supplier</h2>
+                        <div class="module-row">
+                            <div class="module-left-side">
+                                <img src="img/module.gif" alt="Module Image" class="module-image">
+                                <p>Day 1</p>
+                                <button class="start-button"
+                                    onclick="window.location.href=`supplier-day1.html`">Mula</button>
+                            </div>
+                            <div class="module-right-side">
+                                <img src="img/module.gif" alt="Module Image" class="module-image">
+                                <p>Day 2</p>
+                                <button class="start-button" onclick="window.location.href=`day2.html`">Mula</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <section id="penilain-section">
+        <div class="content-container">
+            <h2><i class="fas fa-clipboard-check"></i> Penilaian</h2>
+            <div class="penilaian-container">
+                <button class="penilaian-button" onclick="show(`#prepost-test-qr`)"><i class="fas fa-qrcode"></i> Scan
+                    Post-Test</button> <!-- fullscreen qr when clicked  -->
+                <button class="penilaian-button" onclick="show(`#evaluation-qr`)"><i class="fas fa-qrcode"></i> Scan
+                    Evaluation</button> <!-- fullscreen qr when clicked  -->
+            </div>
+        </div>
+    </section>
+    <div class="qr-popup-container hidden" id="prepost-test-qr" onclick="hide('#prepost-test-qr')">
+        <img src="img/fmds-prepost-qr.png" alt="Pre-Test QR Code" class="qr-image" />
+    </div>
+    <div class="qr-popup-container hidden" id="evaluation-qr" onclick="hide('#evaluation-qr')">
+        <img src="img/fmds-eval-qr.png" alt="Evaluation QR Code" class="qr-image" />
+    </div>
+
+
+
+    <footer>
+        <p>&copy; 2025 Genba Management Dojo | All Rights Reserved.</p>
+    </footer>
+    <!-- Javascript File -->
+    <script src="js/global.js"></script>
+    <script src="js/homepage.js"></script>
+</body>
+
+</html>

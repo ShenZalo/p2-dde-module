@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FMDS - Hoshin Kanri</title>
+    <link rel="icon" href="../img/perodua-favicon.png" sizes="16x16" type="image/png">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Flowbite CSS (for interactive components) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.1/flowbite.min.css" rel="stylesheet" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Font Awesome 6 Free -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chiron+Sung+HK:ital,wght@0,200..900;1,200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/hoshin.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="../src/output.css">
+    <!-- Loader -->
+    <link rel="stylesheet" href="../css/loader.css">
+    <script src="../js/loader.js" defer></script>
+</head>
+
+<body>
+    <!-- Loader to hide content until fully loaded -->
+    <div class="preloader" id="preloader">
+        <div class="loader">
+            <span class="loader-text">DDE</span>
+        </div>
+    </div>
+    <main>
+        <section id="page1">
+            <div class="section-header p-5 gap-3">
+                <img src="img/perodua-logo.png" alt="Perodua Logo" class="lg:w-40 lg:h-32 w-16 h-12">
+                <h1>Hoshin Kanri</h1>
+                <img src="img/dde-logo.png" alt="DDE Logo" class="lg:w-40 lg:h-32 w-16 h-12">
+            </div>
+            <div class="section-container w-full h-auto mt-7 p-3">
+                <div class="content-container">
+                    <h2 class="question">
+                        Apa itu Hoshin-Kanri?
+                    </h2>
+                    <h3 class="lg:text-3xl font-bold lg:ml-20 ml-5 underline">Hoshin ialah</h3>
+                    <h4 class="lg:text-2xl font-semibold lg:ml-24 ml-5 mt-3"><i
+                            class="fa-solid fa-square"></i>Menyelesaikan
+                        Isu-isu Penting di Genba dan Mencapai
+                        Visi dan Sasaran Syarikat.
+                    </h4>
+                    <ol
+                        class="list-none space-y-4 m-5 p-3 mt-5 lg:ml-20 lg:text-xl text-[10px] bg-amber-200 inline-block">
+                        <p class="inline-block font-medium border border-amber-950 px-2 py-1">
+                            Aliran Hoshin Kanri
+                        </p>
+                        <li class="flex items-center font-bold gap-4">
+                            <span
+                                class="flex items-center justify-center w-8 h-8 min-w-8 rounded-full border border-black text-sm leading-none">
+                                1
+                            </span>
+                            <span>Penggunaan daripada dasar syarikat (Syarat sasaran)</span>
+                        </li>
+                        <li class="flex items-center font-bold gap-4">
+                            <span
+                                class="flex items-center justify-center w-8 h-8 min-w-8 rounded-full border border-black text-sm leading-none">
+                                2
+                            </span>
+                            <span>Penetapan Dasar & Sasaran Bahagian Kilang / Pembuatan</span>
+                        </li>
+                        <li class=" flex items-center font-bold gap-4">
+                            <span
+                                class="flex items-center justify-center w-8 h-8 min-w-8 rounded-full border border-black text-sm leading-none">
+                                3
+                            </span>
+                            <span>Penentuan Dasar & Sasaran setiap Jabatan (Semua ahli Jabatan hendaklah dimaklumkan
+                                dengan teliti.)</span>
+                        </li>
+                        <li class="flex items-center font-bold gap-4">
+                            <span
+                                class="flex items-center justify-center w-8 h-8 min-w-8 rounded-full border border-black text-sm leading-none">
+                                4
+                            </span>
+                            <span>Penetapan sasaran (SQCDM)</span>
+                        </li>
+                        <li class="flex items-center font-bold gap-4">
+                            <span
+                                class="flex items-center justify-center w-8 h-8 min-w-8 rounded-full border border-black text-sm leading-none">
+                                5
+                            </span>
+                            <span>Aktiviti</span>
+                        </li>
+                        <li class="flex items-center font-bold gap-4">
+                            <span
+                                class="flex items-center justify-center w-8 h-8 min-w-8 rounded-full border border-black text-sm leading-none">
+                                6
+                            </span>
+                            <span>Penilaian (Kajian dan Refleksi Aktiviti)</span>
+                        </li>
+                        <li class="flex items-center font-bold gap-4">
+                            <span
+                                class="flex items-center justify-center w-8 h-8 min-w-8 rounded-full border border-black text-sm leading-none">
+                                7
+                            </span>
+                            <span>Tindakan (Kaizen, Standard)</span>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section id="page2">
+            <div class="section-container w-full h-auto mt-7 p-3">
+                <div class="content-container">
+                    <h2 class="cust-size-question lg:text-3xl text-xs">
+                        Formula Polisi Pelaksanaan Polisi (Plant, Divison) Pengurusan Polisi
+                    </h2>
+                    <div class="text-center relative -top-5">
+                        <div
+                            class="border-amber-950 rounded-sm text-[0.7rem] lg:text-xl font-semibold bg-amber-200 inline-block text-center m-1 lg:m-5">
+                            <p>Visi syarikat(Syarat sasaran) <i class="fa-solid fa-arrow-right"></i> Pemikiran
+                                Pengurusan Tertinggi. <i class="fa-solid fa-arrow-right"></i> Refleksi Keputusan Tahun
+                                Lepas <i class="fa-solid fa-arrow-right"></i> Keadaan Fakta <i
+                                    class="fa-solid fa-arrow-right"></i>
+                                Thinking Way(Cara berfikir), Penentuan <i class="fa-solid fa-arrow-right"></i> Polisi &
+                                Sasaran Aktiviti
+                            </p>
+                        </div>
+                    </div>
+                    <div x-data="fullscreenImage(`img/hoshin-2.png`)" class="flex justify-center">
+                        <img src="img/hoshin-2.png" class="w-4/5 h-auto cursor-pointer" @click="openFullscreen()">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="page3">
+            <div class="section-container w-full h-auto mt-7 p-3">
+                <div class="content-container">
+                    <h2 class="cust-size-question lg:text-3xl text-xs">
+                        Penggubalan Polisi <i class="fa-solid fa-arrow-right"></i> Pelaksanaan Polisi (Jabatan) <i
+                            class="fa-solid fa-arrow-right"></i> Pengurusan Polisi.
+                    </h2>
+                    <div class="text-center relative -top-5">
+                        <div
+                            class="border-amber-950 rounded-sm text-[0.7rem] lg:text-xl font-semibold bg-amber-200 inline-block text-center m-1 lg:m-5">
+                            <p>Visi syarikat(Syarat sasaran) <i class="fa-solid fa-arrow-right"></i> Pemikiran
+                                Pengurusan Tertinggi. <i class="fa-solid fa-arrow-right"></i> Refleksi Keputusan Tahun
+                                Lepas <i class="fa-solid fa-arrow-right"></i> Keadaan Fakta <i
+                                    class="fa-solid fa-arrow-right"></i>
+                                Thinking Way(Cara berfikir), Penentuan <i class="fa-solid fa-arrow-right"></i> Polisi &
+                                Sasaran Aktiviti
+                            </p>
+                        </div>
+                    </div>
+                    <div x-data="fullscreenImage(`img/hoshin-2-2.png`)" class="flex justify-center">
+                        <img src="img/hoshin-2-2.png" class="w-4/5 h-auto cursor-pointer mb-2"
+                            @click="openFullscreen()">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="page4">
+            <div class="section-container w-full h-auto mt-7 p-3">
+                <div class="content-container">
+                    <div x-data="fullscreenImage(`img/hoshin-2-3.png`)" class="flex justify-center">
+                        <img src="img/hoshin-2-3.png" class="w-4/5 h-auto cursor-pointer m-3" @click="openFullscreen()">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="page5">
+            <div class="section-container w-full h-auto mt-7 p-3">
+                <div class="content-container">
+                    <h2 class="cust-size-question lg:text-3xl text-sm">
+                        Pelaksanaan dan Aktiviti Susulan Dasar Jabatan
+                    </h2>
+                    <h3 class="section-desc text-[0.8rem] lg:text-xl mb-1">
+                        Penjajaran Dasar dan Aktiviti
+                    </h3>
+                    <div x-data="fullscreenImage(`img/hoshin-2-4.png`)" class="flex justify-center">
+                        <img src="img/hoshin-2-4.png" class="w-4/5 h-auto cursor-pointer lg:m-0 -mt-5"
+                            @click="openFullscreen()">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="page6">
+            <div class="section-container w-full h-auto mt-7 p-3">
+                <div class="content-container">
+                    <h2 class="cust-size-question lg:text-3xl text-sm">
+                        Pelaksanaan dan susulan aktiviti dasar Jabatan
+                    </h2>
+                    <h3 class="section-desc text-[0.8rem] lg:text-xl">
+                        Menyelaraskan Dasar dan Aktiviti
+                    </h3>
+                    <p class="relative border-2 border-amber-950 bg-amber-200 inline-block p-2 ml-1 lg:ml-[20%] mt-2
+                        text-[0.7rem] lg:text-2xl">Objektif Korporat
+                    </p>
+                    <div class="flex flex-row mx-auto mt-2 gap-3 lg:gap-10 lg:w-3/4 w-full justify-center">
+                        <p class="border-2 bg-amber-200 rounded-2xl ml-1 mt-1 p-1 lg:text-2xl text-[0.5rem]">Membangun
+                            secara
+                            harmoni<br>selaras dengan
+                            masyarakat<br>antarbangsa melalui
+                            pembekalan<br>kenderaan</p>
+                        <div class="flex items-center justify-center">
+                            <div class="grid grid-cols-1">
+                                <p class="text-[0.4rem] lg:text-xs flex justify-center">Dengan berbuat demikian</p>
+                                <p class="flex justify-center"><i class="fa-solid fa-forward text-xl lg:text-4xl"></i>
+                                </p>
+                            </div>
+                        </div>
+                        <p class="border-2 bg-amber-200 rounded-2xl ml-1 mt-1 p-1
+                            lg:text-xl text-[0.5rem]
+                            flex items-center justify-center">
+                            Kami akan memenuhi misi sosial
+                        </p>
+                    </div>
+                    <div class="flex flex-col items-center justify-center">
+                        <ol
+                            class="list-disc list-inside p-1 lg:p-10 text-[0.5rem] lg:text-2xl mt-1 border-2 border-amber-950 bg-blue-300">
+                            <li class="mt-2">Mampu menjalani kehidupan yang lebih berbudaya dan sejahtera</li>
+                            <li class="mt-2">Memperkasakan komuniti melalui syarikat dan pekerja</li>
+                            <li class="mt-2">Mejamin mata pencarian/pendapatan para pekerja</li>
+                        </ol>
+                        <div class="text-[0.5rem] lg:text-3xl mt-1 border-2 border-amber-950 bg-amber-100 p-1">
+                            <div class="flex flex-row">
+                                <p>Sebuah syarikat tidak boleh bertahan<br>melainkan ia terus mengaut keuntungan</p>
+                                <p class="flex justify-center items-center mx-3"><i class="fa-solid fa-arrow-right"></i>
+                                </p>
+                                <p class="font-semibold">Achievement of Policy<br><span
+                                        class="flex justify-center">SQDCM</span></p>
+                            </div>
+                        </div>
+                        <p class="relative -left-[2%] lg:text-2xl">
+                            <i class="fa-solid fa-arrow-up"></i>
+                        </p>
+                        <div class="flex flex-col items-center justify-center">
+                            <p class="text-[0.5rem] lg:text-2xl font-semibold">Tanggungjawab Ketua: Pencapaian Dasar</p>
+                            <p class="text-[0.5rem] lg:text-2xl font-semibold lg:mt-5 mt-3">Peranan Setiap Ketua: Pelan
+                                khusus
+                                untuk <br>mencapai dasar syarikat
+                            </p>
+                            <img src="img/hoshin-2-5.png" alt="hoshin-2-5" class="w-3/4 lg:w-1/2 h-auto mt-3 mb-2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="page7">
+            <div class="section-container w-full h-auto mt-7 p-3">
+                <div class="content-container">
+                    <h2 class="cust-size-question lg:text-3xl text-sm">
+                        Penggubalan Dasar Pelaksanaan Dasar Kawalan Dasar
+                    </h2>
+                    <h3 class="section-desc text-[0.8rem] lg:text-xl">
+                        Typical example of “FMDS Management Board"
+                    </h3>
+                    <div x-data="fullscreenImage(`img/hoshin-3-1.png`)" class="flex justify-center">
+                        <img src="img/hoshin-3-1.png" class="w-4/5 h-auto cursor-pointer lg:m-0 -mt-5"
+                            @click="openFullscreen()">
+                    </div>
+                    </h2>
+                    <h3 class="section-desc text-[0.8rem] lg:text-xl">
+                        Setiap Jadual Pengurusan 'Jawatan'
+                    </h3>
+                    <div x-data="fullscreenImage(`img/hoshin-3-2.png`)" class="flex justify-center">
+                        <img src="img/hoshin-3-2.png" class="w-4/5 h-auto cursor-pointer lg:m-0 -mt-5"
+                            @click="openFullscreen()">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Page Template-->
+        <!-- <section id="page">
+            <div class="section-container w-full h-auto mt-7 p-3">
+                <div class="content-container">
+
+                </div>
+            </div>
+        </section> -->
+    </main>
+
+    <div id="dragItem" class="navigation-button w-22 h-12 lg:w-24 lg:h-28 fixed lg:bottom-1 lg:left-1
+        hidden lg:flex border border-black/50
+        lg:flex-col items-center gap-3 p-2 shadow-2xl">
+        <button class="nav-button flex items-center justify-center p-1 lg:p-3" id="topBtn">
+            <i class="fas fa-angle-up"></i>
+        </button>
+        <button class="nav-button flex items-center justify-center p-1 lg:p-3" id="backBtn">
+            <i class="fas fa-angle-left"></i>
+        </button>
+    </div>
+
+
+
+
+    <footer class="w-full h-16 bg-black flex justify-center items-center mt-10">
+        <span class="block w-full text-center text-sm text-white">
+            © 2025 Genba Management Dojo | All Rights Reserved.
+        </span>
+    </footer>
+
+
+
+
+
+
+
+    <!-- Flowbite JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <!-- Alpine.js -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- Global JS -->
+    <script src="js/global.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FMDS Day 1 - Introduction</title>
+    <link rel="stylesheet" href="css/day1.css">
+    <link rel="stylesheet" href="css/global.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Loader -->
+    <link rel="stylesheet" href="../css/loader.css">
+    <script src="../js/loader.js" defer></script>
+</head>
+
+<body>
+    <!-- Loader to hide content until fully loaded -->
+    <div class="preloader" id="preloader">
+        <div class="loader">
+            <span class="loader-text">DDE</span>
+        </div>
+    </div>
+
+    <!-- Header --->
+    <section class="module-overview">
+        <div class="module-overview">
+            <div class="overview-header">
+                <img src="img/safety logo.jpg" alt="FMDS Logo" class="image-logo">
+                <h1>MARI MULA BELAJAR<br> FMDS Module <br><br> Introduction</h1>
+                <img src="img/1 team 1 goal.jpg" alt="FMDS Logo" class="image-logo">
+            </div>
+            <div class="overview-subheader">
+                <p>Mulai dengan YOSH <b>mesti selamat</b> dan akhiri dengan YOSH <b>1 team 1 goal</b></p>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section id="cont1">
+            <div class="content-container">
+                <h2 class="content-container-title">Asas Pengurusan Genba</h2>
+                <div class="large-image-container">
+                    <img src="img/kawalanharian.png" alt="Large Content Image" class="large-image"
+                        onclick="openFullscreen('img/kawalanharian.png')">
+                </div>
+            </div>
+        </section>
+
+        <section id="cont2">
+            <div class="content-container">
+                <h2 class="content-container-title">Kenapa perlukan latihan?</h2>
+                <div class="interactive-point">
+                    <div class="corner-box"><span>
+                            <div class="interactive-point-question" onclick="toggleAnswers()">
+                                <h3>Tanya diri anda<br>4 Perkara</h3>
+                            </div>
+                        </span></div>
+                    <div class="interactive-point-answer-layout">
+                        <div class="interactive-point-answer hidden">
+                            Kerja sebenar dilakukan <br>[8.00am ~ 5.30pm]
+                        </div>
+                        <div class="interactive-point-answer hidden">
+                            Peranan & tanggungjawab [AM, SV & TL]
+                        </div>
+                        <div class="interactive-point-answer hidden">
+                            Penilaian normal & abnormal tidak jelas
+                        </div>
+                        <div class="interactive-point-answer hidden">
+                            Pemerhatian kerja [orang, proses, kualiti]
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cont3">
+            <div class="content-container">
+                <h2 class="content-container-title">Objektif Latihan</h2>
+                <div class="content-box" style="flex-direction: column;">
+                    <p><span class="black-underline">Memahami & mampu melaksanakan tugas</span> harian sebagai
+                        <strong>Supervisor @ Team Leader</strong>
+                        dalam <strong>asas pengurusan genba</strong> <br>dengan melaksanakan secara normal supaya dapat
+                        meningkatkan produktiviti & kualiti.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="cont4">
+            <div class="content-container">
+                <h2 class="content-container-title">Aliran Proses Latihan</h2>
+                <div class="large-image-container">
+                    <img src="img/aliranproseslatihan.png" alt="Large Content Image" class="large-image"
+                        onclick="openFullscreen('img/aliranproseslatihan.png')">
+                </div>
+            </div>
+        </section>
+
+        <section id="cont5">
+            <div class="content-container">
+                <h2 class="content-container-title">Faedah Selepas Latihan</h2>
+                <div class="ul-content-box">
+                    <ul>
+                        <li>
+                            Mampu tingkatkan tahap pengetahuan dalam pengurusan genba
+                        </li>
+                        <li>
+                            Mampu laksanakan monozukuri & hitozukuri dengan cara yang betul
+                        </li>
+                        <li>
+                            Mampu ubah diri sendiri, kumpulan, tempat kerja & ubah orang lain
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content-container">
+                <h2 class="content-container-title">4 Perkara Aku Janji</h2>
+                <div class="ul-content-box-horizontal">
+                    <ul>
+                        <li>
+                            <b>Tidak menipu</b> <br>
+                            – Sentiasa berkata benar
+                        </li>
+                        <li>
+                            <b>Beritahu yang betul</b> <br>
+                            – Nyatakan selepas lakukan pengesahan maklumat
+
+                        </li>
+                        <li>
+                            <b>Tidak mencuri tulang</b> <br>
+                            – Tidak berputus asa & lepas tangan
+                        </li>
+                        <li>
+                            <b>Boleh terima transformasi</b> <br>
+                            – Ambil sikap proaktif terhadap perubahan
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Genba Management Dojo | All Rights Reserved.</p>
+    </footer>
+
+
+    <!-- Navigation Button-->
+    <div id="dragItem" class="navigation-button">
+        <button class="nav-button" id="topBtn">
+            <i class="fas fa-angle-up"></i>
+        </button>
+        <button class="nav-button" id="backBtn">
+            <i class="fas fa-angle-left"></i>
+        </button>
+    </div>
+
+
+    <!--- Javascript -->
+    <script src="js/global.js"></script>
+    <script src="js/introduction.js"></script>
+</body>
+
+</html>

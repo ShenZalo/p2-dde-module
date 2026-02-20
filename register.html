@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DDE e-Module Register</title>
+    <link rel="stylesheet" href="css/register.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="page-container">
+        <div class="register-box">
+            <h4>Please register to create your account</h4>
+
+            <form class="login-form" onsubmit="return false;">
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="text" id="staffID" placeholder="Staff ID" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <input type="password" id="confirmPassword" placeholder="Re-type your password" required>
+            </form>
+
+            <button id="registerBtn" class="register-button">Register</button>
+            <p id="errorMsg" style="color:red; margin-top:10px;"></p>
+
+            <a class="login-link" href="index.html">Already have an account? Login!</a>
+        </div>
+    </div>
+
+
+    <!-- FIREBASE (Correct CDN) -->
+    <script type="module">
+        import { initializeApp }
+            from "https://www.gstatic.com/firebasejs/12.9.0/firebase-app.js";
+
+        import {
+            getAuth,
+            createUserWithEmailAndPassword,
+            updateProfile,
+            sendEmailVerification
+        } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-auth.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyB-4KUBbEw2T6Iftr2se8de4ioa44xMsZE",
+            authDomain: "p2-ddemodule.firebaseapp.com",
+            projectId: "p2-ddemodule",
+            storageBucket: "p2-ddemodule.firebasestorage.app",
+            messagingSenderId: "1033811747299",
+            appId: "1:1033811747299:web:e2e79a784432ae3215c0d6",
+            measurementId: "G-JC4GJVLKP2"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        document.getElementById("registerBtn").addEventListener("click", async () => {
+            const username = document.getElementById("username").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const staffID = document.getElementById("staffID").value.trim();
+            const password = document.getElementById("password").value.trim();
+            const confirmPassword = document.getElementById("confirmPassword").value.trim();
+            const errorMsg = document.getElementById("errorMsg");
+
+            errorMsg.textContent = "";
+
+            if (!username || !email || !staffID || !password || !confirmPassword) {
+                errorMsg.textContent = "All fields are required.";
+                return;
+            }
+
+            if (!email.endsWith("@perodua.com.my")) {
+                alert("Please use your company email!");
+                return;
+            }
+
+            if (password !== confirmPassword) {
+                errorMsg.textContent = "Passwords do not match.";
+                return;
+            }
+
+            try {
+                const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+                const user = userCredential.user;
+
+                // Update display name
+                await updateProfile(user, { displayName: username });
+
+                // Send email verification
+                await sendEmailVerification(user);
+
+                alert("Registration successful! A verification email has been sent.");
+                window.location.href = "index.html";
+
+            } catch (error) {
+                errorMsg.textContent = error.message;
+            }
+        });
+    </script>
+
+</body>
+
+</html>

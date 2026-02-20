@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FMDS Day 1 - Abnormality Control</title>
+    <link rel="stylesheet" href="css/day1.css">
+    <link rel="stylesheet" href="css/global.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Loader -->
+    <link rel="stylesheet" href="../css/loader.css">
+    <script src="../js/loader.js" defer></script>
+</head>
+
+<body>
+    <!-- Loader to hide content until fully loaded -->
+    <div class="preloader" id="preloader">
+        <div class="loader">
+            <span class="loader-text">DDE</span>
+        </div>
+    </div>
+
+    <!-- Header --->
+    <section class="module-overview">
+        <div class="module-overview">
+            <div class="overview-header">
+                <img src="img/safety logo.jpg" alt="FMDS Logo" class="image-logo">
+                <h1>MARI MULA BELAJAR<br> FMDS Module <br><br> Abnormality Control</h1>
+                <img src="img/1 team 1 goal.jpg" alt="FMDS Logo" class="image-logo">
+            </div>
+            <div class="overview-subheader">
+                <p>Mulai dengan YOSH <b>mesti selamat</b> dan akhiri dengan YOSH <b>1 team 1 goal</b></p>
+            </div>
+        </div>
+    </section>
+    <main>
+        <!-- Definisi -->
+        <section id="cont1">
+            <div class="content-container">
+                <h2 class="content-container-title">Apa itu kawalan abnormaliti?</h2>
+
+                <div class="bubble-map-container">
+                    <div class="bubble-map-item-layout">
+                        <div class="bubble-map-item hidden">
+                            <p>Tindakan untuk kembalikan keadaan abnormal kepada normal di dalam kawalan harian</p>
+                        </div>
+                        <div class="bubble-map-item hidden">
+                            <p>Tindakan diambil apabila berlaku Henkaten supaya keadaan tidak menjadi bertambah buruk
+                            </p>
+                        </div>
+                    </div>
+                    <div class="corner-box"><span>
+                            <div class="bubble-map-topic" onclick="toggleBubble(`#cont1`)">
+                                <img src="img/abnormality-control-pic-1.png">
+                            </div>
+                        </span></div>
+                    <div class="bubble-map-item-layout">
+                        <div class="bubble-map-item hidden">
+                            <p>Selesai dengan cepat</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Kepentingan Kawalan Abnormaliti -->
+        <section id="cont2">
+            <div class="content-container">
+                <h2 class="content-container-title">Kenapa perlukan kawalan abnormaliti?</h2>
+                <div class="content-box">
+                    <p><b>Abnormaliti</b> - Standard berubah</p>
+                </div>
+                <div class="ul-content-box">
+                    Perubahan perlu dikawal secara tepat & betul
+                    <ul>
+                        <li>Mudah <i>dikenalpasti</i></li>
+                        <li>Mudah laksanakan <i><b>kaizen</b></i></li>
+                        <li>Cara yang <b>efektif</b></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Item Sasaran Kawalan Genba -->
+        <div class="content-container">
+            <section id="cont3">
+                <h2 class="content-container-title">Item sasaran kawalan genba</h2>
+                <div class="content-box">
+                    <p><b>Abnormaliti</b> = Perbezaan dari <b>Standard</b> [Normal]</p>
+                </div>
+            </section>
+            <section id="cont4">
+                <div class="large-image-container">
+                    <img src="img/item-sasaran-kawalan-genba.png" alt="Item sasaran kawalan genba" class="large-image"
+                        onclick="openFullscreen('img/item-sasaran-kawalan-genba.png')">
+                </div>
+            </section>
+        </div>
+
+        <!-- Kaedah Kawalan Abnormaliti -->
+        <div class="content-container">
+            <section id="cont5">
+                <h2 class="content-container-title">Kaedah Kawalan Abnormaliti</h2>
+                <div class="content-card">
+                    <!-- Benda Bergerak - Barang -->
+
+                    <h3 class="content-title">Benda Bergerak - Barang</h3>
+                    <div class="collapsible-wrapper">
+                        <!-- Step 1 - Barang -->
+                        <div class="collapsible-bar" onclick="toggleCollapsible(this)">
+                            <p>Step 1: Buat <b>standard</b> yang tepat</p>
+                            <span class="indicator">&gt;</span>
+                        </div>
+                        <div class="collapsible-card">
+                            <h4 style="text-align: center;">Asas aturan <i>part rack</i></h4>
+                            <div class="large-image-container">
+                                <img src="img/barang-step-1.png" alt="Step 1" class="large-image"
+                                    onclick="openFullscreen('img/barang-step-1.png')">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="collapsible-wrapper">
+                        <!-- Step 2 - Barang -->
+
+                        <div class="collapsible-bar" onclick="toggleCollapsible(this)">
+                            <p>Step 2: <b><i>Meiruka</i></b> [Abnormal dapat dilihat]</p>
+                            <span class="indicator">&gt;</span>
+                        </div>
+                        <div class="collapsible-card">
+                            <h4 style="text-align: center;">Asas aturan <i>part rack</i></h4>
+                            <div class="large-image-container">
+                                <img src="img/barang-step-2.png" alt="Step 2" class="large-image"
+                                    onclick="openFullscreen('img/barang-step-2.png')">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="collapsible-wrapper">
+                        <!-- Step 3 - Barang -->
+
+                        <div class="collapsible-bar" onclick="toggleCollapsible(this)">
+                            <p>Step 3: <b>Selesaikan masalah</b> [Tangani tidak berulang]</p>
+                            <span class="indicator">&gt;</span>
+                        </div>
+                        <div class="collapsible-card">
+                            <h4 style="text-align: center;">Asas aturan <i>part rack</i></h4>
+                            <div class="large-image-container">
+                                <img src="img/barang-step-3.png" alt="Step 3" class="large-image"
+                                    onclick="openFullscreen('img/barang-step-3.png')">
+                            </div>
+                            <div class="content-box">
+                                <p>Buat 'Pemerhatian <i>Genba</i>' untuk kenalpasti <b>abnormal</b> yang telah
+                                    di<i>mieruka</i>kan</p>
+                                <div class="ol-content-box">
+                                    <ol>
+                                        <li>
+                                            <p>SV sendiri buat 'Pemerhatian <i>Genba Genchi Genbutsu</i></p>
+                                        </li>
+                                        <li>
+                                            <p>Arahkan TL & TM buat 'Pemerhatian <i>Genba Genchi Genbutsu</i>, - follow
+                                                up</p>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <!-- You might think: This is really ugly. Yeah I agree  -->
+                            <div class="content-inner-container">
+                                <h4 class="inner-content-title">Video</h4>
+                                <div class="video-container">
+                                    <iframe
+                                        src="https://drive.google.com/file/d/1BBq5gHE1mkOOd9mwFMaj_NqOoAvXvVzj/preview"
+                                        width="640" height="360" allow="autoplay; encrypted-media" allowfullscreen
+                                        frameborder="0">
+                                    </iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+            <section id="cont6">
+                <div class="content-card">
+                    <!-- Benda Bergerak - Orang -->
+                    <h3 class="content-title">Benda Bergerak - Orang</h3>
+
+                    <div class="collapsible-wrapper">
+                        <!-- Step 1 - Orang -->
+                        <div class="collapsible-bar" onclick="toggleCollapsible(this)">
+                            <p>Step 1: Buat <b>standard</b> yang tepat</p>
+                            <span class="indicator">&gt;</span>
+                        </div>
+                        <div class="collapsible-card">
+
+                            <h4 style="text-align: center;"><i>Standard Work</i></h4>
+                            <div class="content-box">
+                                <h4 style="text-align: center;">Misi Pengurusan Genba</h4>
+                                <div class="ul-content-box">
+                                    <ul>
+                                        <li>Selamat</li>
+                                        <li>Berkualiti tinggi</li>
+                                        <li>Kos rendah</li>
+                                        <li>Penghantaran</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <h4 style="text-align: center;">Sekiranya tiada <i>Standard Work</i></h4>
+                            <div class="content-box">
+                                <h4 style="text-align: center;">Bekerja dengan cara</h4>
+                                <div class="ul-content-box">
+                                    <ul>
+                                        <li>Bebas</li>
+                                        <li>Tiada turutan kerja</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            # TODO: Fix layout of this class, broken in smaller screen size
+                            <div class="title-image-layout">
+                                <div class="title-image-wrapper">
+                                    <div class="title-image-title">
+                                        <h4>1. Ambil Lebih</h4>
+                                    </div>
+                                    <div class="title-image-image">
+                                        <img src="img/orang-step1-1.jpg" alt="Ambil Lebih"
+                                            onclick="openFullscreen('img/orang-step1-1.jpg')">
+                                    </div>
+                                </div>
+                                <div class="title-image-wrapper">
+                                    <div class="title-image-title">
+                                        <h4>2. <i>Buffer</i> lebih</h4>
+                                    </div>
+                                    <div class="title-image-image">
+                                        <img src="img/orang-step1-2.jpg" alt="Buffer lebih"
+                                            onclick="openFullscreen('img/orang-step1-2.jpg')">
+                                    </div>
+                                </div>
+                                <div class="title-image-wrapper">
+                                    <div class="title-image-title">
+                                        <h4>3. Pengendalian troli</h4>
+                                    </div>
+                                    <div class="title-image-image">
+                                        <img src="img/orang-step1-3.jpg" alt="Pengendalian troli"
+                                            onclick="openFullscreen('img/orang-step1-3.jpg')">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="title-image-layout">
+                                <div class="title-image-wrapper">
+                                    <div class="title-image-title">
+                                        <h4>4. Laluan kenderaan</h4>
+                                    </div>
+                                    <div class="title-image-image">
+                                        <img src="img/orang-step1-4.png" alt="Laluan kenderaan"
+                                            onclick="openFullscreen('img/orang-step1-4.png')">
+                                    </div>
+                                </div>
+                                <div class="title-image-wrapper">
+                                    <div class="title-image-title">
+                                        <h4>5. Ergonomik</h4>
+                                    </div>
+                                    <div class="title-image-image">
+                                        <img src="img/orang-step1-5.png" alt="Ergonomik"
+                                            onclick="openFullscreen('img/orang-step1-5.png')">
+                                    </div>
+                                </div>
+                                <div class="title-image-wrapper">
+                                    <div class="title-image-title">
+                                        <h4>6. Proses <i>flow</i></h4>
+                                    </div>
+                                    <div class="title-image-image">
+                                        <img src="img/orang-step1-6.png" alt="Proses flow"
+                                            onclick="openFullscreen('img/orang-step1-6.png')">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ul-content-box">
+                                <ul>
+                                    <li>
+                                        <p>Kenal pasti <b>abnormal</b> di <i>genba</i></p>
+                                    </li>
+                                    <li>
+                                        <p>Kembalikan <b>abnormal</b> pada <b>normal</b></p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="collapsible-wrapper">
+                        <!-- Step 2 - Orang -->
+                        <div class="collapsible-bar" onclick="toggleCollapsible(this)">
+                            <p>Step 2: <b><i>Meiruka</i></b> [Abnormal dapat dilihat]</p>
+                            <span class="indicator">&gt;</span>
+                        </div>
+                        <div class="collapsible-card">
+
+                            <h4 style="text-align: center;">Graf <i>Yamazumi</i> [kumulatif]</h4>
+                            <div class="image-container">
+                                <img src="img/graf-yamazumi.png" alt="Graf Yamazumi" class="image"
+                                    onclick="openFullscreen('img/graf-yamazumi.png')">
+                            </div>
+
+                            <div class="small-content-box">
+                                <p>Perbandingan workload mengikut proses yang telah dipuratakan mengikut ratio model.
+                                </p>
+                            </div>
+                            <h4 style="text-align: center;">Cara Kombinasi <i>Standard</i> Work</h4>
+                            <div class="content-box">
+                                Penilaian setiap pekerja lakukan proses ikut <i>tact time</i>
+                                <div class="ul-content-box">
+                                    <ul>
+                                        <li>
+                                            <p>Masa berkerja</p>
+                                        </li>
+                                        <li>
+                                            <p>Masa berjalan</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="collapsible-wrapper">
+                        <!-- Step 3 - Orang -->
+                        <div class="collapsible-bar" onclick="toggleCollapsible(this)">
+                            <p>Step 3: <b>Selesaikan masalah</b> [Tangani tidak berulang]</p>
+                            <span class="indicator">&gt;</span>
+                        </div>
+                        <div class="collapsible-card">
+
+                            <div class="content-box">
+                                <h4 style="text-align: center;"><i>Genba obersvation</i> - Carata kombinasi
+                                    <i>standard</i>
+                                </h4>
+                                <div class="ol-content-box">
+                                    <ol>
+                                        <li>
+                                            <p>Lihat point penting sekitar tempat kerja</p>
+                                        </li>
+                                        <li>Pemerhatian pematuhan SOP</li>
+                                    </ol>
+                                </div>
+                            </div>
+
+                            <h4 style="text-align: center;">Pemerhatian Pergerakan</h4>
+                            <div class="image-container">
+                                <img src="img/pemerhatian-pergerakan.jpg" alt="Pemerhatian Pergerakan" class="image"
+                                    onclick="openFullscreen('img/pemerhatian-pergerakan.jpg')">
+                            </div>
+
+                            <div class="content-box">
+                                <h4 style="text-align:center;">Interview Team Member</h4>
+                                <p style="text-align: center;">Use Why Analysis</p>
+                                <div class="ul-content-box">
+                                    <ul>
+                                        <li>Kenapa tidak patuhi?</li>
+                                        <li>Kenapa tidak dapat dipatuhi?</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h4 style="text-align: center;">Tindakan Team Member</h4>
+                            <div class="title-image-layout">
+                                <div class="title-image-wrapper">
+                                    <div class="title-image-title">
+                                        <h4>Abnormal</h4>
+                                    </div>
+                                    <div class="title-image-image">
+                                        <img src="img/tindakan-tm-1.jpg" alt="Abnormal"
+                                            onclick="openFullscreen('img/tindakan-tm-1.jpg')">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="title-image-layout">
+                                <div class="title-image-wrapper">
+                                    <div class="title-image-title">
+                                        <h4>Stop</h4>
+                                    </div>
+                                    <div class="title-image-image">
+                                        <img src="img/tindakan-tm-2.jpg" alt="Stop"
+                                            onclick="openFullscreen('img/tindakan-tm-2.jpg')">
+                                    </div>
+                                    <div class="title-image-subtitle">
+                                        <p>Hentikan Line</p>
+                                    </div>
+                                </div>
+                                <p class="right-arrow">&#8594;</p>
+                                <div class="title-image-wrapper">
+                                    <div class="title-image-title">
+                                        <h4>Call</h4>
+                                    </div>
+                                    <div class="title-image-image">
+                                        <img src="img/tindakan-tm-3.jpg" alt="Call"
+                                            onclick="openFullscreen('img/tindakan-tm-3.jpg')">
+                                    </div>
+                                    <div class="title-image-subtitle">
+                                        <p>Panggil & info</p>
+                                    </div>
+                                </div>
+                                <p class="right-arrow">&#8594;</p>
+                                <div class="title-image-wrapper">
+                                    <div class="title-image-title">
+                                        <h4>Wait</h4>
+                                    </div>
+                                    <div class="title-image-image">
+                                        <img src="img/tindakan-tm-4.png" alt="Wait"
+                                            onclick="openFullscreen('img/tindakan-tm-4.png')">
+                                    </div>
+                                    <div class="title-image-subtitle">
+                                        <p>Tunggu arahan</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="content-box">
+                                <h4 style="text-align: center;">Tindakan Supervisor & Team Leader</h4>
+                                <div class="ol-content-box">
+                                    <ol>
+                                        <li>Pergi cepat</li>
+                                        <li>Cari cepat</li>
+                                        <li>Selesai cepat</li>
+                                    </ol>
+                                </div>
+                            </div>
+
+                            <div class="flow-chart-layout">
+                                <div class="flow-chart-wrapper">
+                                    <h4>Masalah yang berlaku</h4>
+                                    <p>Abnormal dikesan</p>
+                                </div>
+                                <p class="right-arrow">&#8594;</p>
+                                <div class="flow-chart-wrapper">
+                                    <h4>Keluarkan masalah</h4>
+                                    <p>Supaya masalah dapat dijelaskan dengan betul</p>
+                                </div>
+                                <p class="right-arrow">&#8594;</p>
+                                <div class="flow-chart-wrapper">
+                                    <h4>Tindakan masalah</h4>
+                                    <p>Buat <i>kaizen</i>/<i>Basic skill</i></p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="cont7">
+                <!--Benda Bergerak - Alat Kawalan Info -->
+                <div class="content-card">
+                    <h3 class="content-title">Benda Bergerak - Alat Kawalan Info</h3>
+                    <div class="collapsible-wrapper">
+                        <!-- Step 1 - Alat Kawalan Info -->
+                        <div class="collapsible-bar" onclick="toggleCollapsible(this)">
+                            <p>Step 1: Buat <b>standard</b> yang tepat</p>
+                            <span class="indicator">&gt;</span>
+                        </div>
+                        <div class="collapsible-card">
+
+                            <h4 style="text-align: center;"><i>Hoshin</i> syarikat: Sasaran kumpulan/seksyen [KPI]
+                            </h4>
+                            <div class="large-image-container">
+                                <img src="img/hoshin-syarikat.png" alt="Hoshin Syarikat" class="large-image"
+                                    onclick="openFullscreen('img/hoshin-syarikat.png')">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="collapsible-wrapper">
+                        <!-- Step 2 - Alat Kawalan Info -->
+                        <div class="collapsible-bar" onclick="toggleCollapsible(this)">
+                            <p>Step 2: <b><i>Meiruka</i></b> [Abnormal dapat dilihat]</p>
+                            <span class="indicator">&gt;</span>
+                        </div>
+                        <div class="collapsible-card">
+
+                            <div class="content-box">
+                                <p>Maklumat kawalan & <i>Mieruka</i></p>
+                                <div class="ul-content-box">
+                                    <ul>
+                                        <li>Susun 5 Misi Utama [KPI]</li>
+                                        <li>Plan aktiviti berdasarkan sasaran</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="image-container">
+                                <img src="img/supervisor-control-board.jpg" alt="Supervisor Control Board" class="image"
+                                    onclick="openFullscreen('img/supervisor-control-board.jpg')">
+                            </div>
+                            <div class="content-box">
+                                <p>Supervisor Control Board
+                                    <br>Mengetahui “Keputusan Pencapaian Bulanan"
+                                </p>
+                                <div class="ul-content-box">
+                                    <ul>
+                                        <li><i><b>Main KPI:</i></b> Sasaran <i>shop</i></li>
+                                        <li><i><b>Sub KPI:</i></b> KPI yang dibina dari <i>Main KPI</i></li>
+                                        <li><i><b>Proses KPI:</b></i> Hasil pencapaian sesuatu aktiviti</li>
+                                    </ul>
+                                </div>
+                                <p>Kandungan aktiviti dapat dilihat melalui setiap board</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collapsible-wrapper">
+                        <!-- Step 3 - Alat Kawalan Info -->
+                        <div class="collapsible-bar" onclick="toggleCollapsible(this)">
+                            <p>Step 3: <b>Selesaikan masalah</b> [Tangani tidak berulang]</p>
+                            <span class="indicator">&gt;</span>
+                        </div>
+                        <div class="collapsible-card">
+                            <div class="image-container">
+                                <img src="img/supervisor-control-board-example.png"
+                                    alt="Supervisor Control Board Example" class="image"
+                                    onclick="openFullscreen('img/supervisor-control-board-example.png')">
+                            </div>
+                            <div class="ul-content-box">
+                                <ul>
+                                    <li>
+                                        <p>Tangani masalah yang telah dikesan melalui <i>Supervisor Monitoring Board</i>
+                                            & setiap satu <i>Activity Board</i> yang telah di pamerkan.</p>
+                                    </li>
+                                    <li>Kongsi Bersama Team Leader & Team Member</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Genba Management Dojo | All Rights Reserved.</p>
+    </footer>
+
+
+    <!-- Navigation Button-->
+    <div id="dragItem" class="navigation-button">
+        <button class="nav-button" id="topBtn">
+            <i class="fas fa-angle-up"></i>
+        </button>
+        <button class="nav-button" id="backBtn">
+            <i class="fas fa-angle-left"></i>
+        </button>
+    </div>
+    <!--- Javascript -->
+    <script src="js/global.js"></script>
+    <script src="js/520min.js"></script>
+</body>
+
+
+</html>

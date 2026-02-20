@@ -1,0 +1,579 @@
+/* Welcome Section Styles */
+.welcome-container {
+    width: 100%;
+    /* use viewport width, not viewport height */
+    height: 99vh;
+    box-sizing: border-box;
+    /* include border in dimensions */
+    display: flex;
+    flex-direction: row;
+    border: 2px solid #10d7c3;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.welcome-left-side {
+    width: 40%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    background-color: #10d7c3;
+    border-radius: 10px;
+}
+
+.class-starter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+
+
+.welcome-right-side {
+    width: 60%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.welcome-background {
+    width: 100%;
+    height: 100%;
+    /* ensure the replaced element fills parent height */
+    display: block;
+    /* avoid inline spacing and make sizing reliable */
+    object-fit: cover;
+    /* crop to fill while preserving aspect ratio */
+    border-radius: 10px;
+}
+.deco-border-1 {
+    border: 5px solid #239c90;
+    width: fit-content;
+    margin: 0 auto;
+    top: 20px;
+    box-shadow: 0 16px 12px #239c90;
+    border-radius: 20px;
+}
+.deco-border-2 {
+    border-radius: 10px;
+    border: 5px solid #22b5a6;
+    background-color: #00fce3;
+}
+
+.welcome-message {
+    font-size: 1.5rem;
+    position: relative;
+    top: 15px;
+}
+
+.module-title {
+    font-size: 2rem;
+    position: relative;
+}
+
+.introduction-section {
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.intro-button {
+    width: 200px;
+    padding: 10px 20px;
+    font-size: 2rem;
+    border: none;
+    background-color: #009688;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.intro-button:hover {
+    background-color: rgb(29, 179, 162);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.trainer-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #a8e6cf;
+    background: linear-gradient(45deg, #10d7c3, #0aa39e);
+
+}
+
+.introduction-text {
+    text-align: center;
+}
+
+.trainer-picture-container {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.trainer-picture {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.trainer-card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    overflow: hidden;
+    transition: transform 0.3s, width 0.3s;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+
+}
+
+.trainer-card:hover {
+    transform: translateY(-5px);
+}
+
+.trainer-card-expand {
+    width: 600px;
+    height: 500px;
+}
+
+.trainer-info {
+    padding-left: 20px;
+    text-align: left;
+}
+
+.trainer-info h3 {
+    color: red;
+    text-align: center;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.trainee-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(45deg, #10d7c3, #0aa39e);
+
+    border-radius: 50px;
+    margin: 20px;
+    /* space outside the box */
+    padding: 15px;
+    /* space inside the box */
+}
+
+.trainee-card {
+    text-align: center;
+    background-color: #d2b9b9;
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    padding-top: 15px;
+    border-radius: 10px;
+    transition: transform 0.3s, width 0.3s;
+    cursor: pointer;
+}
+
+.trainee-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.trainee-card-expand {
+    width: 500px;
+    height: 550px;
+}
+
+.trainee-picture-container {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.trainee-picture {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.trainee-info h3 {
+    color: rgb(195, 58, 58);
+    text-align: center;
+    margin: 0;
+    font-size: 1.5rem;
+}
+.trainee-info p {
+    text-align: left;
+    margin-left: 10px;
+}
+
+/* Content Styles */
+.content-container {
+    background-color: #10d7c3;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.content-container h2 {
+    padding-top: 20px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+/* Rules Styles */
+.rules-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.rules-item {
+    background-color: #ffffff;
+    border: 2px solid #10d7c3;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.rules-item:hover {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.rules-picture-container {
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+}
+.rules-picture {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+.rules-text{
+    padding-left: 20px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.content-header-container {
+    margin: 40px 20px;
+    padding: 10px;
+    background: white;
+    border-radius: 20px;
+}
+
+.content-header {
+    display: grid;
+    grid-template-columns: 120px 1fr 120px;
+    gap: 20px;
+    font-size: 20px;
+    text-align: center;
+    align-items: center;
+}
+
+.content-header-logo {
+    width: 120px;
+    object-fit: contain;
+}
+
+.content-subheader {
+    justify-content: center;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 15px;
+}
+
+
+.general-card {
+    background: white;
+    border: 2px solid #009688;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 100%;
+    transition: height 0.3s, transform 0.3s;
+}
+
+.general-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* expanded state */
+.general-card-expand {
+    max-height: 1000px; /* big enough to show all content */
+}
+
+
+/* Header inside */
+.general-header {
+    text-align: center;
+    padding: 12px 0;
+    border-bottom: 2px solid #009688;
+    background: #fff;
+}
+
+/* Make two sides sit next to each other */
+.general-row {
+    display: flex;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.general-row p {
+    font-size: 25px;
+    font-weight: 600;
+    color: #009688;
+}
+
+.general-image {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Column boxes */
+.general-left-side,
+.general-right-side {
+    flex: 1;
+    text-align: center;
+    padding: 25px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Middle divider only */
+.general-left-side {
+    border-right: 2px solid #009688;
+}
+
+.fmds-intro {
+    text-align: center;
+    padding: 12px 0;
+}
+
+.background-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.background-item {
+    background-color: #ffffff;
+    border: 2px solid #009688;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.background-item:hover {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.trainer-material-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background: linear-gradient(135deg, #00796b, #009688);
+    border-radius: 50px;
+    margin: 20px;
+    /* space outside the box */
+    padding: 15px;
+    /* space inside the box */
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+}
+
+.trainer-materials-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: transparent;
+    object-fit: cover;
+}
+
+.trainer-materials-item {
+    text-align: center;
+    margin: 0 20px;
+}
+
+.see-button {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    border: none;
+    background-color: #ffffff;
+    color: #009688;
+    cursor: pointer;
+    padding: 10px 30px 10px 30px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.see-button:hover {
+    background-color: #009688;
+    color: white;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.start-button {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    border: none;
+    background-color: #009688;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.start-button:hover {
+    background-color: rgb(29, 179, 162);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.module-card {
+    margin-top: 20px;
+    background: white;
+    border: 2px solid #009688;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 100%;
+    transition: height 0.3s, transform 0.3s;
+}
+
+.module-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Header inside */
+.module-header {
+    text-align: center;
+    padding: 12px 0;
+    border-bottom: 2px solid #009688;
+    background: #fff;
+}
+
+/* Make two sides sit next to each other */
+.module-row {
+    display: flex;
+    border-bottom: 10px solid #009688;
+}
+
+.module-image {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Column boxes */
+.module-left-side,
+.module-right-side {
+    margin: 20px 20px 0px 20px;
+    border: 5px solid #009688;
+    border-radius: 20px;
+    flex: 1;
+    text-align: center;
+    padding: 25px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.module-fmds h2,
+.module-fmds p{
+    text-align: center;
+    padding: 12px 0;
+    background: #fff;
+}
+
+.module-fmds p {
+    font-size: 25px;
+    font-weight: 600;
+    color: #009688;
+}
+
+.penilaian-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 50px;
+    margin: 20px;
+    padding: 15px;
+}
+.penilaian-button {
+    width: 400px;
+    height: 200px;
+    padding: 10px 20px;
+    font-size: 2.5rem;
+    border: none;
+    background-color: #009688;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+.penilaian-button:hover {
+    background-color: rgb(29, 179, 162);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+footer {
+    margin-top: 20px;
+    height: 50px;
+    background-color: #303f3d;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+}
+
+
+

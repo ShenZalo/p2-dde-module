@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FMDS Day 1 - Abnormality Control</title>
+    <link rel="stylesheet" href="css/day1-opobservation.css">
+    <link rel="stylesheet" href="css/global.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Loader -->
+    <link rel="stylesheet" href="../css/loader.css">
+    <script src="../js/loader.js" defer></script>
+</head>
+
+<body>
+    <!-- Loader to hide content until fully loaded -->
+    <div class="preloader" id="preloader">
+        <div class="loader">
+            <span class="loader-text">DDE</span>
+        </div>
+    </div>
+
+    <!-- Header --->
+    <section class="module-overview">
+        <div class="module-overview">
+            <div class="overview-header">
+                <img src="img/safety logo.jpg" alt="FMDS Logo" class="image-logo">
+                <h1>MARI MULA BELAJAR<br> FMDS Module <br><br> Operator Observation</h1>
+                <img src="img/1 team 1 goal.jpg" alt="FMDS Logo" class="image-logo">
+            </div>
+            <div class="overview-subheader">
+                <p>Mulai dengan YOSH <b>mesti selamat</b> dan akhiri dengan YOSH <b>1 team 1 goal</b></p>
+            </div>
+        </div>
+    </section>
+    <main>
+        <!-- Definisi -->
+        <div class="content-container">
+            <section id="cont1">
+                <h2 class="content-container-title">Definisi</h2>
+                <div class="collapsible-wrapper">
+                    <div class="collapsible-bar" onclick="toggleCollapsible(this)">
+                        <p>Apa itu <i>Observation</i>?</p>
+                        <span class="indicator">&gt;</span>
+                    </div>
+
+                    <div class="collapsible-card">
+                        <p>Proses pemerhatian kerja terhadap <i>Team Member</i></p>
+                    </div>
+                </div>
+
+                <div class="content-inner-container">
+                    <h3 class="content-title">Perhatikan Apa?</h3>
+                    <div class="row-layout">
+                        <div class="image-card">
+                            <img src="img/health.png" alt="Health Icon">
+                            <p>Kesihatan</p>
+                        </div>
+                        <div class="image-card">
+                            <img src="img/ppe.png" alt="PPE Icon">
+                            <p>PPE</p>
+                        </div>
+                        <div class="image-card">
+                            <img src="img/sop.png" alt="SOP Icon">
+                            <p>SOP</p>
+                        </div>
+                        <div class="image-card">
+                            <img src="img/rules.png" alt="Rules Icon">
+                            <p>Peraturan</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="cont2">
+                <div class="content-box">
+                    <div class="row-layout">
+                        <p>High Quality Product</p>
+                        <i class="fas fa-long-arrow-alt-right"></i>
+                        <p>Good Product</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="content-container">
+            <h2 class="content-container-title">Kenapa Perlu Operator Observation?</h2>
+            <div class="content-inner-container">
+                <h3 class="content-title"><i class="fas fa-chevron-right"></i> Berlaku Henkaten pada 4M <i
+                        class="fas fa-chevron-left"></i></h3>
+                <div class="row-layout">
+                    <div class="image-card">
+                        <p>Man</p>
+                        <img src="img/4m-man-icon.gif" alt="4M Man Icon">
+                        <button onclick="show(`#henkaten4M-Man`)">Lihat</button>
+                    </div>
+                    <div class="image-card">
+                        <p>Machine</p>
+                        <img src="img/4m-machine-icon.gif" alt="4M Machine Icon">
+                        <button onclick="show(`#henkaten4M-Machine`)">Lihat</button>
+                    </div>
+                    <div class="image-card">
+                        <p>Material</p>
+                        <img src="img/4m-material-icon.gif" alt="4M Material Icon">
+                        <button onclick="show(`#henkaten4M-Material`)">Lihat</button>
+                    </div>
+                    <div class="image-card">
+                        <p>Method</p>
+                        <img src="img/4m-method-icon.gif" alt="4M Method Icon">
+                        <button onclick="show(`#henkaten4M-Method`)">Lihat</button>
+                    </div>
+                </div>
+                <div class="content-note">
+                    <p>Kawalan pengurusan untuk <i>production</i> berjalan lancar</p>
+                </div>
+            </div>
+
+            <div class="content-inner-container">
+                <h3 class="content-title"><i class="fas fa-chevron-right"></i> Mencari <b>abnormal</b> pada MAN [Orang]
+                    <i class="fas fa-chevron-left"></i>
+                </h3>
+                <div class="row-layout">
+                    <div class="image-card" style="cursor: default;">
+                        <p>Safety and Quality</p>
+                        <img src="img/man-safety-quality.gif" alt="Safety and Quality Icon">
+                        <button onclick="show(`#abnormalMan-SQ`)">Lihat</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Popup For "Berlaku Henkaten pada 4M"-->
+        <!-- MAN-->
+        <div id="henkaten4M-Man" class="popup-container hidden">
+            <h2 class="content-container-title">Berlaku Henkaten pada Man</h2>
+            <div class="content-container">
+                <div class="bubble-map-container">
+                    <div class="bubble-map-item-layout">
+                        <div class="bubble-map-item hidden">
+                            <p>Tahap Kesihatan</p>
+                        </div>
+                        <div class="bubble-map-item hidden">
+                            <p>Pemakaian PPE</p>
+                        </div>
+                    </div>
+                    <div class="corner-box"><span>
+                            <div class="bubble-map-topic" onclick="toggleBubble(`#henkaten4M-Man`)">
+                                <h4>Periksa pada Man</h4>
+                            </div>
+                        </span></div>
+                    <div class="bubble-map-item-layout">
+                        <div class="bubble-map-item hidden">
+                            <p>Cara Kerja</p>
+                        </div>
+                        <div class="bubble-map-item hidden">
+                            <p>Peraturan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="close-div">
+                <button class="close-button" onclick="hide('#henkaten4M-Man')"><i class="fas fa-times"></i>
+                    Tutup</button>
+            </div>
+        </div>
+        <!-- Machine -->
+        <div id="henkaten4M-Machine" class="popup-container hidden">
+            <h2 class="content-container-title">Berlaku Henkaten pada Machine</h2>
+            <div class="content-container">
+                <div class="bubble-map-container">
+                    <div class="bubble-map-item-layout">
+                        <div class="bubble-map-item hidden">
+                            <p><i>Power supply</i></p>
+                        </div>
+                        <div class="bubble-map-item hidden">
+                            <p><i>Pressure gauge</i></p>
+                        </div>
+                    </div>
+                    <div class="corner-box"><span>
+                            <div class="bubble-map-topic" onclick="toggleBubble(`#henkaten4M-Machine`)">
+                                <h4>Periksa pada Machine</h4>
+                            </div>
+                        </span></div>
+                    <div class="bubble-map-item-layout">
+                        <div class="bubble-map-item hidden">
+                            <p><i>Push button</i></p>
+                        </div>
+                        <div class="bubble-map-item hidden">
+                            <p>Kebocoran angin</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="close-div">
+                <button class="close-button" onclick="hide('#henkaten4M-Machine')"><i class="fas fa-times"></i>
+                    Tutup</button>
+            </div>
+        </div>
+        <!-- Material -->
+        <div id="henkaten4M-Material" class="popup-container hidden">
+            <h2 class="content-container-title">Berlaku Henkaten pada Material</h2>
+            <div class="content-container">
+                <div class="bubble-map-container">
+                    <div class="bubble-map-item-layout">
+                        <div class="bubble-map-item hidden">
+                            <p>Kedudukan</p>
+                        </div>
+                        <div class="bubble-map-item hidden">
+                            <p>Cukup</p>
+                        </div>
+                    </div>
+                    <div class="corner-box"><span>
+                            <div class="bubble-map-topic" onclick="toggleBubble(`#henkaten4M-Material`)">
+                                <h4>Periksa pada Material</h4>
+                            </div>
+                        </span></div>
+                    <div class="bubble-map-item-layout">
+                        <div class="bubble-map-item hidden">
+                            <p>Susah</p>
+                        </div>
+                        <div class="bubble-map-item hidden">
+                            <p>Jauh</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="close-div">
+                <button class="close-button" onclick="hide('#henkaten4M-Material')"><i class="fas fa-times"></i>
+                    Tutup</button>
+            </div>
+        </div>
+        <!-- Method -->
+        <div id="henkaten4M-Method" class="popup-container hidden">
+            <h2 class="content-container-title">Berlaku Henkaten pada Method</h2>
+            <div class="content-container">
+                <div class="bubble-map-container">
+                    <div class="bubble-map-item-layout">
+                        <div class="bubble-map-item hidden">
+                            <p>Ikut SOP</p>
+                        </div>
+                        <div class="bubble-map-item hidden">
+                            <p><i>Cycle Job</i></p>
+                        </div>
+                    </div>
+                    <div class="corner-box"><span>
+                            <div class="bubble-map-topic" onclick="toggleBubble(`#henkaten4M-Method`)">
+                                <h4>Periksa pada Method</h4>
+                            </div>
+                        </span></div>
+                    <div class="bubble-map-item-layout">
+                        <div class="bubble-map-item hidden">
+                            <p><i>Basic Skill</i></p>
+                        </div>
+                        <div class="bubble-map-item hidden">
+                            <p><i>Menunggu</i></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="close-div">
+                <button class="close-button" onclick="hide('#henkaten4M-Method')"><i class="fas fa-times"></i>
+                    Tutup</button>
+            </div>
+        </div>
+        <!-- END OF POPUP FOR 4M HENKATEN-->
+        <!-- Popup for Safety and Quality -->
+        <div id="abnormalMan-SQ" class="popup-container hidden">
+            <h2 class="content-container-title">Mencari <b>abnormal</b> pada MAN - Safety and Quality</h2>
+            <div class="content-container">
+                <div class="bubble-map-container">
+                    <div class="bubble-map-item-layout">
+                        <div class="bubble-map-item hidden">
+                            <p>Ikut SOP?</p>
+                        </div>
+                        <div class="bubble-map-item hidden">
+                            <p>Pemeriksaan kualiti?</p>
+                        </div>
+                    </div>
+                    <div class="corner-box"><span>
+                            <div class="bubble-map-topic" onclick="toggleBubble(`#abnormalMan-SQ`)">
+                                <h4>Adakah berbeza daripada <b>standard</b>?</h4>
+                            </div>
+                        </span></div>
+                    <div class="bubble-map-item-layout">
+                        <div class="bubble-map-item hidden">
+                            <p>Pematuhan kemahiran asas?</p>
+                        </div>
+                        <div class="bubble-map-item hidden">
+                            <p>Ikut peraturan?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-container">
+                <h2 class="content-title">Video</h2>
+                <div class="video-container">
+                    <iframe src="https://drive.google.com/file/d/1-LejGZyUC3l-ytcfUiko99xpRoEg0gds/preview" width="640"
+                        height="360" allow="autoplay; encrypted-media" allowfullscreen frameborder="0">
+                    </iframe>
+                </div>
+            </div>
+            <div class="close-div">
+                <button class="close-button" onclick="hide('#abnormalMan-SQ')"><i class="fas fa-times"></i>
+                    Tutup</button>
+            </div>
+        </div>
+        <!-- END OF POPUP FOR SAFETY AND QUALITY-->
+
+        <div class="content-container">
+            <h2 class="content-container-title">Selamat, berkualiti tinggi mencapai tempoh penghantaran dengan lancar
+            </h2>
+            <div class="ol-content-box" style="background-color: #ecfcfd;">
+                <ol>
+                    <li>
+                        Kenal pasti <b>abnormal</b> di <i>genba</i>
+                    </li>
+                    <li>
+                        Kembalikan <b>abnormal</b> kepada <b>normal</b> - <b><i>Man</i></b> [Orang]
+                    </li>
+                    <div class="title-image-layout">
+                        <div class="title-image-wrapper">
+                            <div class="title-image-title">
+                                <h4>1. Ambil Lebih</h4>
+                            </div>
+                            <div class="title-image-image">
+                                <img src="img/orang-step1-1.jpg" alt="Ambil Lebih"
+                                    onclick="openFullscreen('img/orang-step1-1.jpg')">
+                            </div>
+                        </div>
+                        <div class="title-image-wrapper">
+                            <div class="title-image-title">
+                                <h4>2. <i>Buffer</i> lebih</h4>
+                            </div>
+                            <div class="title-image-image">
+                                <img src="img/orang-step1-2.jpg" alt="Buffer lebih"
+                                    onclick="openFullscreen('img/orang-step1-2.jpg')">
+                            </div>
+                        </div>
+                        <div class="title-image-wrapper">
+                            <div class="title-image-title">
+                                <h4>3. Pengendalian troli</h4>
+                            </div>
+                            <div class="title-image-image">
+                                <img src="img/orang-step1-3.jpg" alt="Pengendalian troli"
+                                    onclick="openFullscreen('img/orang-step1-3.jpg')">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="title-image-layout">
+                        <div class="title-image-wrapper">
+                            <div class="title-image-title">
+                                <h4>4. Laluan kenderaan</h4>
+                            </div>
+                            <div class="title-image-image">
+                                <img src="img/orang-step1-4.png" alt="Laluan kenderaan"
+                                    onclick="openFullscreen('img/orang-step1-4.png')">
+                            </div>
+                        </div>
+                        <div class="title-image-wrapper">
+                            <div class="title-image-title">
+                                <h4>5. Ergonomik</h4>
+                            </div>
+                            <div class="title-image-image">
+                                <img src="img/orang-step1-5.png" alt="Ergonomik"
+                                    onclick="openFullscreen('img/orang-step1-5.png')">
+                            </div>
+                        </div>
+                        <div class="title-image-wrapper">
+                            <div class="title-image-title">
+                                <h4>6. Proses <i>flow</i></h4>
+                            </div>
+                            <div class="title-image-image">
+                                <img src="img/orang-step1-6.png" alt="Proses flow"
+                                    onclick="openFullscreen('img/orang-step1-6.png')">
+                            </div>
+                        </div>
+                    </div>
+                    <li>
+                        Berkomunikasi dengan pekerja - patuhi peraturan
+                        <div class="content-note">
+                            <p>Apakah yang perlu ada pada <i>Supervisor, Team Leader, Team Member</i>?</p>
+                        </div>
+                        <div class="ol-content-box">
+                            <ol type="i">
+                                <li>Kesedaran [<i>Awareness</i>] PENTING</li>
+                                <li>Pemikiran positif</li>
+                                <ul>
+                                    <li>PPE sesuatu kawasan - Pakai betul atau tidak</li>
+                                    <li><b><i>Team Member</i></b></li>
+                                    <ul>
+                                        <li>Patuhi peraturan</li>
+                                    </ul>
+                                    <li><b><i>Supervisor/Team Leader</i></b></li>
+                                    <ul>
+                                        <li>Beritahu supaya patuhi peraturan</li>
+                                    </ul>
+                                </ul>
+                            </ol>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="content-container">
+            <h2 class="content-container-title">Bagaimana laksanakan <b><i>Operator Observation</i></b>?</h2>
+            <div class="content-inner-container">
+                <div class="flow-grid">
+                    <div class="flow-chart-box clickable"
+                        onclick="showVideo('https://drive.google.com/file/d/1SY7BDg418ntxGHAvr-qmOPAExwNeMXkR/preview')">
+                        <p>Genba<br><i class="fa fa-play"></i></p>
+                    </div>
+
+                    <div class="flow-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                    <div class="flow-chart-box">
+                        <p>Lihat pergerakan <i>Team Member</i></p>
+                    </div>
+                    <div class="flow-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                    <div class="flow-chart-box clickable"
+                        onclick="showVideo('https://drive.google.com/file/d/1A569izBXdDtsC5GRA9fp-kKto_9Zq8Vk/preview')">
+                        <p>Dokumen <br>[SOP, WIS]<br><i class="fa fa-play"></i></p>
+                    </div>
+                </div>
+                <div class="flow-grid">
+                    <div class="flow-empty"></div>
+                    <div class="flow-empty"></div>
+                    <div class="flow-empty"></div>
+                    <div class="flow-arrow">
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
+                </div>
+                <div class="flow-grid">
+                    <div class="flow-chart-stack">
+                        <div class="flow-chart-box" style="background-color: red;">
+                            <p>Komunikasi <br>[Ada perasaan]<br>Keluarkan<br>[<i>My problem</i>]</p>
+                        </div>
+                        <div class="flow-chart-box" style="background-color: greenyellow;">
+                            <p>Kaizen tetapkan<br>standard</p>
+                        </div>
+                    </div>
+                    <div class="flow-arrow">
+                        <i class="fas fa-arrow-left"></i>
+                    </div>
+                    <div class="flow-chart-stack">
+                        <div class="flow-chart-box clickable"
+                            onclick="showVideo('https://drive.google.com/file/d/19UY5MtXvtxo0SA_4O1lUZ30eiPpcgFq4/preview')">
+                            <p>Abnormal<br><i class="fa fa-play"></i></p>
+                        </div>
+                        <div class="flow-chart-box" style="background-color: greenyellow;">
+                            <p>Normal</p>
+                        </div>
+                    </div>
+                    <div class="flow-arrow">
+                        <i class="fas fa-arrow-left"></i>
+                    </div>
+                    <div class="flow-chart-box clickable"
+                        onclick="showVideo('https://drive.google.com/file/d/1Nrv8FzJsFcXihA4cVMZCK1lgEgkloC59/preview')">
+                        <p>Penilaian apa?<br><i class="fa fa-play"></i></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-container">
+            <h2 class="content-container-title">Point Pemantauan</h2>
+            <div class="content-inner-container">
+                <h3 class="content-title">Perkara yang perlu diberi perhatian</h3>
+                <div class="row-layout">
+                    <div class="image-card">
+                        <p>Mata</p>
+                        <img src="img/mata.gif" alt="Mata Icon">
+                        <button onclick="show(`#pointMata`)">Lihat</button>
+                    </div>
+                    <div class="image-card">
+                        <p>Tangan</p>
+                        <img src="img/tangan.gif" alt="Tangan Icon">
+                        <button onclick="show(`#pointTangan`)">Lihat</button>
+                    </div>
+                    <div class="image-card">
+                        <p>Turutan Kerja</p>
+                        <img src="img/turutan-kerja.gif" alt="Turutan Kerja Icon">
+                        <button onclick="show(`#pointTurutanKerja`)">Lihat</button>
+                    </div>
+                    <div class="image-card">
+                        <p>Halangan</p>
+                        <img src="img/halangan.gif" alt="Halangan Icon">
+                        <button onclick="show(`#pointHalangan`)">Lihat</button>
+                    </div>
+                    <div class="image-card">
+                        <p>Pematuhan Basic Skill</p>
+                        <img src="img/pematuhan-bs.gif" alt="Pematuhan Basic Skill Icon">
+                        <button onclick="show(`#pointPematuhanBS`)">Lihat</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- POPUP FOR pointMata -->
+        <div class="popup-container hidden" id="pointMata">
+            <h2 class="content-container-title">Point Pemantauan - Mata</h2>
+            <div class="content-container">
+                <div class="content-box">
+                    <p>Lihat proses & lakukan pengesahan selepas lakukan proses</p>
+                </div>
+                <div class="large-image-container">
+                    <img src="img/point-mata.png" alt="Point Mata Image" onclick="openFullscreen('img/point-mata.png')"
+                        class="large-image">
+                </div>
+            </div>
+            <div class="close-div">
+                <button class="close-button" onclick="hide('#pointMata')"><i class="fas fa-times"></i>
+                    Tutup</button>
+            </div>
+        </div>
+        <!-- END OF POPUP FOR pointMata-->
+
+        <!-- POPUP FOR pointTangan -->
+        <div class="popup-container hidden" id="pointTangan">
+            <h2 class="content-container-title">Point Pemantauan - Tangan</h2>
+            <div class="content-container">
+                <div class="content-box">
+                    <p>Gunakan kedua tangan sepenuhnya? Pegang pada lokasi betul</p>
+                </div>
+                <div class="large-image-container">
+                    <img src="img/point-tangan.png" alt="Point Tangan Image"
+                        onclick="openFullscreen('img/point-tangan.png')" class="large-image">
+                </div>
+            </div>
+            <div class="close-div">
+                <button class="close-button" onclick="hide('#pointTangan')"><i class="fas fa-times"></i>
+                    Tutup</button>
+            </div>
+        </div>
+        <!-- END OF POPUP FOR pointTangan -->
+
+        <!-- POPUP FOR pointTurutanKerja -->
+        <div class="popup-container hidden" id="pointTurutanKerja">
+            <h2 class="content-container-title">Point Pemantauan - Turutan Kerja</h2>
+            <div class="content-container">
+                <div class="content-box">
+                    <p>Adakah ikut turutan kerja yang betul?</p>
+                </div>
+                <div class="large-image-container">
+                    <img src="img/point-turutan-kerja.png" alt="Point Turutan Kerja Image"
+                        onclick="openFullscreen('img/point-turutan-kerja.png')" class="large-image">
+                </div>
+            </div>
+            <div class="close-div">
+                <button class="close-button" onclick="hide('#pointTurutanKerja')"><i class="fas fa-times"></i>
+                    Tutup</button>
+            </div>
+        </div>
+        <!-- END OF POPUP FOR pointTurutanKerja -->
+
+        <!-- POPUP FOR pointHalangan -->
+        <div class="popup-container hidden" id="pointHalangan">
+            <h2 class="content-container-title">Point Pemantauan - Halangan</h2>
+            <div class="content-container">
+                <div class="content-box">
+                    <p>Tiada barang @ orang yang boleh ganggu kerja di sekitar?</p>
+                </div>
+                <div class="large-image-container">
+                    <img src="img/point-halangan.png" alt="Point Halangan Image"
+                        onclick="openFullscreen('img/point-halangan.png')" class="large-image">
+                </div>
+            </div>
+            <div class="close-div">
+                <button class="close-button" onclick="hide('#pointHalangan')"><i class="fas fa-times"></i>
+                    Tutup</button>
+            </div>
+        </div>
+        <!-- END OF POPUP FOR pointHalangan -->
+
+        <!-- POPUP FOR pointPematuhanBS -->
+        <div class="popup-container hidden" id="pointPematuhanBS">
+            <h2 class="content-container-title">Point Pemantauan - Pematuhan Basic Skill</h2>
+            <div class="content-container">
+                <div class="content-box">
+                    <p>Kerja dilakukan ikut basic skill? Cara pegang & guna, jumlah, sudut</p>
+                </div>
+                <div class="large-image-container">
+                    <img src="img/point-pemantauan-bs.png" alt="Point Pemantauan Basic Skill Image"
+                        onclick="openFullscreen('img/point-pemantauan-bs.png')" class="large-image">
+                </div>
+            </div>
+            <div class="close-div">
+                <button class="close-button" onclick="hide('#pointPematuhanBS')"><i class="fas fa-times"></i>
+                    Tutup</button>
+            </div>
+        </div>
+        <!-- END OF POPUP FOR pointPematuhanBS -->
+
+        <div class="content-container">
+            <h2 class="content-container-title">Jika terdapat abnormal ketika <b>Observation</b></h2>
+            <div class="flow-grid">
+                <div class="flow-chart-box" style="background-color: red;">
+                    <p>Abnormal</p>
+                </div>
+                <div class="flow-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="flow-chart-box" style="background-color: greenyellow;">
+                    <p>Normal</i></p>
+                </div>
+            </div>
+            <div class="ol-content-box">
+                <ol>
+                    <li><b>Kenapa</b> tidak dipatuhi?</li>
+                    <li><b>Bagaimana</b> supaya dipatuhi?</li>
+                </ol>
+            </div>
+            <div class="content-note">
+                <p>Berkomunikasi dengan pekerja supaya pembetulan dapat dilaksanakan [<i>My problem</i>]</p>
+            </div>
+        </div>
+
+        <div class="content-container">
+            <h2 class="content-container-title">Peranan & Kepentingan</h2>
+            <div class="content-inner-container">
+                <div class="flow-grid down">
+                    <div class="flow-chart-box">
+                        <p>Sebenarnya adakah perlu pengurusan <i>genba</i></p>
+                    </div>
+                    <div class="flow-arrow">
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
+                    <div class="flow-chart-box">
+                        Sebab apa? Kenapa?
+                    </div>
+                    <div class="flow-arrow">
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
+                    <div class="flow-chart-box">
+                        <p>Terdapat banyak abnormal dalam <i>plant</i></p>
+                    </div>
+                </div>
+            </div>
+            <div class="content-note">
+                Apa peranan dan tindakan <b>anda</b>?
+            </div>
+        </div>
+
+        <div class="content-container">
+            <h2 class="content-container-title">Aliran Komunikasi</h2>
+            <div class="content-inner-container">
+                <div class="flow-grid" style="padding-bottom: 50px;">
+                    <div class="flow-chart-box">
+                        <p>Komunikasi</p>
+                    </div>
+                    <div class="flow-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                    <div class="flow-chart-box">
+                        <p>Isu</p>
+                    </div>
+                    <div class="flow-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                    <div class="flow-chart-box">
+                        <p>Selesaikan</p>
+                    </div>
+                    <div class="big-note-box">
+                        <p>Boleh faham isu yang berlaku</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content-inner-container">
+                <div class="flow-grid">
+                    <div class="flow-chart-box">
+                        <p>Selesaikan</p>
+                    </div>
+                    <div class="flow-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                    <div class="flow-chart-box">
+                        <p>Kaizen tindakan</p>
+                    </div>
+                    <div class="flow-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                    <div class="flow-chart-box">
+                        <p>Menilai <br>OK/NG</p>
+                    </div>
+                    <div class="flow-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                    <div class="flow-chart-box">
+                        <p>Penilaian Keputusan</p>
+                    </div>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="img/pdca.png" class="image" alt="PDCA Cycle" onclick="openFullscreen('img/pdca.png')">
+            </div>
+        </div>
+
+        <div class="content-container">
+            <h2 class="content-container-title">Pengurusan laksanakan <b>Operator Observation</b>?</h2>
+            <div class="content-inner-container">
+                <div class="flow-grid">
+                    <div class="flow-chart-box">
+                        <p>Tidak nampak masalah berlaku</p>
+                    </div>
+                    <div class="flow-arrow">
+                        <div class="text-arrow">
+                            <p>Inilah masanya</p>
+                        </div>
+                    </div>
+                    <div class="flow-chart-box">
+                        <p>Pengurusan berkomunikasi dengan pekerja</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content-inner-container">
+                <div class="flow-grid">
+                    <div class="flow-chart-box">
+                        <p>Masalah pekerja akan nampak lebih jelas</p>
+                    </div>
+                    <div class="flow-arrow">
+                        <div class="text-arrow">
+                            <p>Disebabkan</p>
+                        </div>
+                    </div>
+                    <div class="flow-chart-box">
+                        <p>Masalah pekerja ada melibatkan feeling [perasaan]</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content-box">
+                <p>Fikirkan jalan penyelesaian dengan membuat kaizen</p>
+            </div>
+            <div class="content-box">
+                <p>Kaedah <b>komunikasi</b> ini membuatkan <b>pekerja</b> rasa diambil berat dihargai oleh
+                    <b>pengurusan</b>
+                </p>
+            </div>
+        </div>
+
+        <div class="content-container">
+            <h2 class="content-container-title">Jika <b>Operator Observation</b> tidak dilaksanakan?</h2>
+            <div class="content-box">
+                <p>Pihak pengurusan tidak lagi diperlukan <b>SYARIKAT</b></p>
+            </div>
+            <div class="large-image-container" style="border: none;">
+                <img src="img/ob-tidak-laksana.png" alt="Jika Operator Observation tidak dilaksanakan"
+                    onclick="openFullscreen('img/ob-tidak-laksana.png')" class="large-image">
+            </div>
+        </div>
+
+        <div class="content-container">
+            <h2 class="content-container-title">Kesimpulan</h2>
+            <div class="large-image-container" style="border: none;">
+                <img src="img/kesimpulan-ob.png" alt="Kesimpulan Operator Observation"
+                    onclick="openFullscreen('img/kesimpulan-ob.png')" class="large-image">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Genba Management Dojo | All Rights Reserved.</p>
+    </footer>
+
+
+    <!-- Navigation Button-->
+    <div id="dragItem" class="navigation-button">
+        <button class="nav-button" id="topBtn">
+            <i class="fas fa-angle-up"></i>
+        </button>
+        <button class="nav-button" id="backBtn">
+            <i class="fas fa-angle-left"></i>
+        </button>
+    </div>
+
+
+    <!--- Javascript -->
+    <script src="js/global.js"></script>
+    <script src="js/520min.js"></script>
+</body>
+
+
+</html>
